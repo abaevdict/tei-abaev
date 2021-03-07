@@ -3,7 +3,7 @@
     <publicationStmt>
         <p>for use by whoever wants it</p>
     </publicationStmt><notesStmt><note type="ns">http://ossetic-studies.org/ns/abaevdict</note></notesStmt><sourceDesc><p>created on Wednesday 06th January 2021 01:42:50 PM</p></sourceDesc></fileDesc></teiHeader><text><front><divGen type="toc"/></front><body><p>My TEI Customization&#xD;
-        starts with modules tei, core, textstructure and header</p><schemaSpec ident="abaevTEI" docLang="en" prefix="tei_" xml:lang="en"><moduleRef key="core" except=""/><moduleRef key="tei" except=""/><moduleRef key="header" except=""/><moduleRef key="textstructure" except=""/><moduleRef key="dictionaries" except=""/><moduleRef key="figures" except=""/><moduleRef key="linking"/><moduleRef key="analysis"/>
+        starts with modules tei, core, textstructure and header</p><schemaSpec ident="abaevTEI" docLang="en" prefix="tei_" xml:lang="en"><moduleRef key="core" except=""/><moduleRef key="tei" except=""/><moduleRef key="header" except=""/><moduleRef key="textstructure" except=""/><moduleRef key="dictionaries" except=""/><moduleRef key="figures" except=""/><moduleRef key="linking"/><moduleRef key="analysis"/><moduleRef key="certainty"/>
         <classSpec module="tei" type="atts" ident="att.global" mode="change">
             <attList>
                 <attDef ident="xml:lang" mode="change">

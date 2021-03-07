@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2021-03-07T11:06:53Z. .
+Schema generated from ODD source 2021-03-07T13:28:45Z. .
 TEI Edition: Version 4.1.0. Last updated on
 	19th August 2020, revision b414ba550
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
@@ -1338,6 +1338,30 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
          </attribute>
       </optional>
    </define>
+   <define name="tei_att.scoping.attributes">
+      <ref name="tei_att.scoping.attribute.target"/>
+      <ref name="tei_att.scoping.attribute.match"/>
+   </define>
+   <define name="tei_att.scoping.attribute.target">
+      <optional>
+         <attribute name="target">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points at one or several elements or sets of elements by means of one or more data pointers, using the URI syntax.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tei_att.scoping.attribute.match">
+      <optional>
+         <attribute name="match">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies an arbitrary XPath expression using the syntax defined in  which identifies a set of nodes, selected within the context identified by the <code xmlns="http://www.w3.org/1999/xhtml">@target</code> attribute if this is supplied, or within the context of the parent element if it is not.</a:documentation>
+            <text/>
+         </attribute>
+      </optional>
+   </define>
    <define name="tei_att.segLike.attributes">
       <ref name="tei_att.datcat.attributes"/>
       <ref name="tei_att.fragmentable.attributes"/>
@@ -2124,6 +2148,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_spanGrp"/>
          <ref name="tei_interp"/>
          <ref name="tei_interpGrp"/>
+         <ref name="tei_precision"/>
+         <ref name="tei_certainty"/>
+         <ref name="tei_respons"/>
       </choice>
    </define>
    <define name="tei_model.milestoneLike">
@@ -2555,7 +2582,11 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </choice>
    </define>
    <define name="tei_model.certLike">
-      <notAllowed/>
+      <choice>
+         <ref name="tei_precision"/>
+         <ref name="tei_certainty"/>
+         <ref name="tei_respons"/>
+      </choice>
    </define>
    <define name="tei_model.descLike">
       <choice>
@@ -9532,6 +9563,169 @@ The attributes @to and @from on <name/> may each contain only a single value</re
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.interpLike.attributes"/>
          <ref name="tei_att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_precision">
+      <element name="precision">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the numerical accuracy or precision associated with some aspect of the text markup. [21.2. Indications of Precision]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <ref name="tei_model.descLike"/>
+               <ref name="tei_model.certLike"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.scoping.attributes"/>
+         <ref name="tei_att.ranging.attributes"/>
+         <ref name="tei_att.datable.attributes"/>
+         <optional>
+            <attribute name="precision">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the precision of the element or attribute pointed to by the <code xmlns="http://www.w3.org/1999/xhtml">&lt;precision&gt;</code> element.</a:documentation>
+               <choice>
+                  <value>high</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>medium</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>low</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>unknown</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="stdDeviation">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies a standard deviation associated with the value in question</a:documentation>
+               <choice>
+                  <data type="double"/>
+                  <data type="token">
+                     <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+                  </data>
+                  <data type="decimal"/>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_certainty">
+      <element name="certainty">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the degree of certainty associated with some aspect of the text markup. [21.1.2. Structured Indications of Uncertainty]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <ref name="tei_model.descLike"/>
+               <ref name="tei_model.certLike"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="tei_att.global.attribute.dialect"/>
+         <ref name="tei_att.global.attribute.xmlid"/>
+         <ref name="tei_att.global.attribute.n"/>
+         <ref name="tei_att.global.attribute.xmllang"/>
+         <ref name="tei_att.global.attribute.xmlbase"/>
+         <ref name="tei_att.global.attribute.xmlspace"/>
+         <ref name="tei_att.global.rendition.attribute.rend"/>
+         <ref name="tei_att.global.rendition.attribute.style"/>
+         <ref name="tei_att.global.rendition.attribute.rendition"/>
+         <ref name="tei_att.global.linking.attribute.corresp"/>
+         <ref name="tei_att.global.linking.attribute.synch"/>
+         <ref name="tei_att.global.linking.attribute.sameAs"/>
+         <ref name="tei_att.global.linking.attribute.copyOf"/>
+         <ref name="tei_att.global.linking.attribute.next"/>
+         <ref name="tei_att.global.linking.attribute.prev"/>
+         <ref name="tei_att.global.linking.attribute.exclude"/>
+         <ref name="tei_att.global.linking.attribute.select"/>
+         <ref name="tei_att.global.analytic.attribute.ana"/>
+         <ref name="tei_att.global.responsibility.attribute.resp"/>
+         <ref name="tei_att.global.source.attribute.source"/>
+         <ref name="tei_att.scoping.attributes"/>
+         <optional>
+            <attribute name="cert">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(certainty) signifies the degree of certainty associated with the object pointed to by the <code xmlns="http://www.w3.org/1999/xhtml">&lt;certainty&gt;</code> element.</a:documentation>
+               <choice>
+                  <value>high</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>medium</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>low</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>unknown</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               </choice>
+            </attribute>
+         </optional>
+         <attribute name="locus">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates more exactly the aspect concerning which certainty is being expressed: specifically, whether the markup is correctly located, whether the correct element or attribute name has been used, or whether the content of the element or attribute is correct, etc.</a:documentation>
+            <choice>
+               <value>name</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">uncertainty concerns whether the name of the element or attribute used is correctly applied.</a:documentation>
+               <value>start</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">uncertainty concerns whether the start of the element is correctly identified.</a:documentation>
+               <value>end</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">uncertainty concerns whether the end of the element is correctly identified.</a:documentation>
+               <value>location</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">uncertainty concerns both the start and the end of the element.</a:documentation>
+               <value>value</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">uncertainty concerns the content (for an element) or the value (for an attribute)</a:documentation>
+            </choice>
+         </attribute>
+         <optional>
+            <attribute name="assertedValue">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides an alternative value for the aspect of the markup in question—an alternative generic identifier, transcription, or attribute value, or the identifier of an <code xmlns="http://www.w3.org/1999/xhtml">&lt;anchor&gt;</code> element (to indicate an alternative starting or ending location). If an <code xmlns="http://www.w3.org/1999/xhtml">@assertedValue</code> is given, the confidence level specified by <code xmlns="http://www.w3.org/1999/xhtml">@degree</code> applies to the alternative markup specified by <code xmlns="http://www.w3.org/1999/xhtml">@assertedValue</code>; if none is given, it applies to the markup in the text.</a:documentation>
+               <data type="token">
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
+               </data>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="given">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates one or more element(s) characterizing the conditions which are assumed in the assignment of a degree of confidence.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="anyURI"/>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="degree">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the degree of confidence assigned to the aspect of the markup named by the <code xmlns="http://www.w3.org/1999/xhtml">@locus</code> attribute.</a:documentation>
+               <data type="double"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_respons">
+      <element name="respons">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(responsibility) identifies the individual(s) responsible for some aspect of the content or markup of particular element(s). [21.3. Attribution of Responsibility]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <ref name="tei_model.descLike"/>
+               <ref name="tei_model.certLike"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.scoping.attributes"/>
+         <attribute name="locus">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the specific aspect of the encoding (markup or content) for which responsibility is being assigned.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <choice>
+                     <value>name</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">responsibility is being assigned concerning the name of the element or attribute used.</a:documentation>
+                     <value>start</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">responsibility is being assigned concerning the start of the element concerned.</a:documentation>
+                     <value>end</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">responsibility is being assigned concerning the end of the element concerned.</a:documentation>
+                     <value>location</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">responsibility is being assigned concerning the location of the element concerned.</a:documentation>
+                     <value>value</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">responsibility is being assigned concerning the content (for an element) or the value (for an attribute)</a:documentation>
+                  </choice>
+               </oneOrMore>
+            </list>
+         </attribute>
          <empty/>
       </element>
    </define>
