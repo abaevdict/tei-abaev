@@ -3,10 +3,20 @@
     <publicationStmt>
         <p>for use by whoever wants it</p>
     </publicationStmt><notesStmt><note type="ns">http://ossetic-studies.org/ns/abaevdict</note></notesStmt><sourceDesc><p>created on Wednesday 06th January 2021 01:42:50 PM</p></sourceDesc></fileDesc></teiHeader><text><front><divGen type="toc"/></front><body><p>My TEI Customization&#xD;
-        starts with modules tei, core, textstructure and header</p><schemaSpec ident="abaevTEI" docLang="en" prefix="tei_" xml:lang="en"><moduleRef key="core" except=""/><moduleRef key="tei" except=""/><moduleRef key="header" except=""/><moduleRef key="textstructure" except=""/><moduleRef key="dictionaries" except=""/><moduleRef key="figures" except=""/><moduleRef key="linking"/><moduleRef key="analysis"/><moduleRef key="certainty"/>
-        <classSpec module="tei" type="atts" ident="att.global" mode="change">
-            <attList>
-                <attDef ident="xml:lang" mode="change">
+        starts with modules tei, core, textstructure and header</p>
+            <schemaSpec ident="abaevTEI" docLang="en" prefix="tei_" xml:lang="en">
+                <moduleRef key="core" except=""/>
+                <moduleRef key="tei" except=""/>
+                <moduleRef key="header" except=""/>
+                <moduleRef key="textstructure" except=""/>
+                <moduleRef key="dictionaries" except=""/>
+                <moduleRef key="figures" except=""/>
+                <moduleRef key="linking"/>
+<!--                <moduleRef key="analysis"/>-->
+                <moduleRef key="certainty"/>
+                <classSpec module="tei" type="atts" ident="att.global" mode="change">
+                    <attList>
+                        <!--                <attDef ident="xml:lang" mode="change">
                     <valList type="semi" mode="replace">
                         <valItem ident="ady-x-abadz"><gloss>абадз. / Abadzekh Adyghe</gloss></valItem>
                         <valItem ident="abq"><gloss>абаз. / Abaza</gloss></valItem>
@@ -18,17 +28,17 @@
                         <valItem ident="ru"><gloss>рус. / Russian</gloss></valItem>
                         <valItem ident="en"><gloss>англ. / English</gloss></valItem>
                     </valList>
-                </attDef>
-                <attDef ident="dialect" mode="add">
-                    <datatype minOccurs = "1" maxOccurs = "unbounded">
-                        <dataRef name="language"/>
-                    </datatype>
-                </attDef>
-            </attList>
-        </classSpec>
-            
-        <elementSpec module="dictionaries" ident="entry" mode="change">
-<!--            <content>
+                </attDef>-->
+                        <attDef ident="dialect" mode="add">
+                            <datatype minOccurs="1" maxOccurs="unbounded">
+                                <dataRef name="language"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </classSpec>
+                
+                <elementSpec module="dictionaries" ident="entry" mode="change">
+                    <!--            <content>
                 <sequence>
                     <elementRef key="certainty" minOccurs="0" maxOccurs="1"/>
                     <elementRef key="form" minOccurs="1" maxOccurs="2"/>
@@ -44,37 +54,42 @@
                     <elementRef key="xr" minOccurs="0" maxOccurs="unbounded"/>
                 </sequence>
             </content>-->
-            <constraintSpec ident="form-type" scheme="schematron">
-                <constraint>
-                    <sch:rule context="tei:entry/tei:form[1]">
-                        <sch:assert test="@type = 'lemma'">The first form must have the type 'lemma' (headword).</sch:assert>
-                    </sch:rule>
-                    <sch:rule context="tei:entry/tei:form[2]">
-                        <sch:assert test="@xml:lang = 'os-x-digor'">The second form may only be the Digor form.</sch:assert>
-                        <sch:assert test="@type = 'dialectal'">The second form must be a dialectal variant.</sch:assert>
-                    </sch:rule>
-                </constraint>
-            </constraintSpec>
-            <constraintSpec ident="note-type" scheme="schematron">
-                <constraint>
-                    <sch:rule context="tei:entry/tei:note[preceding-sibling::tei:etym]">
-                        <sch:assert test="@type = 'internal'">Internal note should follow etymology.</sch:assert>
-                    </sch:rule>
-                    <sch:rule context="tei:entry/tei:note[following-sibling::tei:etym]">
-                        <sch:assert test="@type = 'comment'">Entry comments should precede etymology.</sch:assert>
-                    </sch:rule>
-                </constraint>
-            </constraintSpec>
-            <constraintSpec ident="cit-type" scheme="schematron">
-                <constraint>
-                    <sch:rule context="tei:entry/tei:cit">
-                        <sch:assert test="@type = 'exampleGroup'">A 'cit' element inside 'entry' should be of type 'exampleGroup'.</sch:assert>
-                    </sch:rule>
-                </constraint>
-            </constraintSpec>
-        </elementSpec>
-            
-<!--        <elementSpec module="linking" ident="seg" mode="change">
+                    <constraintSpec ident="form-type" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="tei:entry/tei:form[1]">
+                                <sch:assert test="@type = 'lemma'">The first form must have the type
+                                    'lemma' (headword).</sch:assert>
+                            </sch:rule>
+                            <sch:rule context="tei:entry/tei:form[2]">
+                                <sch:assert test="@xml:lang = 'os-x-digor'">The second form may only
+                                    be the Digor form.</sch:assert>
+                                <sch:assert test="@type = 'dialectal'">The second form must be a
+                                    dialectal variant.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <constraintSpec ident="note-type" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="tei:entry/tei:note[preceding-sibling::tei:etym]">
+                                <sch:assert test="@type = 'internal'">Internal note should follow
+                                    etymology.</sch:assert>
+                            </sch:rule>
+                            <sch:rule context="tei:entry/tei:note[following-sibling::tei:etym]">
+                                <sch:assert test="@type = 'comment'">Entry comments should precede
+                                    etymology.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <constraintSpec ident="cit-type" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="tei:entry/tei:cit">
+                                <sch:assert test="@type = 'exampleGroup'">A 'cit' element inside
+                                    'entry' should be of type 'exampleGroup'.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                </elementSpec>
+                <!--        <elementSpec module="linking" ident="seg" mode="change">
             <attList>
                 <attDef ident="type" mode="change" usage="req">
                     <valList type="closed" mode="replace">
@@ -83,8 +98,7 @@
                 </attDef>
             </attList>
         </elementSpec>-->
-            
-<!--        <elementSpec module="dictionaries" ident="lang" mode="change">
+                <!--        <elementSpec module="dictionaries" ident="lang" mode="change">
             <attList>
                 <attDef ident="xml:lang" mode="change" usage="req">
                     <valList type="closed" mode="replace">
@@ -94,28 +108,40 @@
                 </attDef>
             </attList>            
         </elementSpec>  -->
-       
-        <elementSpec module="core" ident="cit" mode="change">
-            <constraintSpec ident="tr-ru-eng" scheme="schematron">
-                <constraint>
-                    <sch:rule context=".[@type = 'translation']">
-                        <sch:assert test="(@xml:lang = 'ru') or (@xml:lang = 'en')">Translation must be in Russian (xml:lang = ru) or English (xml:lang = en).</sch:assert>
-                    </sch:rule>
-                </constraint>
-            </constraintSpec>
-
-            <attList>
-                <attDef ident="type" mode="replace" usage="req">
-                    <valList type="closed" mode="replace">
-                        <valItem ident="translation"><desc xml:lang="en">Translation of a usage example of a lexeme or word form.</desc><desc xml:lang="ru">Перевод примера употребления лексемы или формы.</desc></valItem>
-                        <valItem ident="example"><desc xml:lang="en">Example of the usage of an expression.</desc><desc xml:lang="ru">Пример употребления выражения.</desc></valItem>
-                        <valItem ident="exampleGroup"><desc xml:lang="en">Group of examples in a dictionary entry.</desc><desc xml:lang="ru">Группа примеров в словарной статье.</desc></valItem>
-                    </valList>
-                </attDef>
-            </attList>            
-        </elementSpec>
-            
-<!--        <elementSpec module="core" ident="bibl" mode="change">
+                <elementSpec module="core" ident="cit" mode="change">
+                    <constraintSpec ident="tr-ru-eng" scheme="schematron">
+                        <constraint>
+                            <sch:rule context=".[@type = 'translation']">
+                                <sch:assert test="(@xml:lang = 'ru') or (@xml:lang = 'en')"
+                                    >Translation must be in Russian (xml:lang = ru) or English
+                                    (xml:lang = en).</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <attList>
+                        <attDef ident="type" mode="replace" usage="req">
+                            <valList type="closed" mode="replace">
+                                <valItem ident="translation">
+                                    <desc xml:lang="en">Translation of a usage example of a lexeme
+                                        or word form.</desc>
+                                    <desc xml:lang="ru">Перевод примера употребления лексемы или
+                                        формы.</desc>
+                                </valItem>
+                                <valItem ident="example">
+                                    <desc xml:lang="en">Example of the usage of an
+                                        expression.</desc>
+                                    <desc xml:lang="ru">Пример употребления выражения.</desc>
+                                </valItem>
+                                <valItem ident="exampleGroup">
+                                    <desc xml:lang="en">Group of examples in a dictionary
+                                        entry.</desc>
+                                    <desc xml:lang="ru">Группа примеров в словарной статье.</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <!--        <elementSpec module="core" ident="bibl" mode="change">
             <attList>
                 <attDef ident="corresp" mode="change">
                     <valList type="semi" mode="replace">
@@ -178,4 +204,4 @@
                 </attDef>
             </attList>
         </elementSpec>-->
-        </schemaSpec></body></text></TEI>
+            </schemaSpec></body></text></TEI>
