@@ -12,7 +12,7 @@
                 <moduleRef key="dictionaries" except=""/>
                 <moduleRef key="figures" except=""/>
                 <moduleRef key="linking"/>
-<!--                <moduleRef key="analysis"/>-->
+                <moduleRef key="analysis"/>
                 <moduleRef key="certainty"/>
                 <classSpec module="tei" type="atts" ident="att.global" mode="change">
                     <attList>
