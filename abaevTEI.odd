@@ -13,6 +13,8 @@
                 <moduleRef key="figures" except=""/>
                 <moduleRef key="linking"/>
                 <moduleRef key="analysis" include="w m c cl phr s"/>
+                <classSpec module="analysis" type="atts" ident="att.global.analytic" mode="replace"></classSpec>
+                
                 <moduleRef key="certainty"/>
                 <classSpec module="tei" type="atts" ident="att.global" mode="change">
                     <attList>
