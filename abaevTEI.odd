@@ -730,12 +730,12 @@
                     </constraintSpec>
                     <constraintSpec ident="note-type" scheme="schematron">
                         <constraint>
-                            <sch:rule context="tei:entry/tei:note[preceding-sibling::tei:etym]">
-                                <sch:assert test="@type = 'internal'">Internal note should follow
+                            <sch:rule context="tei:entry/tei:note[@type = 'internal']">
+                                <sch:assert test="not(following-sibling::tei:etym)">Internal note should follow
                                     etymology.</sch:assert>
                             </sch:rule>
-                            <sch:rule context="tei:entry/tei:note[following-sibling::tei:etym]">
-                                <sch:assert test="@type = 'comment'">Entry comments should precede
+                            <sch:rule context="tei:entry/tei:note[@type = 'comment']">
+                                <sch:assert test="not(preceding-sibling::tei:etym)">Entry comments should precede
                                     etymology.</sch:assert>
                             </sch:rule>
                         </constraint>
