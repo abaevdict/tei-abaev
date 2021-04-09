@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2021-04-08T19:14:43Z. .
+Schema generated from ODD source 2021-04-09T09:50:33Z. .
 TEI Edition: Version 4.1.0. Last updated on
 	19th August 2020, revision b414ba550
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
@@ -813,12 +813,452 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       <optional>
          <attribute name="xml:lang">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to <a xmlns="http://www.w3.org/1999/xhtml"
-                  href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47</a>.</a:documentation>
+                  href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47</a>.
+Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (абаз. / Abaza); 3] ab (абх. / Abkhaz); 4] ae (ав. / Avestan); 5] av (авар. / Avar); 6] agx (агул. / Aghul); 7] ady (адыг. / Adyghe); 8] aze (азерб. / Azerbaijani); 9] akk (аккад. / Akkadian); 10] dar-x-aqusha (акуш. / Aqusha Dargwa); 11] xln (алан. / Alanic); 12] sqj (алб. / Albanian); 13] alt (алт. / Altai); 14] tr-x-anat (анат. / Anatolian Turkish); 15] en (англ. / English); 16] ang (англос. / Old English); 17] ani (анд. / Andi); 18] iir (ар. / Proto-Indo-Iranian); 19] ar (араб. / Arabic); 20] arc (арам. / Aramaic); 21] xcl (арм. / (Classical) Armenian); 22] aqc (арчин. / Archi); 23] aii (ассир. / Assyrian); 24] ps (афг. / Pashto); 25] krc-x-balkar (балк. / Balkar); 26] eu (баск. / Basque); 27] ba (башк. / Bashkir); 28] x-balochi (бел. / Balochi); 29] be (белорусс. / Belarusian); 30] bg (болг. / Bulgarian); 31] br (брет. / Breton); 32] bdk (будух. / Budugh); 33] xbo (булг. / Bulgar); 34] bua (бурят. / Buryat); 35] sa-vaidika (вед. / Vedic); 36] x-vaynakh (вейнах. / Vaynakh); 37] hu (венг. / Hungarian); 38] vep (вепс. / Veps); 39] bsk (верш. / Burushaski); 40] gem (герм. / Proto-Germanic); 41] glk (гилян. / Gilaki); 42] got (гот. / Gothic); 43] grc (гр. / (Ancient) Greek); 44] ka (груз. / Georgian); 45] hac (гуран. / Gorani); 46] os-x-digor (д. / Digor Ossetic); 47] dar (дарг. / Dargwa); 48] chg (джагат. / Chagatai); 49] kry-x-jek (джекск. / Jek Kryts); 50] ddo (дид. / Tsez); 51] cu-x-bg (др.болг. / Old Bulgarian); 52] goh (др.в.нем. / Old High German); 53] gem-x-old (др.герм. / Old Germanic); 54] hbo (др.евр. / Ancient Hebrew); 55] sa (др.инд. / Old Indic); 56] x-oldirn (др.иран. / Proto-Iranian); 57] sga (др.ирл. / Old Irish); 58] non-x-is (др.исл. / Old Icelandic); 59] peo (др.перс. / Old Persian); 60] prg (др.прусс. / Old Prussian); 61] orv (др.русск. / Old Russian); 62] osx (др.сакс. / Old Saxon); 63] non (др.сев. / Old Norse); 64] x-oldsl (др.слав. / Proto-Slavic); 65] zza (заза / Zazaki); 66] os-x-iron (и. / Iron Ossetic); 67] ine (и.е. / Proto-Indo-European); 68] inh (инг. / Ingush); 69] inc (инд. / Indic); 70] ira (иран. / (Proto-?)Iranian); 71] ga (ирл. / Irish); 72] es (исп. / Spanish); 73] it (ит. / Italian); 74] kbd (каб. / Kabardian); 75] kk (каз. / Kazakh); 76] tt-x-kazan (казан. / Kazan Tatar); 77] dar-x-kaitag (кайт. / Kaitag Dargwa); 78] xal (калм. / Kalmyk); 79] kap (капуч. / Bezhta); 80] kdr (караим. / Karaim); 81] krc-x-karachay (карач. / Karachay); 82] krl (карел. / Karelian); 83] ccs (картв. / South Caucasian); 84] x-nuristan (кафир. / Nuristani); 85] ug-x-kashgar (кашг. / Kashgari Uyghur); 86] cel (кельт. / Celtic); 87] ky (кирг. / Kyrgyz); 88] zh (кит. / Chinese); 89] kv (коми / Komi); 90] os-x-ksan (ксан. / Ksan Ossetic); 91] kum (кум. / Kumyk); 92] qwm (куман. / Cuman); 93] ku (курд. / Kurdish); 94] xbc (кушан. / Bactrian); 95] pgd (кхарошти / Gandhari); 96] lbe (лак. / Lak); 97] la (лат. / Latin); 98] lv (латыш. / Latvian); 99] lez (лезг. / Lezgian); 100] liv (лив. / Livonian); 101] lt (лит. / Lithuanian); 102] smi (лопар. / Sami); 103] wen (луж. / Sorbian); 104] ldd (лур. / Luri); 105] mzn (маз. / Mazanderani); 106] mns (манси / Mansi); 107] chm (мар. / Mari); 108] xmf (мегр. / Mingerlian); 109] xme (мид. / Median); 110] mn (монг. / Mongolian); 111] bua (монг. бурят. / Buryat); 112] cmg (монг. письм. / Classical Mongolian); 113] x-mordvin (морд. / Mordvinic); 114] el (н.гр. / Modern Greek); 115] de (нем. / German); 116] yrk (нен. / Nenets); 117] nl (нидерл. / Dutch); 118] nds (н.н.нем. / Low German); 119] nog (ног. / Nogai); 120] no (норв. / Norwegian); 121] nub (нубийское / Nubian); 122] oru (орм. / Ormuri); 123] os (ос. / Ossetic); 124] pal-x-pazend (паз. / Pazend); 125] pi (пали / Pali); 126] x-pamir (пам. / Pamir); 127] sgh-x-bartang (пам. барт. / Bartangi); 128] wbl (пам. в. / Wakhi); 129] sgy-x-zebak (пам. зеб. / Zebaki); 130] ydg (пам. и. / Yidgha); 131] isk (пам. ишк. / Ishkashimi); 132] mnj (пам. м. / Munji); 133] x-pamir-n (пам. н.?? / Pamir); 134] oru (пам. ор. / Ormuri); 135] x-rushani (пам. руш. / Rushani); 136] srh (пам. с. / Sarikoli); 137] sgy (пам. сгл. / Sanglechi); 138] sgh (пам. ш. / Shughni); 139] yah (пам. язг. / Yazgulyam); 140] prc (пар. / Parachi); 141] xpr (парф. / Parthian); 142] psh (пашан / Pashai (?)); 143] fa (перс. / Persian); 144] pal (пехл. / Middle Persian); 145] pal-x-turfan (пехл. турф. / Turfan Pahlavi); 146] pl (пол. / Polish); 147] ro (рум. / Romanian); 148] ru (русск. / Russian); 149] rut (рутул. / Rutul); 150] kho (сак. / Saka); 151] sva (сван. / Svan); 152] trk-x-north (сев. тюрк. / North Turkic); 153] inc-x-nnew (северные новоиндийские диалекты / North New Indic dialects); 154] sem (семит. / Semitic); 155] sr (серб. / Serbian); 156] syr (сир. / Syriac); 157] xsc (скиф. / Scythian); 158] sla (слав. / Slavic); 159] sl (слов. / Slovenian); 160] sog (согд. / Sogdian); 161] sog-x-chr (согд. христ. / Christian Sogdian); 162] gmh (ср.в.нем. / Middle High German); 163] inc-x-mid (ср.инд. / Middle Indic); 164] ira-x-mid (ср.иран. / Middle Iranian); 165] gml (ср.н.нем. / Middle Low German); 166] oos (ст.ос. / Old Ossetic); 167] cu (ст.слав. / Old Church Slavonic); 168] tab (табас. / Tabassaran); 169] tg (тадж. / Tajik); 170] tly (тал. / Talyshi); 171] tt (татар. / Tatar); 172] ttt (татск. / Tat (Muslim?)); 173] alt-x-teleut (телеут. / Teleut Altai); 174] bo (тибет. / Tibetan); 175] x-tchr (тохар. / Tocharian); 176] xto (тохар. A / Tocharian A); 177] txb (тохар. B / Tocharian B); 178] tr (тур. / Turkish); 179] bbl (туш. / Bats); 180] trk (тюрк. / Turkic); 181] uby (убых. / Ubykh); 182] udi (удин. / Udi); 183] udm (удм. / Udmurt); 184] uz (узб. / Uzbek); 185] ug (уйгур. / Uyghur); 186] uk (укр. / Ukrainian); 187] mn-x-uriankh (урянх. / Uriankhai); 188] fi (фин. / Finnish); 189] fr (фр. / French); 190] txh (фрак. / Thracian); 191] kca (ханты / Khanty); 192] khv (хварш. / Khwarshi); 193] ka-x-khevsur (хевсур. / Khevsur Georgian); 194] hit (хетт. / Hittite); 195] kjj (хиналуг. / Khinalugh); 196] khw (ховар. / Khowar); 197] hr (хорв. / Croatian); 198] zkh (хорезм. / Khwarezmian); 199] tkr (цахур. / Tsakhur); 200] rom (цыг. / Romani); 201] chg (чагат. / Chagatai); 202] cji (чамал. / Chamalal); 203] lzz (чан. / Laz); 204] x-crc (черк. / Circassian); 205] ce (чеч. / Chechen); 206] cs (чеш. / Czech); 207] cv (чув. / Chuvash); 208] ady (шапс. / Shapsug Adyghe); 209] sv (швед. / Swedish); 210] sux (шумер. / Sumerian); 211] evn (эвенк. / Evenki); 212] et (эст. / Estonian); 213] os-x-south (ю. / South Ossetic); 214] gbz-x-yzd (язди / Yazdi); 215] x-iazyg (языгский / Iazygean); 216] sah (якут. / Yakut); 217] yai (ягн. / Yaghnobi); 218] ja (япон. / Japanese)</a:documentation>
             <choice>
-               <data type="language"/>
+               <value>ady-x-abadz</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(абадз. / Abzakh) </a:documentation>
+               <value>abq</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(абаз. / Abaza) </a:documentation>
+               <value>ab</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(абх. / Abkhaz) </a:documentation>
+               <value>ae</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ав. / Avestan) </a:documentation>
+               <value>av</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(авар. / Avar) </a:documentation>
+               <value>agx</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(агул. / Aghul) </a:documentation>
+               <value>ady</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(адыг. / Adyghe) </a:documentation>
+               <value>aze</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(азерб. / Azerbaijani) </a:documentation>
+               <value>akk</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(аккад. / Akkadian) </a:documentation>
+               <value>dar-x-aqusha</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(акуш. / Aqusha Dargwa) </a:documentation>
+               <value>xln</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(алан. / Alanic) </a:documentation>
+               <value>sqj</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(алб. / Albanian) </a:documentation>
+               <value>alt</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(алт. / Altai) </a:documentation>
+               <value>tr-x-anat</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(анат. / Anatolian Turkish) </a:documentation>
+               <value>en</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(англ. / English) </a:documentation>
+               <value>ang</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(англос. / Old English) </a:documentation>
+               <value>ani</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(анд. / Andi) </a:documentation>
+               <value>iir</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ар. / Proto-Indo-Iranian) </a:documentation>
+               <value>ar</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(араб. / Arabic) </a:documentation>
+               <value>arc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(арам. / Aramaic) </a:documentation>
+               <value>xcl</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(арм. / (Classical) Armenian) </a:documentation>
+               <value>aqc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(арчин. / Archi) </a:documentation>
+               <value>aii</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ассир. / Assyrian) </a:documentation>
+               <value>ps</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(афг. / Pashto) </a:documentation>
+               <value>krc-x-balkar</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(балк. / Balkar) </a:documentation>
+               <value>eu</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(баск. / Basque) </a:documentation>
+               <value>ba</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(башк. / Bashkir) </a:documentation>
+               <value>x-balochi</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(бел. / Balochi) </a:documentation>
+               <value>be</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(белорусс. / Belarusian) </a:documentation>
+               <value>bg</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(болг. / Bulgarian) </a:documentation>
+               <value>br</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(брет. / Breton) </a:documentation>
+               <value>bdk</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(будух. / Budugh) </a:documentation>
+               <value>xbo</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(булг. / Bulgar) </a:documentation>
+               <value>bua</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(бурят. / Buryat) </a:documentation>
+               <value>sa-vaidika</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(вед. / Vedic) </a:documentation>
+               <value>x-vaynakh</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(вейнах. / Vaynakh) </a:documentation>
+               <value>hu</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(венг. / Hungarian) </a:documentation>
+               <value>vep</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(вепс. / Veps) </a:documentation>
+               <value>bsk</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(верш. / Burushaski) </a:documentation>
+               <value>gem</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(герм. / Proto-Germanic) </a:documentation>
+               <value>glk</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(гилян. / Gilaki) </a:documentation>
+               <value>got</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(гот. / Gothic) </a:documentation>
+               <value>grc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(гр. / (Ancient) Greek) </a:documentation>
+               <value>ka</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(груз. / Georgian) </a:documentation>
+               <value>hac</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(гуран. / Gorani) </a:documentation>
+               <value>os-x-digor</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(д. / Digor Ossetic) </a:documentation>
+               <value>dar</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(дарг. / Dargwa) </a:documentation>
+               <value>chg</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(джагат. / Chagatai) </a:documentation>
+               <value>kry-x-jek</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(джекск. / Jek Kryts) </a:documentation>
+               <value>ddo</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(дид. / Tsez) </a:documentation>
+               <value>cu-x-bg</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.болг. / Old Bulgarian) </a:documentation>
+               <value>goh</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.в.нем. / Old High German) </a:documentation>
+               <value>gem-x-old</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.герм. / Old Germanic) </a:documentation>
+               <value>hbo</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.евр. / Ancient Hebrew) </a:documentation>
+               <value>sa</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.инд. / Old Indic) </a:documentation>
+               <value>x-oldirn</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.иран. / Proto-Iranian) </a:documentation>
+               <value>sga</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.ирл. / Old Irish) </a:documentation>
+               <value>non-x-is</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.исл. / Old Icelandic) </a:documentation>
+               <value>peo</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.перс. / Old Persian) </a:documentation>
+               <value>prg</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.прусс. / Old Prussian) </a:documentation>
+               <value>orv</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.русск. / Old Russian) </a:documentation>
+               <value>osx</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.сакс. / Old Saxon) </a:documentation>
+               <value>non</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.сев. / Old Norse) </a:documentation>
+               <value>x-oldsl</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.слав. / Proto-Slavic) </a:documentation>
+               <value>zza</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(заза / Zazaki) </a:documentation>
+               <value>os-x-iron</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(и. / Iron Ossetic) </a:documentation>
+               <value>ine</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(и.е. / Proto-Indo-European) </a:documentation>
+               <value>inh</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(инг. / Ingush) </a:documentation>
+               <value>inc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(инд. / Indic) </a:documentation>
+               <value>ira</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(иран. / (Proto-?)Iranian) </a:documentation>
+               <value>ga</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ирл. / Irish) </a:documentation>
+               <value>es</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(исп. / Spanish) </a:documentation>
+               <value>it</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ит. / Italian) </a:documentation>
+               <value>kbd</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(каб. / Kabardian) </a:documentation>
+               <value>kk</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(каз. / Kazakh) </a:documentation>
+               <value>tt-x-kazan</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(казан. / Kazan Tatar) </a:documentation>
+               <value>dar-x-kaitag</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(кайт. / Kaitag Dargwa) </a:documentation>
+               <value>xal</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(калм. / Kalmyk) </a:documentation>
+               <value>kap</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(капуч. / Bezhta) </a:documentation>
+               <value>kdr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(караим. / Karaim) </a:documentation>
+               <value>krc-x-karachay</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(карач. / Karachay) </a:documentation>
+               <value>krl</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(карел. / Karelian) </a:documentation>
+               <value>ccs</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(картв. / South Caucasian) </a:documentation>
+               <value>x-nuristan</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(кафир. / Nuristani) </a:documentation>
+               <value>ug-x-kashgar</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(кашг. / Kashgari Uyghur) </a:documentation>
+               <value>cel</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(кельт. / Celtic) </a:documentation>
+               <value>ky</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(кирг. / Kyrgyz) </a:documentation>
+               <value>zh</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(кит. / Chinese) </a:documentation>
+               <value>kv</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(коми / Komi) </a:documentation>
+               <value>os-x-ksan</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ксан. / Ksan Ossetic) </a:documentation>
+               <value>kum</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(кум. / Kumyk) </a:documentation>
+               <value>qwm</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(куман. / Cuman) </a:documentation>
+               <value>ku</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(курд. / Kurdish) </a:documentation>
+               <value>xbc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(кушан. / Bactrian) </a:documentation>
+               <value>pgd</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(кхарошти / Gandhari) </a:documentation>
+               <value>lbe</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(лак. / Lak) </a:documentation>
+               <value>la</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(лат. / Latin) </a:documentation>
+               <value>lv</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(латыш. / Latvian) </a:documentation>
+               <value>lez</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(лезг. / Lezgian) </a:documentation>
+               <value>liv</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(лив. / Livonian) </a:documentation>
+               <value>lt</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(лит. / Lithuanian) </a:documentation>
+               <value>smi</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(лопар. / Sami) </a:documentation>
+               <value>wen</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(луж. / Sorbian) </a:documentation>
+               <value>ldd</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(лур. / Luri) </a:documentation>
+               <value>mzn</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(маз. / Mazanderani) </a:documentation>
+               <value>mns</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(манси / Mansi) </a:documentation>
+               <value>chm</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(мар. / Mari) </a:documentation>
+               <value>xmf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(мегр. / Mingerlian) </a:documentation>
+               <value>xme</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(мид. / Median) </a:documentation>
+               <value>mn</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(монг. / Mongolian) </a:documentation>
+               <value>bua</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(монг. бурят. / Buryat) </a:documentation>
+               <value>cmg</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(монг. письм. / Classical Mongolian) </a:documentation>
+               <value>x-mordvin</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(морд. / Mordvinic) </a:documentation>
+               <value>el</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(н.гр. / Modern Greek) </a:documentation>
+               <value>de</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(нем. / German) </a:documentation>
+               <value>yrk</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(нен. / Nenets) </a:documentation>
+               <value>nl</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(нидерл. / Dutch) </a:documentation>
+               <value>nds</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(н.н.нем. / Low German) </a:documentation>
+               <value>nog</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ног. / Nogai) </a:documentation>
+               <value>no</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(норв. / Norwegian) </a:documentation>
+               <value>nub</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(нубийское / Nubian) </a:documentation>
+               <value>oru</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(орм. / Ormuri) </a:documentation>
+               <value>os</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ос. / Ossetic) </a:documentation>
+               <value>pal-x-pazend</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(паз. / Pazend) </a:documentation>
+               <value>pi</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пали / Pali) </a:documentation>
+               <value>x-pamir</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. / Pamir) </a:documentation>
+               <value>sgh-x-bartang</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. барт. / Bartangi) </a:documentation>
+               <value>wbl</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. в. / Wakhi) </a:documentation>
+               <value>sgy-x-zebak</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. зеб. / Zebaki) </a:documentation>
+               <value>ydg</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. и. / Yidgha) </a:documentation>
+               <value>isk</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. ишк. / Ishkashimi) </a:documentation>
+               <value>mnj</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. м. / Munji) </a:documentation>
+               <value>x-pamir-n</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. н.?? / Pamir) </a:documentation>
+               <value>oru</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. ор. / Ormuri) </a:documentation>
+               <value>x-rushani</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. руш. / Rushani) </a:documentation>
+               <value>srh</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. с. / Sarikoli) </a:documentation>
+               <value>sgy</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. сгл. / Sanglechi) </a:documentation>
+               <value>sgh</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. ш. / Shughni) </a:documentation>
+               <value>yah</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. язг. / Yazgulyam) </a:documentation>
+               <value>prc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пар. / Parachi) </a:documentation>
+               <value>xpr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(парф. / Parthian) </a:documentation>
+               <value>psh</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пашан / Pashai (?)) </a:documentation>
+               <value>fa</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(перс. / Persian) </a:documentation>
+               <value>pal</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пехл. / Middle Persian) </a:documentation>
+               <value>pal-x-turfan</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пехл. турф. / Turfan Pahlavi) </a:documentation>
+               <value>pl</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пол. / Polish) </a:documentation>
+               <value>ro</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(рум. / Romanian) </a:documentation>
+               <value>ru</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(русск. / Russian) </a:documentation>
+               <value>rut</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(рутул. / Rutul) </a:documentation>
+               <value>kho</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(сак. / Saka) </a:documentation>
+               <value>sva</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(сван. / Svan) </a:documentation>
+               <value>trk-x-north</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(сев. тюрк. / North Turkic) </a:documentation>
+               <value>inc-x-nnew</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(северные новоиндийские диалекты / North New Indic
+                                        dialects) </a:documentation>
+               <value>sem</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(семит. / Semitic) </a:documentation>
+               <value>sr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(серб. / Serbian) </a:documentation>
+               <value>syr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(сир. / Syriac) </a:documentation>
+               <value>xsc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(скиф. / Scythian) </a:documentation>
+               <value>sla</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(слав. / Slavic) </a:documentation>
+               <value>sl</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(слов. / Slovenian) </a:documentation>
+               <value>sog</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(согд. / Sogdian) </a:documentation>
+               <value>sog-x-chr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(согд. христ. / Christian Sogdian) </a:documentation>
+               <value>gmh</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ср.в.нем. / Middle High German) </a:documentation>
+               <value>inc-x-mid</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ср.инд. / Middle Indic) </a:documentation>
+               <value>ira-x-mid</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ср.иран. / Middle Iranian) </a:documentation>
+               <value>gml</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ср.н.нем. / Middle Low German) </a:documentation>
+               <value>oos</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ст.ос. / Old Ossetic) </a:documentation>
+               <value>cu</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ст.слав. / Old Church Slavonic) </a:documentation>
+               <value>tab</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(табас. / Tabassaran) </a:documentation>
+               <value>tg</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(тадж. / Tajik) </a:documentation>
+               <value>tly</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(тал. / Talyshi) </a:documentation>
+               <value>tt</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(татар. / Tatar) </a:documentation>
+               <value>ttt</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(татск. / Tat (Muslim?)) </a:documentation>
+               <value>alt-x-teleut</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(телеут. / Teleut Altai) </a:documentation>
+               <value>bo</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(тибет. / Tibetan) </a:documentation>
+               <value>x-tchr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(тохар. / Tocharian) </a:documentation>
+               <value>xto</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(тохар. A / Tocharian A) </a:documentation>
+               <value>txb</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(тохар. B / Tocharian B) </a:documentation>
+               <value>tr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(тур. / Turkish) </a:documentation>
+               <value>bbl</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(туш. / Bats) </a:documentation>
+               <value>trk</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(тюрк. / Turkic) </a:documentation>
+               <value>uby</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(убых. / Ubykh) </a:documentation>
+               <value>udi</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(удин. / Udi) </a:documentation>
+               <value>udm</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(удм. / Udmurt) </a:documentation>
+               <value>uz</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(узб. / Uzbek) </a:documentation>
+               <value>ug</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(уйгур. / Uyghur) </a:documentation>
+               <value>uk</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(укр. / Ukrainian) </a:documentation>
+               <value>mn-x-uriankh</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(урянх. / Uriankhai) </a:documentation>
+               <value>fi</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(фин. / Finnish) </a:documentation>
+               <value>fr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(фр. / French) </a:documentation>
+               <value>txh</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(фрак. / Thracian) </a:documentation>
+               <value>kca</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ханты / Khanty) </a:documentation>
+               <value>khv</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(хварш. / Khwarshi) </a:documentation>
+               <value>ka-x-khevsur</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(хевсур. / Khevsur Georgian) </a:documentation>
+               <value>hit</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(хетт. / Hittite) </a:documentation>
+               <value>kjj</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(хиналуг. / Khinalugh) </a:documentation>
+               <value>khw</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ховар. / Khowar) </a:documentation>
+               <value>hr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(хорв. / Croatian) </a:documentation>
+               <value>zkh</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(хорезм. / Khwarezmian) </a:documentation>
+               <value>tkr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(цахур. / Tsakhur) </a:documentation>
+               <value>rom</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(цыг. / Romani) </a:documentation>
+               <value>chg</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(чагат. / Chagatai) </a:documentation>
+               <value>cji</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(чамал. / Chamalal) </a:documentation>
+               <value>lzz</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(чан. / Laz) </a:documentation>
+               <value>x-crc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(черк. / Circassian) </a:documentation>
+               <value>ce</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(чеч. / Chechen) </a:documentation>
+               <value>cs</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(чеш. / Czech) </a:documentation>
+               <value>cv</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(чув. / Chuvash) </a:documentation>
+               <value>ady</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(шапс. / Shapsug Adyghe) </a:documentation>
+               <value>sv</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(швед. / Swedish) </a:documentation>
+               <value>sux</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(шумер. / Sumerian) </a:documentation>
+               <value>evn</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(эвенк. / Evenki) </a:documentation>
+               <value>et</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(эст. / Estonian) </a:documentation>
+               <value>os-x-south</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ю. / South Ossetic) </a:documentation>
+               <value>gbz-x-yzd</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(язди / Yazdi) </a:documentation>
+               <value>x-iazyg</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(языгский / Iazygean) </a:documentation>
+               <value>sah</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(якут. / Yakut) </a:documentation>
+               <value>yai</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ягн. / Yaghnobi) </a:documentation>
+               <value>ja</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(япон. / Japanese) </a:documentation>
                <choice>
-                  <value/>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <data type="language"/>
+                  <choice>
+                     <value/>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  </choice>
                </choice>
             </choice>
          </attribute>
@@ -3440,7 +3880,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      context=".[@type = 'translation']">
+                      context="tei:cit[@type = 'translation']">
                <sch:assert test="(@xml:lang = 'ru') or (@xml:lang = 'en')">Translation must be in Russian (xml:lang = ru) or English
                                     (xml:lang = en).</sch:assert>
             </sch:rule>

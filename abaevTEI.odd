@@ -16,19 +16,679 @@
                 <moduleRef key="certainty"/>
                 <classSpec module="tei" type="atts" ident="att.global" mode="change">
                     <attList>
-                        <!--                <attDef ident="xml:lang" mode="change">
-                    <valList type="semi" mode="replace">
-                        <valItem ident="ady-x-abadz"><gloss>абадз. / Abadzekh Adyghe</gloss></valItem>
-                        <valItem ident="abq"><gloss>абаз. / Abaza</gloss></valItem>
-                        <valItem ident="ab"><gloss>аб. / Abkhaz</gloss></valItem>
-                        <valItem ident="os"><gloss>ос. / Ossetic</gloss></valItem>
-                        <valItem ident="os-x-iron"><gloss>и. / Iron Ossetic</gloss></valItem>
-                        <valItem ident="os-x-digor"><gloss>д. / Digor Ossetic</gloss></valItem>            
-                        <valItem ident="os-x-south"><gloss>ю. / South Ossetic</gloss></valItem>                                   
-                        <valItem ident="ru"><gloss>рус. / Russian</gloss></valItem>
-                        <valItem ident="en"><gloss>англ. / English</gloss></valItem>
-                    </valList>
-                </attDef>-->
+                        <attDef ident="xml:lang" mode="change">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="ady-x-abadz">
+                                    <gloss>абадз. / Abzakh</gloss>
+                                </valItem>
+                                <valItem ident="abq">
+                                    <gloss>абаз. / Abaza</gloss>
+                                </valItem>
+                                <valItem ident="ab">
+                                    <gloss>абх. / Abkhaz</gloss>
+                                </valItem>
+                                <valItem ident="ae">
+                                    <gloss>ав. / Avestan</gloss>
+                                </valItem>
+                                <valItem ident="av">
+                                    <gloss>авар. / Avar</gloss>
+                                </valItem>
+                                <valItem ident="agx">
+                                    <gloss>агул. / Aghul</gloss>
+                                </valItem>
+                                <valItem ident="ady">
+                                    <gloss>адыг. / Adyghe</gloss>
+                                </valItem>
+                                <valItem ident="aze">
+                                    <gloss>азерб. / Azerbaijani</gloss>
+                                </valItem>
+                                <valItem ident="akk">
+                                    <gloss>аккад. / Akkadian</gloss>
+                                </valItem>
+                                <valItem ident="dar-x-aqusha">
+                                    <gloss>акуш. / Aqusha Dargwa</gloss>
+                                </valItem>
+                                <valItem ident="xln">
+                                    <gloss>алан. / Alanic</gloss>
+                                </valItem>
+                                <valItem ident="sqj">
+                                    <gloss>алб. / Albanian</gloss>
+                                </valItem>
+                                <valItem ident="alt">
+                                    <gloss>алт. / Altai</gloss>
+                                </valItem>
+                                <valItem ident="tr-x-anat">
+                                    <gloss>анат. / Anatolian Turkish</gloss>
+                                </valItem>
+                                <valItem ident="en">
+                                    <gloss>англ. / English</gloss>
+                                </valItem>
+                                <valItem ident="ang">
+                                    <gloss>англос. / Old English</gloss>
+                                </valItem>
+                                <valItem ident="ani">
+                                    <gloss>анд. / Andi</gloss>
+                                </valItem>
+                                <valItem ident="iir">
+                                    <gloss>ар. / Proto-Indo-Iranian</gloss>
+                                </valItem>
+                                <!-- Check this-->
+                                <valItem ident="ar">
+                                    <gloss>араб. / Arabic</gloss>
+                                </valItem>
+                                <valItem ident="arc">
+                                    <gloss>арам. / Aramaic</gloss>
+                                </valItem>
+                                <valItem ident="xcl">
+                                    <gloss>арм. / (Classical) Armenian</gloss>
+                                </valItem>
+                                <valItem ident="aqc">
+                                    <gloss>арчин. / Archi</gloss>
+                                </valItem>
+                                <valItem ident="aii">
+                                    <gloss>ассир. / Assyrian</gloss>
+                                </valItem>
+                                <!-- check -->
+                                <valItem ident="ps">
+                                    <gloss>афг. / Pashto</gloss>
+                                </valItem>
+                                <valItem ident="krc-x-balkar">
+                                    <gloss>балк. / Balkar</gloss>
+                                </valItem>
+                                <valItem ident="eu">
+                                    <gloss>баск. / Basque</gloss>
+                                </valItem>
+                                <valItem ident="ba">
+                                    <gloss>башк. / Bashkir</gloss>
+                                </valItem>
+                                <valItem ident="x-balochi">
+                                    <gloss>бел. / Balochi</gloss>
+                                </valItem>
+                                <valItem ident="be">
+                                    <gloss>белорусс. / Belarusian</gloss>
+                                </valItem>
+                                <valItem ident="bg">
+                                    <gloss>болг. / Bulgarian</gloss>
+                                </valItem>
+                                <valItem ident="br">
+                                    <gloss>брет. / Breton</gloss>
+                                </valItem>
+                                <valItem ident="bdk">
+                                    <gloss>будух. / Budugh</gloss>
+                                </valItem>
+                                <valItem ident="xbo">
+                                    <gloss>булг. / Bulgar</gloss>
+                                </valItem>
+                                <valItem ident="bua">
+                                    <gloss>бурят. / Buryat</gloss>
+                                </valItem>
+                                <valItem ident="sa-vaidika">
+                                    <gloss>вед. / Vedic</gloss>
+                                </valItem>
+                                <valItem ident="x-vaynakh">
+                                    <gloss>вейнах. / Vaynakh</gloss>
+                                </valItem>
+                                <valItem ident="hu">
+                                    <gloss>венг. / Hungarian</gloss>
+                                </valItem>
+                                <valItem ident="vep">
+                                    <gloss>вепс. / Veps</gloss>
+                                </valItem>
+                                <valItem ident="bsk">
+                                    <gloss>верш. / Burushaski</gloss>
+                                </valItem>
+                                <valItem ident="gem">
+                                    <gloss>герм. / Proto-Germanic</gloss>
+                                </valItem>
+                                <!-- check -->
+                                <valItem ident="glk">
+                                    <gloss>гилян. / Gilaki</gloss>
+                                </valItem>
+                                <valItem ident="got">
+                                    <gloss>гот. / Gothic</gloss>
+                                </valItem>
+                                <valItem ident="grc">
+                                    <gloss>гр. / (Ancient) Greek</gloss>
+                                </valItem>
+                                <!-- check -->
+                                <valItem ident="ka">
+                                    <gloss>груз. / Georgian</gloss>
+                                </valItem>
+                                <!-- ancient or modern? probably both -->
+                                <valItem ident="hac">
+                                    <gloss>гуран. / Gorani</gloss>
+                                </valItem>
+                                <valItem ident="os-x-digor">
+                                    <gloss>д. / Digor Ossetic</gloss>
+                                </valItem>
+                                <valItem ident="dar">
+                                    <gloss>дарг. / Dargwa</gloss>
+                                </valItem>
+                                <valItem ident="chg">
+                                    <gloss>джагат. / Chagatai</gloss>
+                                </valItem>
+                                <valItem ident="kry-x-jek">
+                                    <gloss>джекск. / Jek Kryts</gloss>
+                                </valItem>
+                                <valItem ident="ddo">
+                                    <gloss>дид. / Tsez</gloss>
+                                </valItem>
+                                <valItem ident="cu-x-bg">
+                                    <gloss>др.болг. / Old Bulgarian</gloss>
+                                </valItem>
+                                <valItem ident="goh">
+                                    <gloss>др.в.нем. / Old High German</gloss>
+                                </valItem>
+                                <valItem ident="gem-x-old">
+                                    <gloss>др.герм. / Old Germanic</gloss>
+                                </valItem>
+                                <valItem ident="hbo">
+                                    <gloss>др.евр. / Ancient Hebrew</gloss>
+                                </valItem>
+                                <valItem ident="sa">
+                                    <gloss>др.инд. / Old Indic</gloss>
+                                </valItem>
+                                <valItem ident="x-oldirn">
+                                    <gloss>др.иран. / Proto-Iranian</gloss>
+                                </valItem>
+                                <!-- check -->
+                                <valItem ident="sga">
+                                    <gloss>др.ирл. / Old Irish</gloss>
+                                </valItem>
+                                <valItem ident="non-x-is">
+                                    <gloss>др.исл. / Old Icelandic</gloss>
+                                </valItem>
+                                <!-- treated as variant of Old Norse -->
+                                <valItem ident="peo">
+                                    <gloss>др.перс. / Old Persian</gloss>
+                                </valItem>
+                                <valItem ident="prg">
+                                    <gloss>др.прусс. / Old Prussian</gloss>
+                                </valItem>
+                                <valItem ident="orv">
+                                    <gloss>др.русск. / Old Russian</gloss>
+                                </valItem>
+                                <valItem ident="osx">
+                                    <gloss>др.сакс. / Old Saxon</gloss>
+                                </valItem>
+                                <valItem ident="non">
+                                    <gloss>др.сев. / Old Norse</gloss>
+                                </valItem>
+                                <valItem ident="x-oldsl">
+                                    <gloss>др.слав. / Proto-Slavic</gloss>
+                                </valItem>
+                                <!-- check -->
+                                <valItem ident="zza">
+                                    <gloss>заза / Zazaki</gloss>
+                                </valItem>
+                                <valItem ident="os-x-iron">
+                                    <gloss>и. / Iron Ossetic</gloss>
+                                </valItem>
+                                <valItem ident="ine">
+                                    <gloss>и.е. / Proto-Indo-European</gloss>
+                                </valItem>
+                                <!-- check -->
+                                <valItem ident="inh">
+                                    <gloss>инг. / Ingush</gloss>
+                                </valItem>
+                                <valItem ident="inc">
+                                    <gloss>инд. / Indic</gloss>
+                                </valItem>
+                                <!-- check -->
+                                <!-- not clear what this is (Proto-IA?); doesn't seem to be attested -->
+                                <valItem ident="ira">
+                                    <gloss>иран. / (Proto-?)Iranian</gloss>
+                                </valItem>
+                                <!-- check -->
+                                <valItem ident="ga">
+                                    <gloss>ирл. / Irish</gloss>
+                                </valItem>
+                                <valItem ident="es">
+                                    <gloss>исп. / Spanish</gloss>
+                                </valItem>
+                                <valItem ident="it">
+                                    <gloss>ит. / Italian</gloss>
+                                </valItem>
+                                <valItem ident="kbd">
+                                    <gloss>каб. / Kabardian</gloss>
+                                </valItem>
+                                <valItem ident="kk">
+                                    <gloss>каз. / Kazakh</gloss>
+                                </valItem>
+                                <valItem ident="tt-x-kazan">
+                                    <gloss>казан. / Kazan Tatar</gloss>
+                                </valItem>
+                                <valItem ident="dar-x-kaitag">
+                                    <gloss>кайт. / Kaitag Dargwa</gloss>
+                                </valItem>
+                                <valItem ident="xal">
+                                    <gloss>калм. / Kalmyk</gloss>
+                                </valItem>
+                                <valItem ident="kap">
+                                    <gloss>капуч. / Bezhta</gloss>
+                                </valItem>
+                                <valItem ident="kdr">
+                                    <gloss>караим. / Karaim</gloss>
+                                </valItem>
+                                <valItem ident="krc-x-karachay">
+                                    <gloss>карач. / Karachay</gloss>
+                                </valItem>
+                                <valItem ident="krl">
+                                    <gloss>карел. / Karelian</gloss>
+                                </valItem>
+                                <valItem ident="ccs">
+                                    <gloss>картв. / South Caucasian</gloss>
+                                </valItem>
+                                <!-- check -->
+                                <valItem ident="x-nuristan">
+                                    <gloss>кафир. / Nuristani</gloss>
+                                </valItem>
+                                <valItem ident="ug-x-kashgar">
+                                    <gloss>кашг. / Kashgari Uyghur</gloss>
+                                </valItem>
+                                <valItem ident="cel">
+                                    <gloss>кельт. / Celtic</gloss>
+                                </valItem>
+                                <valItem ident="ky">
+                                    <gloss>кирг. / Kyrgyz</gloss>
+                                </valItem>
+                                <valItem ident="zh">
+                                    <gloss>кит. / Chinese</gloss>
+                                </valItem>
+                                <valItem ident="kv">
+                                    <gloss>коми / Komi</gloss>
+                                </valItem>
+                                <valItem ident="os-x-ksan">
+                                    <gloss>ксан. / Ksan Ossetic</gloss>
+                                </valItem>
+                                <valItem ident="kum">
+                                    <gloss>кум. / Kumyk</gloss>
+                                </valItem>
+                                <valItem ident="qwm">
+                                    <gloss>куман. / Cuman</gloss>
+                                </valItem>
+                                <valItem ident="ku">
+                                    <gloss>курд. / Kurdish</gloss>
+                                </valItem>
+                                <valItem ident="xbc">
+                                    <gloss>кушан. / Bactrian</gloss>
+                                </valItem>
+                                <valItem ident="pgd">
+                                    <gloss>кхарошти / Gandhari</gloss>
+                                </valItem>
+                                <valItem ident="lbe">
+                                    <gloss>лак. / Lak</gloss>
+                                </valItem>
+                                <valItem ident="la">
+                                    <gloss>лат. / Latin</gloss>
+                                </valItem>
+                                <valItem ident="lv">
+                                    <gloss>латыш. / Latvian</gloss>
+                                </valItem>
+                                <valItem ident="lez">
+                                    <gloss>лезг. / Lezgian</gloss>
+                                </valItem>
+                                <valItem ident="liv">
+                                    <gloss>лив. / Livonian</gloss>
+                                </valItem>
+                                <valItem ident="lt">
+                                    <gloss>лит. / Lithuanian</gloss>
+                                </valItem>
+                                <valItem ident="smi">
+                                    <gloss>лопар. / Sami</gloss>
+                                </valItem>
+                                <valItem ident="wen">
+                                    <gloss>луж. / Sorbian</gloss>
+                                </valItem>
+                                <valItem ident="ldd">
+                                    <gloss>лур. / Luri</gloss>
+                                </valItem>
+                                <valItem ident="mzn">
+                                    <gloss>маз. / Mazanderani</gloss>
+                                </valItem>
+                                <valItem ident="mns">
+                                    <gloss>манси / Mansi</gloss>
+                                </valItem>
+                                <valItem ident="chm">
+                                    <gloss>мар. / Mari</gloss>
+                                </valItem>
+                                <valItem ident="xmf">
+                                    <gloss>мегр. / Mingerlian</gloss>
+                                </valItem>
+                                <valItem ident="xme">
+                                    <gloss>мид. / Median</gloss>
+                                </valItem>
+                                <valItem ident="mn">
+                                    <gloss>монг. / Mongolian</gloss>
+                                </valItem>
+                                <valItem ident="bua">
+                                    <gloss>монг. бурят. / Buryat</gloss>
+                                </valItem>
+                                <valItem ident="cmg">
+                                    <gloss>монг. письм. / Classical Mongolian</gloss>
+                                </valItem>
+                                <!-- check -->
+                                <valItem ident="x-mordvin">
+                                    <gloss>морд. / Mordvinic</gloss>
+                                </valItem>
+                                <valItem ident="el">
+                                    <gloss>н.гр. / Modern Greek</gloss>
+                                </valItem>
+                                <valItem ident="de">
+                                    <gloss>нем. / German</gloss>
+                                </valItem>
+                                <valItem ident="yrk">
+                                    <gloss>нен. / Nenets</gloss>
+                                </valItem>
+                                <valItem ident="nl">
+                                    <gloss>нидерл. / Dutch</gloss>
+                                </valItem>
+                                <valItem ident="nds">
+                                    <gloss>н.н.нем. / Low German</gloss>
+                                </valItem>
+                                <valItem ident="nog">
+                                    <gloss>ног. / Nogai</gloss>
+                                </valItem>
+                                <valItem ident="no">
+                                    <gloss>норв. / Norwegian</gloss>
+                                </valItem>
+                                <valItem ident="nub">
+                                    <gloss>нубийское / Nubian</gloss>
+                                </valItem>
+                                <valItem ident="oru">
+                                    <gloss>орм. / Ormuri</gloss>
+                                </valItem>
+                                <valItem ident="os">
+                                    <gloss>ос. / Ossetic</gloss>
+                                </valItem>
+                                <valItem ident="pal-x-pazend">
+                                    <gloss>паз. / Pazend</gloss>
+                                </valItem>
+                                <valItem ident="pi">
+                                    <gloss>пали / Pali</gloss>
+                                </valItem>
+                                <valItem ident="x-pamir">
+                                    <gloss>пам. / Pamir</gloss>
+                                </valItem>
+                                <valItem ident="sgh-x-bartang">
+                                    <gloss>пам. барт. / Bartangi</gloss>
+                                </valItem>
+                                <valItem ident="wbl">
+                                    <gloss>пам. в. / Wakhi</gloss>
+                                </valItem>
+                                <valItem ident="sgy-x-zebak">
+                                    <gloss>пам. зеб. / Zebaki</gloss>
+                                </valItem>
+                                <valItem ident="ydg">
+                                    <gloss>пам. и. / Yidgha</gloss>
+                                </valItem>
+                                <valItem ident="isk">
+                                    <gloss>пам. ишк. / Ishkashimi</gloss>
+                                </valItem>
+                                <valItem ident="mnj">
+                                    <gloss>пам. м. / Munji</gloss>
+                                </valItem>
+                                <valItem ident="x-pamir-n">
+                                    <gloss>пам. н.?? / Pamir</gloss>
+                                </valItem>
+                                <valItem ident="oru">
+                                    <gloss>пам. ор. / Ormuri</gloss>
+                                </valItem>
+                                <valItem ident="x-rushani">
+                                    <gloss>пам. руш. / Rushani</gloss>
+                                </valItem>
+                                <valItem ident="srh">
+                                    <gloss>пам. с. / Sarikoli</gloss>
+                                </valItem>
+                                <valItem ident="sgy">
+                                    <gloss>пам. сгл. / Sanglechi</gloss>
+                                </valItem>
+                                <valItem ident="sgh">
+                                    <gloss>пам. ш. / Shughni</gloss>
+                                </valItem>
+                                <valItem ident="yah">
+                                    <gloss>пам. язг. / Yazgulyam</gloss>
+                                </valItem>
+                                <valItem ident="prc">
+                                    <gloss>пар. / Parachi</gloss>
+                                </valItem>
+                                <valItem ident="xpr">
+                                    <gloss>парф. / Parthian</gloss>
+                                </valItem>
+                                <valItem ident="psh">
+                                    <gloss>пашан / Pashai (?)</gloss>
+                                </valItem>
+                                <valItem ident="fa">
+                                    <gloss>перс. / Persian</gloss>
+                                </valItem>
+                                <valItem ident="pal">
+                                    <gloss>пехл. / Middle Persian</gloss>
+                                </valItem>
+                                <valItem ident="pal-x-turfan">
+                                    <gloss>пехл. турф. / Turfan Pahlavi</gloss>
+                                </valItem>
+                                <valItem ident="pl">
+                                    <gloss>пол. / Polish</gloss>
+                                </valItem>
+                                <valItem ident="ro">
+                                    <gloss>рум. / Romanian</gloss>
+                                </valItem>
+                                <valItem ident="ru">
+                                    <gloss>русск. / Russian</gloss>
+                                </valItem>
+                                <valItem ident="rut">
+                                    <gloss>рутул. / Rutul</gloss>
+                                </valItem>
+                                <valItem ident="kho">
+                                    <gloss>сак. / Saka</gloss>
+                                </valItem>
+                                <valItem ident="sva">
+                                    <gloss>сван. / Svan</gloss>
+                                </valItem>
+                                <valItem ident="trk-x-north">
+                                    <gloss>сев. тюрк. / North Turkic</gloss>
+                                </valItem>
+                                <valItem ident="inc-x-nnew">
+                                    <gloss>северные новоиндийские диалекты / North New Indic
+                                        dialects</gloss>
+                                </valItem>
+                                <valItem ident="sem">
+                                    <gloss>семит. / Semitic</gloss>
+                                </valItem>
+                                <valItem ident="sr">
+                                    <gloss>серб. / Serbian</gloss>
+                                </valItem>
+                                <valItem ident="syr">
+                                    <gloss>сир. / Syriac</gloss>
+                                </valItem>
+                                <valItem ident="xsc">
+                                    <gloss>скиф. / Scythian</gloss>
+                                </valItem>
+                                <valItem ident="sla">
+                                    <gloss>слав. / Slavic</gloss>
+                                </valItem>
+                                <valItem ident="sl">
+                                    <gloss>слов. / Slovenian</gloss>
+                                </valItem>
+                                <valItem ident="sog">
+                                    <gloss>согд. / Sogdian</gloss>
+                                </valItem>
+                                <valItem ident="sog-x-chr">
+                                    <gloss>согд. христ. / Christian Sogdian</gloss>
+                                </valItem>
+                                <valItem ident="gmh">
+                                    <gloss>ср.в.нем. / Middle High German</gloss>
+                                </valItem>
+                                <valItem ident="inc-x-mid">
+                                    <gloss>ср.инд. / Middle Indic</gloss>
+                                </valItem>
+                                <valItem ident="ira-x-mid">
+                                    <gloss>ср.иран. / Middle Iranian</gloss>
+                                </valItem>
+                                <valItem ident="gml">
+                                    <gloss>ср.н.нем. / Middle Low German</gloss>
+                                </valItem>
+                                <valItem ident="oos">
+                                    <gloss>ст.ос. / Old Ossetic</gloss>
+                                </valItem>
+                                <valItem ident="cu">
+                                    <gloss>ст.слав. / Old Church Slavonic</gloss>
+                                </valItem>
+                                <valItem ident="tab">
+                                    <gloss>табас. / Tabassaran</gloss>
+                                </valItem>
+                                <valItem ident="tg">
+                                    <gloss>тадж. / Tajik</gloss>
+                                </valItem>
+                                <valItem ident="tly">
+                                    <gloss>тал. / Talyshi</gloss>
+                                </valItem>
+                                <valItem ident="tt">
+                                    <gloss>татар. / Tatar</gloss>
+                                </valItem>
+                                <valItem ident="ttt">
+                                    <gloss>татск. / Tat (Muslim?)</gloss>
+                                </valItem>
+                                <valItem ident="alt-x-teleut">
+                                    <gloss>телеут. / Teleut Altai</gloss>
+                                </valItem>
+                                <valItem ident="bo">
+                                    <gloss>тибет. / Tibetan</gloss>
+                                </valItem>
+                                <valItem ident="x-tchr">
+                                    <gloss>тохар. / Tocharian</gloss>
+                                </valItem>
+                                <valItem ident="xto">
+                                    <gloss>тохар. A / Tocharian A</gloss>
+                                </valItem>
+                                <valItem ident="txb">
+                                    <gloss>тохар. B / Tocharian B</gloss>
+                                </valItem>
+                                <valItem ident="tr">
+                                    <gloss>тур. / Turkish</gloss>
+                                </valItem>
+                                <valItem ident="bbl">
+                                    <gloss>туш. / Bats</gloss>
+                                </valItem>
+                                <valItem ident="trk">
+                                    <gloss>тюрк. / Turkic</gloss>
+                                </valItem>
+                                <valItem ident="uby">
+                                    <gloss>убых. / Ubykh</gloss>
+                                </valItem>
+                                <valItem ident="udi">
+                                    <gloss>удин. / Udi</gloss>
+                                </valItem>
+                                <valItem ident="udm">
+                                    <gloss>удм. / Udmurt</gloss>
+                                </valItem>
+                                <valItem ident="uz">
+                                    <gloss>узб. / Uzbek</gloss>
+                                </valItem>
+                                <valItem ident="ug">
+                                    <gloss>уйгур. / Uyghur</gloss>
+                                </valItem>
+                                <valItem ident="uk">
+                                    <gloss>укр. / Ukrainian</gloss>
+                                </valItem>
+                                <valItem ident="mn-x-uriankh">
+                                    <gloss>урянх. / Uriankhai</gloss>
+                                </valItem>
+                                <valItem ident="fi">
+                                    <gloss>фин. / Finnish</gloss>
+                                </valItem>
+                                <valItem ident="fr">
+                                    <gloss>фр. / French</gloss>
+                                </valItem>
+                                <valItem ident="txh">
+                                    <gloss>фрак. / Thracian</gloss>
+                                </valItem>
+                                <valItem ident="kca">
+                                    <gloss>ханты / Khanty</gloss>
+                                </valItem>
+                                <valItem ident="khv">
+                                    <gloss>хварш. / Khwarshi</gloss>
+                                </valItem>
+                                <valItem ident="ka-x-khevsur">
+                                    <gloss>хевсур. / Khevsur Georgian</gloss>
+                                </valItem>
+                                <valItem ident="hit">
+                                    <gloss>хетт. / Hittite</gloss>
+                                </valItem>
+                                <valItem ident="kjj">
+                                    <gloss>хиналуг. / Khinalugh</gloss>
+                                </valItem>
+                                <valItem ident="khw">
+                                    <gloss>ховар. / Khowar</gloss>
+                                </valItem>
+                                <valItem ident="hr">
+                                    <gloss>хорв. / Croatian</gloss>
+                                </valItem>
+                                <valItem ident="zkh">
+                                    <gloss>хорезм. / Khwarezmian</gloss>
+                                </valItem>
+                                <valItem ident="tkr">
+                                    <gloss>цахур. / Tsakhur</gloss>
+                                </valItem>
+                                <valItem ident="rom">
+                                    <gloss>цыг. / Romani</gloss>
+                                </valItem>
+                                <valItem ident="chg">
+                                    <gloss>чагат. / Chagatai</gloss>
+                                </valItem>
+                                <valItem ident="cji">
+                                    <gloss>чамал. / Chamalal</gloss>
+                                </valItem>
+                                <valItem ident="lzz">
+                                    <gloss>чан. / Laz</gloss>
+                                </valItem>
+                                <valItem ident="x-crc">
+                                    <gloss>черк. / Circassian</gloss>
+                                </valItem>
+                                <valItem ident="ce">
+                                    <gloss>чеч. / Chechen</gloss>
+                                </valItem>
+                                <valItem ident="cs">
+                                    <gloss>чеш. / Czech</gloss>
+                                </valItem>
+                                <valItem ident="cv">
+                                    <gloss>чув. / Chuvash</gloss>
+                                </valItem>
+                                <valItem ident="ady">
+                                    <gloss>шапс. / Shapsug Adyghe</gloss>
+                                </valItem>
+                                <valItem ident="sv">
+                                    <gloss>швед. / Swedish</gloss>
+                                </valItem>
+                                <valItem ident="sux">
+                                    <gloss>шумер. / Sumerian</gloss>
+                                </valItem>
+                                <valItem ident="evn">
+                                    <gloss>эвенк. / Evenki</gloss>
+                                </valItem>
+                                <valItem ident="et">
+                                    <gloss>эст. / Estonian</gloss>
+                                </valItem>
+                                <valItem ident="os-x-south">
+                                    <gloss>ю. / South Ossetic</gloss>
+                                </valItem>
+                                <valItem ident="gbz-x-yzd">
+                                    <gloss>язди / Yazdi</gloss>
+                                </valItem>
+                                <valItem ident="x-iazyg">
+                                    <gloss>языгский / Iazygean</gloss>
+                                </valItem>
+                                <valItem ident="sah">
+                                    <gloss>якут. / Yakut</gloss>
+                                </valItem>
+                                <valItem ident="yai">
+                                    <gloss>ягн. / Yaghnobi</gloss>
+                                </valItem>
+                                <valItem ident="ja">
+                                    <gloss>япон. / Japanese</gloss>
+                                </valItem>
+                            </valList>
+                        </attDef>
                         <attDef ident="dialect" mode="add">
                             <datatype minOccurs="1" maxOccurs="unbounded">
                                 <dataRef name="language"/>
@@ -111,7 +771,7 @@
                 <elementSpec module="core" ident="cit" mode="change">
                     <constraintSpec ident="tr-ru-eng" scheme="schematron">
                         <constraint>
-                            <sch:rule context=".[@type = 'translation']">
+                            <sch:rule context="tei:cit[@type = 'translation']">
                                 <sch:assert test="(@xml:lang = 'ru') or (@xml:lang = 'en')"
                                     >Translation must be in Russian (xml:lang = ru) or English
                                     (xml:lang = en).</sch:assert>
@@ -141,6 +801,18 @@
                         </attDef>
                     </attList>
                 </elementSpec>
+                
+<!--                <elementSpec module="core" ident="ref" mode="change">
+                    <constraintSpec ident="crossref-id" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="tei:ref[@type='xr']">
+                                <sch:assert test="substring(@target,2) = //tei:entry/@xml:id">The cross-referenced entry <sch:value-of select="substring(@target,2)"/> does not exist.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                </elementSpec>-->
+                
+                
                 <!--        <elementSpec module="core" ident="bibl" mode="change">
             <attList>
                 <attDef ident="corresp" mode="change">
