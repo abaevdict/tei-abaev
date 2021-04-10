@@ -7,15 +7,52 @@
             <schemaSpec ident="abaevTEI" docLang="en" prefix="tei_" xml:lang="en">
                 <moduleRef key="core" except=""/>
                 <moduleRef key="tei" except=""/>
+                <classSpec module="tei" type="atts" ident="att.global.responsibility" mode="change">
+                    <attList>
+                        <attDef ident="cert" mode="delete"/>
+                        <attDef ident="resp" mode="delete"/>
+                    </attList>
+                </classSpec>
+                <classSpec module="tei" type="atts" ident="att.datcat" mode="change">
+                    <attList>
+                        <attDef ident="datcat" mode="delete"/>
+                        <attDef ident="valueDatcat" mode="delete"/>
+                    </attList>
+                </classSpec>                
                 <moduleRef key="header" except=""/>
                 <moduleRef key="textstructure" except=""/>
                 <moduleRef key="dictionaries" except=""/>
+                <classSpec module="dictionaries" type="atts" ident="att.lexicographic" mode="change">
+                    <attList>
+                        <attDef ident="expand" mode="delete"/>
+                        <attDef ident="split" mode="delete"/>
+                        <attDef ident="value" mode="delete"/>
+                        <attDef ident="location" mode="delete"/>
+                        <attDef ident="mergedIn" mode="delete"/>
+                        <attDef ident="opt" mode="delete"/>
+                    </attList>
+                </classSpec>                
                 <moduleRef key="figures" except=""/>
                 <moduleRef key="linking"/>
+                <classSpec module="linking" type="atts" ident="att.global.linking" mode="change">
+                    <attList>
+                        <attDef ident="synch" mode="delete"/>
+                        <attDef ident="sameAs" mode="delete"/>
+                        <attDef ident="copyOf" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                        <attDef ident="exclude" mode="delete"/>
+                        <attDef ident="select" mode="delete"/>
+                    </attList>
+                </classSpec>
                 <moduleRef key="analysis" include="w m c cl phr s"/>
-                <classSpec module="analysis" type="atts" ident="att.global.analytic" mode="replace"></classSpec>
+                <classSpec module="analysis" type="atts" ident="att.global.analytic" mode="change">
+                    <attList>
+                        <attDef ident="ana" mode="delete"/>
+                    </attList>
+                </classSpec>
                 
-                <moduleRef key="certainty"/>
+<!--                <moduleRef key="certainty"/>-->
                 <classSpec module="tei" type="atts" ident="att.global" mode="change">
                     <attList>
                         <attDef ident="xml:lang" mode="change">
@@ -122,7 +159,7 @@
                                     <gloss>булг. / Bulgar</gloss>
                                 </valItem>
                                 <valItem ident="bua">
-                                    <gloss>бурят. / Buryat</gloss>
+                                    <gloss>(монг.) бурят. / Buryat</gloss>
                                 </valItem>
                                 <valItem ident="sa-vaidika">
                                     <gloss>вед. / Vedic</gloss>
@@ -167,7 +204,7 @@
                                     <gloss>дарг. / Dargwa</gloss>
                                 </valItem>
                                 <valItem ident="chg">
-                                    <gloss>джагат. / Chagatai</gloss>
+                                    <gloss>джагат. (чагат.) / Chagatai</gloss>
                                 </valItem>
                                 <valItem ident="kry-x-jek">
                                     <gloss>джекск. / Jek Kryts</gloss>
@@ -363,9 +400,6 @@
                                 <valItem ident="mn">
                                     <gloss>монг. / Mongolian</gloss>
                                 </valItem>
-                                <valItem ident="bua">
-                                    <gloss>монг. бурят. / Buryat</gloss>
-                                </valItem>
                                 <valItem ident="cmg">
                                     <gloss>монг. письм. / Classical Mongolian</gloss>
                                 </valItem>
@@ -398,7 +432,7 @@
                                     <gloss>нубийское / Nubian</gloss>
                                 </valItem>
                                 <valItem ident="oru">
-                                    <gloss>орм. / Ormuri</gloss>
+                                    <gloss>(пам.) орм. / Ormuri</gloss>
                                 </valItem>
                                 <valItem ident="os">
                                     <gloss>ос. / Ossetic</gloss>
@@ -432,9 +466,6 @@
                                 </valItem>
                                 <valItem ident="x-pamir-n">
                                     <gloss>пам. н.?? / Pamir</gloss>
-                                </valItem>
-                                <valItem ident="oru">
-                                    <gloss>пам. ор. / Ormuri</gloss>
                                 </valItem>
                                 <valItem ident="x-rushani">
                                     <gloss>пам. руш. / Rushani</gloss>
@@ -635,9 +666,6 @@
                                 <valItem ident="rom">
                                     <gloss>цыг. / Romani</gloss>
                                 </valItem>
-                                <valItem ident="chg">
-                                    <gloss>чагат. / Chagatai</gloss>
-                                </valItem>
                                 <valItem ident="cji">
                                     <gloss>чамал. / Chamalal</gloss>
                                 </valItem>
@@ -656,7 +684,7 @@
                                 <valItem ident="cv">
                                     <gloss>чув. / Chuvash</gloss>
                                 </valItem>
-                                <valItem ident="ady">
+                                <valItem ident="ady-x-shpsg">
                                     <gloss>шапс. / Shapsug Adyghe</gloss>
                                 </valItem>
                                 <valItem ident="sv">

@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2021-04-09T19:03:01Z. .
+Schema generated from ODD source 2021-04-10T11:23:22Z. .
 TEI Edition: Version 4.1.0. Last updated on
 	19th August 2020, revision b414ba550
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
@@ -492,32 +492,7 @@ Sample values include: 1] all; 2] most; 3] range</a:documentation>
       </optional>
    </define>
    <define name="tei_att.datcat.attributes">
-      <ref name="tei_att.datcat.attribute.datcat"/>
-      <ref name="tei_att.datcat.attribute.valueDatcat"/>
-   </define>
-   <define name="tei_att.datcat.attribute.datcat">
-      <optional>
-         <attribute name="datcat" ns="http://www.isocat.org/ns/dcr">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a PID (persistent identifier) that aligns the given element with the appropriate Data Category (or categories) in ISOcat.</a:documentation>
-            <list>
-               <oneOrMore>
-                  <data type="anyURI"/>
-               </oneOrMore>
-            </list>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.datcat.attribute.valueDatcat">
-      <optional>
-         <attribute name="valueDatcat" ns="http://www.isocat.org/ns/dcr">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a PID (persistent identifier) that aligns the content of the given element or the value of the given attribute with the appropriate simple Data Category (or categories) in ISOcat.</a:documentation>
-            <list>
-               <oneOrMore>
-                  <data type="anyURI"/>
-               </oneOrMore>
-            </list>
-         </attribute>
-      </optional>
+      <empty/>
    </define>
    <define name="tei_att.declarable.attributes">
       <ref name="tei_att.declarable.attribute.default"/>
@@ -634,40 +609,7 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
       </optional>
    </define>
    <define name="tei_att.global.responsibility.attributes">
-      <ref name="tei_att.global.responsibility.attribute.cert"/>
-      <ref name="tei_att.global.responsibility.attribute.resp"/>
-   </define>
-   <define name="tei_att.global.responsibility.attribute.cert">
-      <optional>
-         <attribute name="cert">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(certainty) signifies the degree of certainty associated with the intervention or interpretation.</a:documentation>
-            <choice>
-               <data type="double"/>
-               <choice>
-                  <value>high</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>medium</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>low</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>unknown</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               </choice>
-            </choice>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.global.responsibility.attribute.resp">
-      <optional>
-         <attribute name="resp">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(responsible party) indicates the agency responsible for the intervention or interpretation, for example an editor or transcriber.</a:documentation>
-            <list>
-               <oneOrMore>
-                  <data type="anyURI"/>
-               </oneOrMore>
-            </list>
-         </attribute>
-      </optional>
+      <empty/>
    </define>
    <define name="tei_att.editLike.attributes">
       <ref name="tei_att.editLike.attribute.evidence"/>
@@ -814,7 +756,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
          <attribute name="xml:lang">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to <a xmlns="http://www.w3.org/1999/xhtml"
                   href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47</a>.
-Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (абаз. / Abaza); 3] ab (абх. / Abkhaz); 4] ae (ав. / Avestan); 5] av (авар. / Avar); 6] agx (агул. / Aghul); 7] ady (адыг. / Adyghe); 8] aze (азерб. / Azerbaijani); 9] akk (аккад. / Akkadian); 10] dar-x-aqusha (акуш. / Aqusha Dargwa); 11] xln (алан. / Alanic); 12] sqj (алб. / Albanian); 13] alt (алт. / Altai); 14] tr-x-anat (анат. / Anatolian Turkish); 15] en (англ. / English); 16] ang (англос. / Old English); 17] ani (анд. / Andi); 18] iir (ар. / Proto-Indo-Iranian); 19] ar (араб. / Arabic); 20] arc (арам. / Aramaic); 21] xcl (арм. / (Classical) Armenian); 22] aqc (арчин. / Archi); 23] aii (ассир. / Assyrian); 24] ps (афг. / Pashto); 25] krc-x-balkar (балк. / Balkar); 26] eu (баск. / Basque); 27] ba (башк. / Bashkir); 28] x-balochi (бел. / Balochi); 29] be (белорусс. / Belarusian); 30] bg (болг. / Bulgarian); 31] br (брет. / Breton); 32] bdk (будух. / Budugh); 33] xbo (булг. / Bulgar); 34] bua (бурят. / Buryat); 35] sa-vaidika (вед. / Vedic); 36] x-vaynakh (вейнах. / Vaynakh); 37] hu (венг. / Hungarian); 38] vep (вепс. / Veps); 39] bsk (верш. / Burushaski); 40] gem (герм. / Proto-Germanic); 41] glk (гилян. / Gilaki); 42] got (гот. / Gothic); 43] grc (гр. / (Ancient) Greek); 44] ka (груз. / Georgian); 45] hac (гуран. / Gorani); 46] os-x-digor (д. / Digor Ossetic); 47] dar (дарг. / Dargwa); 48] chg (джагат. / Chagatai); 49] kry-x-jek (джекск. / Jek Kryts); 50] ddo (дид. / Tsez); 51] cu-x-bg (др.болг. / Old Bulgarian); 52] goh (др.в.нем. / Old High German); 53] gem-x-old (др.герм. / Old Germanic); 54] hbo (др.евр. / Ancient Hebrew); 55] sa (др.инд. / Old Indic); 56] x-oldirn (др.иран. / Proto-Iranian); 57] sga (др.ирл. / Old Irish); 58] non-x-is (др.исл. / Old Icelandic); 59] peo (др.перс. / Old Persian); 60] prg (др.прусс. / Old Prussian); 61] orv (др.русск. / Old Russian); 62] osx (др.сакс. / Old Saxon); 63] non (др.сев. / Old Norse); 64] x-oldsl (др.слав. / Proto-Slavic); 65] zza (заза / Zazaki); 66] os-x-iron (и. / Iron Ossetic); 67] ine (и.е. / Proto-Indo-European); 68] inh (инг. / Ingush); 69] inc (инд. / Indic); 70] ira (иран. / (Proto-?)Iranian); 71] ga (ирл. / Irish); 72] es (исп. / Spanish); 73] it (ит. / Italian); 74] kbd (каб. / Kabardian); 75] kk (каз. / Kazakh); 76] tt-x-kazan (казан. / Kazan Tatar); 77] dar-x-kaitag (кайт. / Kaitag Dargwa); 78] xal (калм. / Kalmyk); 79] kap (капуч. / Bezhta); 80] kdr (караим. / Karaim); 81] krc-x-karachay (карач. / Karachay); 82] krl (карел. / Karelian); 83] ccs (картв. / South Caucasian); 84] x-nuristan (кафир. / Nuristani); 85] ug-x-kashgar (кашг. / Kashgari Uyghur); 86] cel (кельт. / Celtic); 87] ky (кирг. / Kyrgyz); 88] zh (кит. / Chinese); 89] kv (коми / Komi); 90] os-x-ksan (ксан. / Ksan Ossetic); 91] kum (кум. / Kumyk); 92] qwm (куман. / Cuman); 93] ku (курд. / Kurdish); 94] xbc (кушан. / Bactrian); 95] pgd (кхарошти / Gandhari); 96] lbe (лак. / Lak); 97] la (лат. / Latin); 98] lv (латыш. / Latvian); 99] lez (лезг. / Lezgian); 100] liv (лив. / Livonian); 101] lt (лит. / Lithuanian); 102] smi (лопар. / Sami); 103] wen (луж. / Sorbian); 104] ldd (лур. / Luri); 105] mzn (маз. / Mazanderani); 106] mns (манси / Mansi); 107] chm (мар. / Mari); 108] xmf (мегр. / Mingerlian); 109] xme (мид. / Median); 110] mn (монг. / Mongolian); 111] bua (монг. бурят. / Buryat); 112] cmg (монг. письм. / Classical Mongolian); 113] x-mordvin (морд. / Mordvinic); 114] el (н.гр. / Modern Greek); 115] de (нем. / German); 116] yrk (нен. / Nenets); 117] nl (нидерл. / Dutch); 118] nds (н.н.нем. / Low German); 119] nog (ног. / Nogai); 120] no (норв. / Norwegian); 121] nub (нубийское / Nubian); 122] oru (орм. / Ormuri); 123] os (ос. / Ossetic); 124] pal-x-pazend (паз. / Pazend); 125] pi (пали / Pali); 126] x-pamir (пам. / Pamir); 127] sgh-x-bartang (пам. барт. / Bartangi); 128] wbl (пам. в. / Wakhi); 129] sgy-x-zebak (пам. зеб. / Zebaki); 130] ydg (пам. и. / Yidgha); 131] isk (пам. ишк. / Ishkashimi); 132] mnj (пам. м. / Munji); 133] x-pamir-n (пам. н.?? / Pamir); 134] oru (пам. ор. / Ormuri); 135] x-rushani (пам. руш. / Rushani); 136] srh (пам. с. / Sarikoli); 137] sgy (пам. сгл. / Sanglechi); 138] sgh (пам. ш. / Shughni); 139] yah (пам. язг. / Yazgulyam); 140] prc (пар. / Parachi); 141] xpr (парф. / Parthian); 142] psh (пашан / Pashai (?)); 143] fa (перс. / Persian); 144] pal (пехл. / Middle Persian); 145] pal-x-turfan (пехл. турф. / Turfan Pahlavi); 146] pl (пол. / Polish); 147] ro (рум. / Romanian); 148] ru (русск. / Russian); 149] rut (рутул. / Rutul); 150] kho (сак. / Saka); 151] sva (сван. / Svan); 152] trk-x-north (сев. тюрк. / North Turkic); 153] inc-x-nnew (северные новоиндийские диалекты / North New Indic dialects); 154] sem (семит. / Semitic); 155] sr (серб. / Serbian); 156] syr (сир. / Syriac); 157] xsc (скиф. / Scythian); 158] sla (слав. / Slavic); 159] sl (слов. / Slovenian); 160] sog (согд. / Sogdian); 161] sog-x-chr (согд. христ. / Christian Sogdian); 162] gmh (ср.в.нем. / Middle High German); 163] inc-x-mid (ср.инд. / Middle Indic); 164] ira-x-mid (ср.иран. / Middle Iranian); 165] gml (ср.н.нем. / Middle Low German); 166] oos (ст.ос. / Old Ossetic); 167] cu (ст.слав. / Old Church Slavonic); 168] tab (табас. / Tabassaran); 169] tg (тадж. / Tajik); 170] tly (тал. / Talyshi); 171] tt (татар. / Tatar); 172] ttt (татск. / Tat (Muslim?)); 173] alt-x-teleut (телеут. / Teleut Altai); 174] bo (тибет. / Tibetan); 175] x-tchr (тохар. / Tocharian); 176] xto (тохар. A / Tocharian A); 177] txb (тохар. B / Tocharian B); 178] tr (тур. / Turkish); 179] bbl (туш. / Bats); 180] trk (тюрк. / Turkic); 181] uby (убых. / Ubykh); 182] udi (удин. / Udi); 183] udm (удм. / Udmurt); 184] uz (узб. / Uzbek); 185] ug (уйгур. / Uyghur); 186] uk (укр. / Ukrainian); 187] mn-x-uriankh (урянх. / Uriankhai); 188] fi (фин. / Finnish); 189] fr (фр. / French); 190] txh (фрак. / Thracian); 191] kca (ханты / Khanty); 192] khv (хварш. / Khwarshi); 193] ka-x-khevsur (хевсур. / Khevsur Georgian); 194] hit (хетт. / Hittite); 195] kjj (хиналуг. / Khinalugh); 196] khw (ховар. / Khowar); 197] hr (хорв. / Croatian); 198] zkh (хорезм. / Khwarezmian); 199] tkr (цахур. / Tsakhur); 200] rom (цыг. / Romani); 201] chg (чагат. / Chagatai); 202] cji (чамал. / Chamalal); 203] lzz (чан. / Laz); 204] x-crc (черк. / Circassian); 205] ce (чеч. / Chechen); 206] cs (чеш. / Czech); 207] cv (чув. / Chuvash); 208] ady (шапс. / Shapsug Adyghe); 209] sv (швед. / Swedish); 210] sux (шумер. / Sumerian); 211] evn (эвенк. / Evenki); 212] et (эст. / Estonian); 213] os-x-south (ю. / South Ossetic); 214] gbz-x-yzd (язди / Yazdi); 215] x-iazyg (языгский / Iazygean); 216] sah (якут. / Yakut); 217] yai (ягн. / Yaghnobi); 218] ja (япон. / Japanese)</a:documentation>
+Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (абаз. / Abaza); 3] ab (абх. / Abkhaz); 4] ae (ав. / Avestan); 5] av (авар. / Avar); 6] agx (агул. / Aghul); 7] ady (адыг. / Adyghe); 8] aze (азерб. / Azerbaijani); 9] akk (аккад. / Akkadian); 10] dar-x-aqusha (акуш. / Aqusha Dargwa); 11] xln (алан. / Alanic); 12] sqj (алб. / Albanian); 13] alt (алт. / Altai); 14] tr-x-anat (анат. / Anatolian Turkish); 15] en (англ. / English); 16] ang (англос. / Old English); 17] ani (анд. / Andi); 18] iir (ар. / Proto-Indo-Iranian); 19] ar (араб. / Arabic); 20] arc (арам. / Aramaic); 21] xcl (арм. / (Classical) Armenian); 22] aqc (арчин. / Archi); 23] aii (ассир. / Assyrian); 24] ps (афг. / Pashto); 25] krc-x-balkar (балк. / Balkar); 26] eu (баск. / Basque); 27] ba (башк. / Bashkir); 28] x-balochi (бел. / Balochi); 29] be (белорусс. / Belarusian); 30] bg (болг. / Bulgarian); 31] br (брет. / Breton); 32] bdk (будух. / Budugh); 33] xbo (булг. / Bulgar); 34] bua ((монг.) бурят. / Buryat); 35] sa-vaidika (вед. / Vedic); 36] x-vaynakh (вейнах. / Vaynakh); 37] hu (венг. / Hungarian); 38] vep (вепс. / Veps); 39] bsk (верш. / Burushaski); 40] gem (герм. / Proto-Germanic); 41] glk (гилян. / Gilaki); 42] got (гот. / Gothic); 43] grc (гр. / (Ancient) Greek); 44] ka (груз. / Georgian); 45] hac (гуран. / Gorani); 46] os-x-digor (д. / Digor Ossetic); 47] dar (дарг. / Dargwa); 48] chg (джагат. (чагат.) / Chagatai); 49] kry-x-jek (джекск. / Jek Kryts); 50] ddo (дид. / Tsez); 51] cu-x-bg (др.болг. / Old Bulgarian); 52] goh (др.в.нем. / Old High German); 53] gem-x-old (др.герм. / Old Germanic); 54] hbo (др.евр. / Ancient Hebrew); 55] sa (др.инд. / Old Indic); 56] x-oldirn (др.иран. / Proto-Iranian); 57] sga (др.ирл. / Old Irish); 58] non-x-is (др.исл. / Old Icelandic); 59] peo (др.перс. / Old Persian); 60] prg (др.прусс. / Old Prussian); 61] orv (др.русск. / Old Russian); 62] osx (др.сакс. / Old Saxon); 63] non (др.сев. / Old Norse); 64] x-oldsl (др.слав. / Proto-Slavic); 65] zza (заза / Zazaki); 66] os-x-iron (и. / Iron Ossetic); 67] ine (и.е. / Proto-Indo-European); 68] inh (инг. / Ingush); 69] inc (инд. / Indic); 70] ira (иран. / (Proto-?)Iranian); 71] ga (ирл. / Irish); 72] es (исп. / Spanish); 73] it (ит. / Italian); 74] kbd (каб. / Kabardian); 75] kk (каз. / Kazakh); 76] tt-x-kazan (казан. / Kazan Tatar); 77] dar-x-kaitag (кайт. / Kaitag Dargwa); 78] xal (калм. / Kalmyk); 79] kap (капуч. / Bezhta); 80] kdr (караим. / Karaim); 81] krc-x-karachay (карач. / Karachay); 82] krl (карел. / Karelian); 83] ccs (картв. / South Caucasian); 84] x-nuristan (кафир. / Nuristani); 85] ug-x-kashgar (кашг. / Kashgari Uyghur); 86] cel (кельт. / Celtic); 87] ky (кирг. / Kyrgyz); 88] zh (кит. / Chinese); 89] kv (коми / Komi); 90] os-x-ksan (ксан. / Ksan Ossetic); 91] kum (кум. / Kumyk); 92] qwm (куман. / Cuman); 93] ku (курд. / Kurdish); 94] xbc (кушан. / Bactrian); 95] pgd (кхарошти / Gandhari); 96] lbe (лак. / Lak); 97] la (лат. / Latin); 98] lv (латыш. / Latvian); 99] lez (лезг. / Lezgian); 100] liv (лив. / Livonian); 101] lt (лит. / Lithuanian); 102] smi (лопар. / Sami); 103] wen (луж. / Sorbian); 104] ldd (лур. / Luri); 105] mzn (маз. / Mazanderani); 106] mns (манси / Mansi); 107] chm (мар. / Mari); 108] xmf (мегр. / Mingerlian); 109] xme (мид. / Median); 110] mn (монг. / Mongolian); 111] cmg (монг. письм. / Classical Mongolian); 112] x-mordvin (морд. / Mordvinic); 113] el (н.гр. / Modern Greek); 114] de (нем. / German); 115] yrk (нен. / Nenets); 116] nl (нидерл. / Dutch); 117] nds (н.н.нем. / Low German); 118] nog (ног. / Nogai); 119] no (норв. / Norwegian); 120] nub (нубийское / Nubian); 121] oru ((пам.) орм. / Ormuri); 122] os (ос. / Ossetic); 123] pal-x-pazend (паз. / Pazend); 124] pi (пали / Pali); 125] x-pamir (пам. / Pamir); 126] sgh-x-bartang (пам. барт. / Bartangi); 127] wbl (пам. в. / Wakhi); 128] sgy-x-zebak (пам. зеб. / Zebaki); 129] ydg (пам. и. / Yidgha); 130] isk (пам. ишк. / Ishkashimi); 131] mnj (пам. м. / Munji); 132] x-pamir-n (пам. н.?? / Pamir); 133] x-rushani (пам. руш. / Rushani); 134] srh (пам. с. / Sarikoli); 135] sgy (пам. сгл. / Sanglechi); 136] sgh (пам. ш. / Shughni); 137] yah (пам. язг. / Yazgulyam); 138] prc (пар. / Parachi); 139] xpr (парф. / Parthian); 140] psh (пашан / Pashai (?)); 141] fa (перс. / Persian); 142] pal (пехл. / Middle Persian); 143] pal-x-turfan (пехл. турф. / Turfan Pahlavi); 144] pl (пол. / Polish); 145] ro (рум. / Romanian); 146] ru (русск. / Russian); 147] rut (рутул. / Rutul); 148] kho (сак. / Saka); 149] sva (сван. / Svan); 150] trk-x-north (сев. тюрк. / North Turkic); 151] inc-x-nnew (северные новоиндийские диалекты / North New Indic dialects); 152] sem (семит. / Semitic); 153] sr (серб. / Serbian); 154] syr (сир. / Syriac); 155] xsc (скиф. / Scythian); 156] sla (слав. / Slavic); 157] sl (слов. / Slovenian); 158] sog (согд. / Sogdian); 159] sog-x-chr (согд. христ. / Christian Sogdian); 160] gmh (ср.в.нем. / Middle High German); 161] inc-x-mid (ср.инд. / Middle Indic); 162] ira-x-mid (ср.иран. / Middle Iranian); 163] gml (ср.н.нем. / Middle Low German); 164] oos (ст.ос. / Old Ossetic); 165] cu (ст.слав. / Old Church Slavonic); 166] tab (табас. / Tabassaran); 167] tg (тадж. / Tajik); 168] tly (тал. / Talyshi); 169] tt (татар. / Tatar); 170] ttt (татск. / Tat (Muslim?)); 171] alt-x-teleut (телеут. / Teleut Altai); 172] bo (тибет. / Tibetan); 173] x-tchr (тохар. / Tocharian); 174] xto (тохар. A / Tocharian A); 175] txb (тохар. B / Tocharian B); 176] tr (тур. / Turkish); 177] bbl (туш. / Bats); 178] trk (тюрк. / Turkic); 179] uby (убых. / Ubykh); 180] udi (удин. / Udi); 181] udm (удм. / Udmurt); 182] uz (узб. / Uzbek); 183] ug (уйгур. / Uyghur); 184] uk (укр. / Ukrainian); 185] mn-x-uriankh (урянх. / Uriankhai); 186] fi (фин. / Finnish); 187] fr (фр. / French); 188] txh (фрак. / Thracian); 189] kca (ханты / Khanty); 190] khv (хварш. / Khwarshi); 191] ka-x-khevsur (хевсур. / Khevsur Georgian); 192] hit (хетт. / Hittite); 193] kjj (хиналуг. / Khinalugh); 194] khw (ховар. / Khowar); 195] hr (хорв. / Croatian); 196] zkh (хорезм. / Khwarezmian); 197] tkr (цахур. / Tsakhur); 198] rom (цыг. / Romani); 199] cji (чамал. / Chamalal); 200] lzz (чан. / Laz); 201] x-crc (черк. / Circassian); 202] ce (чеч. / Chechen); 203] cs (чеш. / Czech); 204] cv (чув. / Chuvash); 205] ady-x-shpsg (шапс. / Shapsug Adyghe); 206] sv (швед. / Swedish); 207] sux (шумер. / Sumerian); 208] evn (эвенк. / Evenki); 209] et (эст. / Estonian); 210] os-x-south (ю. / South Ossetic); 211] gbz-x-yzd (язди / Yazdi); 212] x-iazyg (языгский / Iazygean); 213] sah (якут. / Yakut); 214] yai (ягн. / Yaghnobi); 215] ja (япон. / Japanese)</a:documentation>
             <choice>
                <value>ady-x-abadz</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(абадз. / Abzakh) </a:documentation>
@@ -883,7 +825,7 @@ Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (аба�
                <value>xbo</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(булг. / Bulgar) </a:documentation>
                <value>bua</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(бурят. / Buryat) </a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">((монг.) бурят. / Buryat) </a:documentation>
                <value>sa-vaidika</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(вед. / Vedic) </a:documentation>
                <value>x-vaynakh</value>
@@ -911,7 +853,7 @@ Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (аба�
                <value>dar</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(дарг. / Dargwa) </a:documentation>
                <value>chg</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(джагат. / Chagatai) </a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(джагат. (чагат.) / Chagatai) </a:documentation>
                <value>kry-x-jek</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(джекск. / Jek Kryts) </a:documentation>
                <value>ddo</value>
@@ -1036,8 +978,6 @@ Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (аба�
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(мид. / Median) </a:documentation>
                <value>mn</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(монг. / Mongolian) </a:documentation>
-               <value>bua</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(монг. бурят. / Buryat) </a:documentation>
                <value>cmg</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(монг. письм. / Classical Mongolian) </a:documentation>
                <value>x-mordvin</value>
@@ -1059,7 +999,7 @@ Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (аба�
                <value>nub</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(нубийское / Nubian) </a:documentation>
                <value>oru</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(орм. / Ormuri) </a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">((пам.) орм. / Ormuri) </a:documentation>
                <value>os</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ос. / Ossetic) </a:documentation>
                <value>pal-x-pazend</value>
@@ -1082,8 +1022,6 @@ Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (аба�
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. м. / Munji) </a:documentation>
                <value>x-pamir-n</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. н.?? / Pamir) </a:documentation>
-               <value>oru</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. ор. / Ormuri) </a:documentation>
                <value>x-rushani</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. руш. / Rushani) </a:documentation>
                <value>srh</value>
@@ -1217,8 +1155,6 @@ Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (аба�
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(цахур. / Tsakhur) </a:documentation>
                <value>rom</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(цыг. / Romani) </a:documentation>
-               <value>chg</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(чагат. / Chagatai) </a:documentation>
                <value>cji</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(чамал. / Chamalal) </a:documentation>
                <value>lzz</value>
@@ -1231,7 +1167,7 @@ Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (аба�
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(чеш. / Czech) </a:documentation>
                <value>cv</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(чув. / Chuvash) </a:documentation>
-               <value>ady</value>
+               <value>ady-x-shpsg</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(шапс. / Shapsug Adyghe) </a:documentation>
                <value>sv</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(швед. / Swedish) </a:documentation>
@@ -1739,30 +1675,6 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
                   </data>
                </zeroOrMore>
             </list>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.scoping.attributes">
-      <ref name="tei_att.scoping.attribute.target"/>
-      <ref name="tei_att.scoping.attribute.match"/>
-   </define>
-   <define name="tei_att.scoping.attribute.target">
-      <optional>
-         <attribute name="target">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points at one or several elements or sets of elements by means of one or more data pointers, using the URI syntax.</a:documentation>
-            <list>
-               <oneOrMore>
-                  <data type="anyURI"/>
-               </oneOrMore>
-            </list>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.scoping.attribute.match">
-      <optional>
-         <attribute name="match">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies an arbitrary XPath expression using the syntax defined in  which identifies a set of nodes, selected within the context identified by the <code xmlns="http://www.w3.org/1999/xhtml">@target</code> attribute if this is supplied, or within the context of the parent element if it is not.</a:documentation>
-            <text/>
          </attribute>
       </optional>
    </define>
@@ -2547,9 +2459,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_joinGrp"/>
          <ref name="tei_alt"/>
          <ref name="tei_altGrp"/>
-         <ref name="tei_precision"/>
-         <ref name="tei_certainty"/>
-         <ref name="tei_respons"/>
       </choice>
    </define>
    <define name="tei_model.milestoneLike">
@@ -2981,11 +2890,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </choice>
    </define>
    <define name="tei_model.certLike">
-      <choice>
-         <ref name="tei_precision"/>
-         <ref name="tei_certainty"/>
-         <ref name="tei_respons"/>
-      </choice>
+      <notAllowed/>
    </define>
    <define name="tei_model.descLike">
       <choice>
@@ -7999,62 +7904,6 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
    <define name="tei_att.lexicographic.attributes">
       <ref name="tei_att.datcat.attributes"/>
       <ref name="tei_att.lexicographic.normalized.attributes"/>
-      <ref name="tei_att.lexicographic.attribute.expand"/>
-      <ref name="tei_att.lexicographic.attribute.split"/>
-      <ref name="tei_att.lexicographic.attribute.value"/>
-      <ref name="tei_att.lexicographic.attribute.location"/>
-      <ref name="tei_att.lexicographic.attribute.mergedIn"/>
-      <ref name="tei_att.lexicographic.attribute.opt"/>
-   </define>
-   <define name="tei_att.lexicographic.attribute.expand">
-      <optional>
-         <attribute name="expand">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives an expanded form of information presented more concisely in the dictionary</a:documentation>
-            <data type="string"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.lexicographic.attribute.split">
-      <optional>
-         <attribute name="split">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives the list of split values for a merged form</a:documentation>
-            <data type="string"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.lexicographic.attribute.value">
-      <optional>
-         <attribute name="value">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives a value which lacks any realization in the printed source text.</a:documentation>
-            <data type="string"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.lexicographic.attribute.location">
-      <optional>
-         <attribute name="location">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates an <code xmlns="http://www.w3.org/1999/xhtml">&lt;anchor&gt;</code> element typically elsewhere in the document, but possibly in another document, which is the original location of this component.</a:documentation>
-            <data type="anyURI"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.lexicographic.attribute.mergedIn">
-      <optional>
-         <attribute name="mergedIn">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives a reference to another element, where the original appears as a merged form.</a:documentation>
-            <data type="anyURI"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.lexicographic.attribute.opt">
-      <optional>
-         <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                    name="opt"
-                    a:defaultValue="false">
-            <a:documentation>(optional) indicates whether the element is optional or not</a:documentation>
-            <data type="boolean"/>
-         </attribute>
-      </optional>
    </define>
    <define name="tei_model.morphLike">
       <choice>
@@ -9032,86 +8881,11 @@ Suggested values include: 1] label; 2] data</a:documentation>
    </define>
    <define name="tei_att.global.linking.attributes">
       <ref name="tei_att.global.linking.attribute.corresp"/>
-      <ref name="tei_att.global.linking.attribute.synch"/>
-      <ref name="tei_att.global.linking.attribute.sameAs"/>
-      <ref name="tei_att.global.linking.attribute.copyOf"/>
-      <ref name="tei_att.global.linking.attribute.next"/>
-      <ref name="tei_att.global.linking.attribute.prev"/>
-      <ref name="tei_att.global.linking.attribute.exclude"/>
-      <ref name="tei_att.global.linking.attribute.select"/>
    </define>
    <define name="tei_att.global.linking.attribute.corresp">
       <optional>
          <attribute name="corresp">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(corresponds) points to elements that correspond to the current element in some way.</a:documentation>
-            <list>
-               <oneOrMore>
-                  <data type="anyURI"/>
-               </oneOrMore>
-            </list>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.global.linking.attribute.synch">
-      <optional>
-         <attribute name="synch">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(synchronous) points to elements that are synchronous with the current element.</a:documentation>
-            <list>
-               <oneOrMore>
-                  <data type="anyURI"/>
-               </oneOrMore>
-            </list>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.global.linking.attribute.sameAs">
-      <optional>
-         <attribute name="sameAs">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to an element that is the same as the current element.</a:documentation>
-            <data type="anyURI"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.global.linking.attribute.copyOf">
-      <optional>
-         <attribute name="copyOf">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to an element of which the current element is a copy.</a:documentation>
-            <data type="anyURI"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.global.linking.attribute.next">
-      <optional>
-         <attribute name="next">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to the next element of a virtual aggregate of which the current element is part.</a:documentation>
-            <data type="anyURI"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.global.linking.attribute.prev">
-      <optional>
-         <attribute name="prev">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(previous) points to the previous element of a virtual aggregate of which the current element is part.</a:documentation>
-            <data type="anyURI"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.global.linking.attribute.exclude">
-      <optional>
-         <attribute name="exclude">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to elements that are in exclusive alternation with the current element.</a:documentation>
-            <list>
-               <oneOrMore>
-                  <data type="anyURI"/>
-               </oneOrMore>
-            </list>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.global.linking.attribute.select">
-      <optional>
-         <attribute name="select">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">selects one or more alternants; if one alternant is selected, the ambiguity or uncertainty is marked as resolved. If more than one alternant is selected, the degree of ambiguity or uncertainty is marked as reduced by the number of alternants not selected.</a:documentation>
             <list>
                <oneOrMore>
                   <data type="anyURI"/>
@@ -9548,15 +9322,6 @@ You must supply at least two values for @target on <name/>
          <ref name="tei_att.global.rendition.attribute.style"/>
          <ref name="tei_att.global.rendition.attribute.rendition"/>
          <ref name="tei_att.global.linking.attribute.corresp"/>
-         <ref name="tei_att.global.linking.attribute.synch"/>
-         <ref name="tei_att.global.linking.attribute.sameAs"/>
-         <ref name="tei_att.global.linking.attribute.copyOf"/>
-         <ref name="tei_att.global.linking.attribute.next"/>
-         <ref name="tei_att.global.linking.attribute.prev"/>
-         <ref name="tei_att.global.linking.attribute.exclude"/>
-         <ref name="tei_att.global.linking.attribute.select"/>
-         <ref name="tei_att.global.responsibility.attribute.cert"/>
-         <ref name="tei_att.global.responsibility.attribute.resp"/>
          <ref name="tei_att.global.source.attribute.source"/>
          <ref name="tei_att.pointing.attribute.targetLang"/>
          <ref name="tei_att.pointing.attribute.evaluate"/>
@@ -9800,168 +9565,6 @@ You must supply at least two values for @target on <name/>
          <ref name="tei_att.segLike.attributes"/>
          <ref name="tei_att.typed.attributes"/>
          <ref name="tei_att.notated.attributes"/>
-         <empty/>
-      </element>
-   </define>
-   <define name="tei_precision">
-      <element name="precision">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the numerical accuracy or precision associated with some aspect of the text markup. [21.2. Indications of Precision]</a:documentation>
-         <zeroOrMore>
-            <choice>
-               <ref name="tei_model.descLike"/>
-               <ref name="tei_model.certLike"/>
-            </choice>
-         </zeroOrMore>
-         <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.scoping.attributes"/>
-         <ref name="tei_att.ranging.attributes"/>
-         <ref name="tei_att.datable.attributes"/>
-         <optional>
-            <attribute name="precision">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the precision of the element or attribute pointed to by the <code xmlns="http://www.w3.org/1999/xhtml">&lt;precision&gt;</code> element.</a:documentation>
-               <choice>
-                  <value>high</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>medium</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>low</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>unknown</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               </choice>
-            </attribute>
-         </optional>
-         <optional>
-            <attribute name="stdDeviation">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies a standard deviation associated with the value in question</a:documentation>
-               <choice>
-                  <data type="double"/>
-                  <data type="token">
-                     <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
-                  </data>
-                  <data type="decimal"/>
-               </choice>
-            </attribute>
-         </optional>
-         <empty/>
-      </element>
-   </define>
-   <define name="tei_certainty">
-      <element name="certainty">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the degree of certainty associated with some aspect of the text markup. [21.1.2. Structured Indications of Uncertainty]</a:documentation>
-         <zeroOrMore>
-            <choice>
-               <ref name="tei_model.descLike"/>
-               <ref name="tei_model.certLike"/>
-            </choice>
-         </zeroOrMore>
-         <ref name="tei_att.global.attribute.dialect"/>
-         <ref name="tei_att.global.attribute.xmlid"/>
-         <ref name="tei_att.global.attribute.n"/>
-         <ref name="tei_att.global.attribute.xmllang"/>
-         <ref name="tei_att.global.attribute.xmlbase"/>
-         <ref name="tei_att.global.attribute.xmlspace"/>
-         <ref name="tei_att.global.rendition.attribute.rend"/>
-         <ref name="tei_att.global.rendition.attribute.style"/>
-         <ref name="tei_att.global.rendition.attribute.rendition"/>
-         <ref name="tei_att.global.linking.attribute.corresp"/>
-         <ref name="tei_att.global.linking.attribute.synch"/>
-         <ref name="tei_att.global.linking.attribute.sameAs"/>
-         <ref name="tei_att.global.linking.attribute.copyOf"/>
-         <ref name="tei_att.global.linking.attribute.next"/>
-         <ref name="tei_att.global.linking.attribute.prev"/>
-         <ref name="tei_att.global.linking.attribute.exclude"/>
-         <ref name="tei_att.global.linking.attribute.select"/>
-         <ref name="tei_att.global.responsibility.attribute.resp"/>
-         <ref name="tei_att.global.source.attribute.source"/>
-         <ref name="tei_att.scoping.attributes"/>
-         <optional>
-            <attribute name="cert">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(certainty) signifies the degree of certainty associated with the object pointed to by the <code xmlns="http://www.w3.org/1999/xhtml">&lt;certainty&gt;</code> element.</a:documentation>
-               <choice>
-                  <value>high</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>medium</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>low</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>unknown</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               </choice>
-            </attribute>
-         </optional>
-         <attribute name="locus">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates more exactly the aspect concerning which certainty is being expressed: specifically, whether the markup is correctly located, whether the correct element or attribute name has been used, or whether the content of the element or attribute is correct, etc.</a:documentation>
-            <choice>
-               <value>name</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">uncertainty concerns whether the name of the element or attribute used is correctly applied.</a:documentation>
-               <value>start</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">uncertainty concerns whether the start of the element is correctly identified.</a:documentation>
-               <value>end</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">uncertainty concerns whether the end of the element is correctly identified.</a:documentation>
-               <value>location</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">uncertainty concerns both the start and the end of the element.</a:documentation>
-               <value>value</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">uncertainty concerns the content (for an element) or the value (for an attribute)</a:documentation>
-            </choice>
-         </attribute>
-         <optional>
-            <attribute name="assertedValue">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides an alternative value for the aspect of the markup in question—an alternative generic identifier, transcription, or attribute value, or the identifier of an <code xmlns="http://www.w3.org/1999/xhtml">&lt;anchor&gt;</code> element (to indicate an alternative starting or ending location). If an <code xmlns="http://www.w3.org/1999/xhtml">@assertedValue</code> is given, the confidence level specified by <code xmlns="http://www.w3.org/1999/xhtml">@degree</code> applies to the alternative markup specified by <code xmlns="http://www.w3.org/1999/xhtml">@assertedValue</code>; if none is given, it applies to the markup in the text.</a:documentation>
-               <data type="token">
-                  <param name="pattern">[^\p{C}\p{Z}]+</param>
-               </data>
-            </attribute>
-         </optional>
-         <optional>
-            <attribute name="given">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates one or more element(s) characterizing the conditions which are assumed in the assignment of a degree of confidence.</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <data type="anyURI"/>
-                  </oneOrMore>
-               </list>
-            </attribute>
-         </optional>
-         <optional>
-            <attribute name="degree">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the degree of confidence assigned to the aspect of the markup named by the <code xmlns="http://www.w3.org/1999/xhtml">@locus</code> attribute.</a:documentation>
-               <data type="double"/>
-            </attribute>
-         </optional>
-         <empty/>
-      </element>
-   </define>
-   <define name="tei_respons">
-      <element name="respons">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(responsibility) identifies the individual(s) responsible for some aspect of the content or markup of particular element(s). [21.3. Attribution of Responsibility]</a:documentation>
-         <zeroOrMore>
-            <choice>
-               <ref name="tei_model.descLike"/>
-               <ref name="tei_model.certLike"/>
-            </choice>
-         </zeroOrMore>
-         <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.scoping.attributes"/>
-         <attribute name="locus">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the specific aspect of the encoding (markup or content) for which responsibility is being assigned.</a:documentation>
-            <list>
-               <oneOrMore>
-                  <choice>
-                     <value>name</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">responsibility is being assigned concerning the name of the element or attribute used.</a:documentation>
-                     <value>start</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">responsibility is being assigned concerning the start of the element concerned.</a:documentation>
-                     <value>end</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">responsibility is being assigned concerning the end of the element concerned.</a:documentation>
-                     <value>location</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">responsibility is being assigned concerning the location of the element concerned.</a:documentation>
-                     <value>value</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">responsibility is being assigned concerning the content (for an element) or the value (for an attribute)</a:documentation>
-                  </choice>
-               </oneOrMore>
-            </list>
-         </attribute>
          <empty/>
       </element>
    </define>
