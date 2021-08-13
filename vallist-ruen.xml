@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valList mode="replace" type="closed" xmlns="http://www.tei-c.org/ns/1.0">
+    <valItem ident="ru">
+        <gloss xml:lang="ru">русский</gloss>
+        <gloss xml:lang="en">Russian</gloss>
+    </valItem>
+    <valItem ident="en">
+        <gloss xml:lang="ru">английский</gloss>
+        <gloss xml:lang="en">English</gloss>
+    </valItem>
+</valList>

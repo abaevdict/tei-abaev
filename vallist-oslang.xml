@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valList mode="replace" type="closed" xmlns="http://www.tei-c.org/ns/1.0">
+    <valItem ident="os">
+        <gloss>Ossetic</gloss>
+    </valItem>
+    <valItem ident="os-x-iron">
+        <gloss>Iron Ossetic</gloss>
+    </valItem>
+    <valItem ident="os-x-digor">
+        <gloss>Digor Ossetic</gloss>
+    </valItem>
+    <valItem ident="os-x-south">
+        <gloss>South Ossetic</gloss>
+    </valItem>
+    <valItem ident="os-x-ksan">
+        <gloss>Ksan Ossetic</gloss>
+    </valItem>
+</valList>
