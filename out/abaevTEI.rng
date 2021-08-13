@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2021-04-10T11:23:22Z. .
+Schema generated from ODD source 2021-08-13T13:14:14Z. .
 TEI Edition: Version 4.1.0. Last updated on
 	19th August 2020, revision b414ba550
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
@@ -79,6 +79,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
             <except>
                <nsName ns="http://www.tei-c.org/ns/1.0"/>
                <name ns="http://www.tei-c.org/ns/Examples">egXML</name>
+               <nsName ns="http://ossetic-studies.org/ns/abaevdict"/>
             </except>
          </anyName>
          <zeroOrMore>
@@ -430,8 +431,8 @@ Sample values include: 1] all; 2] most; 3] range</a:documentation>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="abaevTEI-att.datable.w3c-att-datable-w3c-when-constraint-rule-1">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 context="tei:*[@when]">
@@ -440,8 +441,8 @@ Sample values include: 1] all; 2] most; 3] range</a:documentation>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="abaevTEI-att.datable.w3c-att-datable-w3c-from-constraint-rule-2">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 context="tei:*[@from]">
@@ -450,8 +451,8 @@ Sample values include: 1] all; 2] most; 3] range</a:documentation>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="abaevTEI-att.datable.w3c-att-datable-w3c-to-constraint-rule-3">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 context="tei:*[@to]">
@@ -473,8 +474,8 @@ Sample values include: 1] all; 2] most; 3] range</a:documentation>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="abaevTEI-att.datable-calendar-calendar-constraint-rule-4">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 context="tei:*[@calendar]">
@@ -658,7 +659,6 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
    </define>
    <define name="tei_att.global.rendition.attributes">
       <ref name="tei_att.global.rendition.attribute.rend"/>
-      <ref name="tei_att.global.rendition.attribute.style"/>
       <ref name="tei_att.global.rendition.attribute.rendition"/>
    </define>
    <define name="tei_att.global.rendition.attribute.rend">
@@ -675,14 +675,6 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
          </attribute>
       </optional>
    </define>
-   <define name="tei_att.global.rendition.attribute.style">
-      <optional>
-         <attribute name="style">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains an expression in some formal style definition language which defines the rendering or presentation used for this element in the source text</a:documentation>
-            <data type="string"/>
-         </attribute>
-      </optional>
-   </define>
    <define name="tei_att.global.rendition.attribute.rendition">
       <optional>
          <attribute name="rendition">
@@ -695,45 +687,13 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
          </attribute>
       </optional>
    </define>
-   <define name="tei_att.global.source.attributes">
-      <ref name="tei_att.global.source.attribute.source"/>
-   </define>
-   <define name="tei_att.global.source.attribute.source">
-      <optional>
-         <attribute name="source">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the source from which some aspect of this element is drawn.</a:documentation>
-            <list>
-               <oneOrMore>
-                  <data type="anyURI"/>
-               </oneOrMore>
-            </list>
-         </attribute>
-      </optional>
-   </define>
    <define name="tei_att.global.attributes">
-      <ref name="tei_att.global.rendition.attributes"/>
-      <ref name="tei_att.global.linking.attributes"/>
       <ref name="tei_att.global.analytic.attributes"/>
       <ref name="tei_att.global.responsibility.attributes"/>
-      <ref name="tei_att.global.source.attributes"/>
-      <ref name="tei_att.global.attribute.dialect"/>
       <ref name="tei_att.global.attribute.xmlid"/>
       <ref name="tei_att.global.attribute.n"/>
       <ref name="tei_att.global.attribute.xmllang"/>
       <ref name="tei_att.global.attribute.xmlbase"/>
-      <ref name="tei_att.global.attribute.xmlspace"/>
-   </define>
-   <define name="tei_att.global.attribute.dialect">
-      <optional>
-         <attribute name="dialect">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <list>
-               <oneOrMore>
-                  <data type="language"/>
-               </oneOrMore>
-            </list>
-         </attribute>
-      </optional>
    </define>
    <define name="tei_att.global.attribute.xmlid">
       <optional>
@@ -1208,19 +1168,16 @@ Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (аба�
          </attribute>
       </optional>
    </define>
-   <define name="tei_att.global.attribute.xmlspace">
-      <optional>
-         <attribute name="xml:space">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">signals an intention about how white space should be managed by applications.</a:documentation>
-            <choice>
-               <value>default</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">signals that the application's default white-space processing modes are acceptable</a:documentation>
-               <value>preserve</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the intent that applications preserve all white space</a:documentation>
-            </choice>
-         </attribute>
-      </optional>
-   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="abaevTEI-att.global-lang-not-empty-constraint-rule-5">
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                context="@xml:lang">
+         <sch:assert test="string(.) != ''">Language may not be empty.</sch:assert>
+      </sch:rule>
+   </pattern>
    <define name="tei_att.handFeatures.attribute.scribe">
       <optional>
          <attribute name="scribe">
@@ -1454,9 +1411,9 @@ Suggested values include: 1] m (metre); 2] kg (kilogram); 3] s (second); 4] Hz (
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="abaevTEI-att.measurement-att-measurement-unitRef-constraint-rule-5">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+            id="abaevTEI-att.measurement-att-measurement-unitRef-constraint-rule-6">
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 context="tei:*[@unitRef]">
@@ -1491,19 +1448,6 @@ Suggested values include: 1] m (metre); 2] kg (kilogram); 3] s (second); 4] Hz (
                   <data type="anyURI"/>
                </oneOrMore>
             </list>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.notated.attributes">
-      <ref name="tei_att.notated.attribute.notation"/>
-   </define>
-   <define name="tei_att.notated.attribute.notation">
-      <optional>
-         <attribute name="notation">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">names the notation used for the content of the element.</a:documentation>
-            <data type="token">
-               <param name="pattern">[^\p{C}\p{Z}]+</param>
-            </data>
          </attribute>
       </optional>
    </define>
@@ -1572,9 +1516,9 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="abaevTEI-att.typed-subtypeTyped-constraint-rule-6">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+            id="abaevTEI-att.typed-subtypeTyped-constraint-rule-7">
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 context="tei:*[@subtype]">
@@ -1602,9 +1546,9 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="abaevTEI-att.pointing-targetLang-targetLang-constraint-rule-7">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+            id="abaevTEI-att.pointing-targetLang-targetLang-constraint-rule-8">
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 context="tei:*[not(self::tei:schemaSpec)][@targetLang]">
@@ -1693,19 +1637,6 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
          </attribute>
       </optional>
    </define>
-   <define name="tei_att.sortable.attributes">
-      <ref name="tei_att.sortable.attribute.sortKey"/>
-   </define>
-   <define name="tei_att.sortable.attribute.sortKey">
-      <optional>
-         <attribute name="sortKey">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies the sort key for this element in an index, list or group which contains it.</a:documentation>
-            <data type="token">
-               <param name="pattern">[^\p{C}\p{Z}]+</param>
-            </data>
-         </attribute>
-      </optional>
-   </define>
    <define name="tei_att.edition.attributes">
       <ref name="tei_att.edition.attribute.ed"/>
       <ref name="tei_att.edition.attribute.edRef"/>
@@ -1748,9 +1679,9 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="abaevTEI-att.spanning-spanTo-spanTo-2-constraint-rule-8">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+            id="abaevTEI-att.spanning-spanTo-spanTo-2-constraint-rule-9">
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 context="tei:*[@spanTo]">
@@ -1791,9 +1722,9 @@ The element indicated by @spanTo (<sch:value-of select="@spanTo"/>) must follow 
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="abaevTEI-att.styleDef-schemeVersion-schemeVersionRequiresScheme-constraint-rule-9">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+            id="abaevTEI-att.styleDef-schemeVersion-schemeVersionRequiresScheme-constraint-rule-10">
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 context="tei:*[@schemeVersion]">
@@ -2806,6 +2737,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_lbl"/>
          <ref name="tei_xr"/>
          <ref name="tei_re"/>
+         <ref name="tei_exampleGrp"/>
       </choice>
    </define>
    <define name="tei_model.global.edit">
@@ -3479,32 +3411,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_correspContext"/>
       </choice>
    </define>
-   <define name="tei_att.partials.attributes">
-      <ref name="tei_att.partials.attribute.extent"/>
-   </define>
-   <define name="tei_att.partials.attribute.extent">
-      <optional>
-         <attribute name="extent">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates whether the pronunciation or orthography applies to all or part of a word.
-Suggested values include: 1] full (full form); 2] pref (prefix); 3] suff (suffix); 4] inf (infix); 5] part (partial)</a:documentation>
-            <choice>
-               <value>full</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(full form) </a:documentation>
-               <value>pref</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(prefix) </a:documentation>
-               <value>suff</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(suffix) </a:documentation>
-               <value>inf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(infix) </a:documentation>
-               <value>part</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(partial) </a:documentation>
-               <data type="token">
-                  <param name="pattern">[^\p{C}\p{Z}]+</param>
-               </data>
-            </choice>
-         </attribute>
-      </optional>
-   </define>
    <define name="tei_model.resource">
       <choice>
          <ref name="tei_text"/>
@@ -3594,7 +3500,8 @@ Suggested values include: 1] page; 2] column; 3] line; 4] book; 5] poem; 6] cant
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="abaevTEI-p-abstractModel-structure-p-constraint-report-5">
             <rule context="tei:p">
-               <report xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+               <report xmlns:xi="http://www.w3.org/2001/XInclude"
+                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="not(ancestor::tei:floatingText) and (ancestor::tei:p or ancestor::tei:ab)          and not(parent::tei:exemplum                |parent::tei:item                |parent::tei:note                |parent::tei:q                |parent::tei:quote                |parent::tei:remarks                |parent::tei:said                |parent::tei:sp                |parent::tei:stage                |parent::tei:cell                |parent::tei:figure                )">
         Abstract model violation: Paragraphs may not occur inside other paragraphs or ab elements.
@@ -3604,7 +3511,8 @@ Suggested values include: 1] page; 2] column; 3] line; 4] book; 5] poem; 6] cant
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="abaevTEI-p-abstractModel-structure-l-constraint-report-6">
             <rule context="tei:p">
-               <report xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+               <report xmlns:xi="http://www.w3.org/2001/XInclude"
+                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="ancestor::tei:l[not(.//tei:note//tei:p[. = current()])]">
         Abstract model violation: Lines may not contain higher-level structural elements such as div, p, or ab.
@@ -3638,6 +3546,7 @@ Suggested values include: 1] page; 2] column; 3] line; 4] book; 5] poem; 6] cant
       <element name="hi">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(highlighted) marks a word or phrase as graphically distinct from the surrounding text, for reasons concerning which no claim is made. [3.3.2.2. Emphatic Words and Phrases 3.3.2. Emphasis, Foreign Words, and Unusual Language]</a:documentation>
          <ref name="tei_macro.paraContent"/>
+         <ref name="tei_att.global.rendition.attributes"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.written.attributes"/>
          <empty/>
@@ -3723,7 +3632,6 @@ Suggested values include: 1] page; 2] column; 3] line; 4] book; 5] poem; 6] cant
          <ref name="tei_macro.specialPara"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.typed.attributes"/>
-         <ref name="tei_att.notated.attributes"/>
          <empty/>
       </element>
    </define>
@@ -3731,6 +3639,7 @@ Suggested values include: 1] page; 2] column; 3] line; 4] book; 5] poem; 6] cant
       <element name="q">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(quoted) contains material which is distinguished from the surrounding text using quotation marks or a similar method, for any one of a variety of reasons including, but not limited to: direct speech or thought, technical terms or jargon, authorial distance, quotations from elsewhere, and passages that are mentioned but not used. [3.3.3. Quotation]</a:documentation>
          <ref name="tei_macro.specialPara"/>
+         <ref name="tei_att.global.rendition.attributes"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.ascribed.directed.attributes"/>
          <optional>
@@ -3780,37 +3689,491 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                <ref name="tei_q"/>
             </choice>
          </oneOrMore>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-cit-tr-ru-eng-constraint-rule-10">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      context="tei:cit[@type = 'translation']">
-               <sch:assert test="(@xml:lang = 'ru') or (@xml:lang = 'en')">Translation must be in Russian (xml:lang = ru) or English
-                                    (xml:lang = en).</sch:assert>
-            </sch:rule>
-         </pattern>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.typed.attribute.subtype"/>
-         <attribute name="type">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <choice>
-               <value>translation</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Translation of a usage example of a lexeme or word form.</a:documentation>
-               <value>example</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Example of the usage of an expression.</a:documentation>
-               <value>exampleGroup</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Group of examples in a dictionary entry.</a:documentation>
-            </choice>
-         </attribute>
+         <ref name="tei_att.typed.attributes"/>
          <empty/>
       </element>
    </define>
    <define name="tei_mentioned">
       <element name="mentioned">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">marks words or phrases mentioned, not used. [3.3.3. Quotation]</a:documentation>
-         <ref name="tei_macro.phraseSeq"/>
-         <ref name="tei_att.global.attributes"/>
+         <group>
+            <optional>
+               <ref name="tei_lang"/>
+            </optional>
+            <zeroOrMore>
+               <choice>
+                  <ref name="tei_model.global"/>
+                  <ref name="tei_w"/>
+                  <ref name="tei_c"/>
+                  <ref name="tei_m"/>
+                  <ref name="tei_phr"/>
+                  <ref name="tei_s"/>
+                  <ref name="tei_gloss"/>
+                  <text/>
+               </choice>
+            </zeroOrMore>
+         </group>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="abaevTEI-mentioned-punctuation-only-constraint-rule-11">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      context="tei:mentioned/text()">
+               <sch:report test="matches(.,'[^\s\p]')">Text in mentioned forms must only include punctuation (spaces, commas).</sch:report>
+            </sch:rule>
+         </pattern>
+         <ref name="tei_att.dialectal.attributes"/>
+         <ref name="tei_att.extralang.attributes"/>
+         <ref name="tei_att.global.attribute.xmlid"/>
+         <ref name="tei_att.global.attribute.n"/>
+         <ref name="tei_att.global.attribute.xmlbase"/>
+         <attribute name="xml:lang">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to <a xmlns="http://www.w3.org/1999/xhtml"
+                  href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47</a>.
+Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (абаз. / Abaza); 3] ab (абх. / Abkhaz); 4] ae (ав. / Avestan); 5] av (авар. / Avar); 6] agx (агул. / Aghul); 7] ady (адыг. / Adyghe); 8] aze (азерб. / Azerbaijani); 9] akk (аккад. / Akkadian); 10] dar-x-aqusha (акуш. / Aqusha Dargwa); 11] xln (алан. / Alanic); 12] sqj (алб. / Albanian); 13] alt (алт. / Altai); 14] tr-x-anat (анат. / Anatolian Turkish); 15] en (англ. / English); 16] ang (англос. / Old English); 17] ani (анд. / Andi); 18] iir (ар. / Proto-Indo-Iranian); 19] ar (араб. / Arabic); 20] arc (арам. / Aramaic); 21] xcl (арм. / (Classical) Armenian); 22] aqc (арчин. / Archi); 23] aii (ассир. / Assyrian); 24] ps (афг. / Pashto); 25] krc-x-balkar (балк. / Balkar); 26] eu (баск. / Basque); 27] ba (башк. / Bashkir); 28] x-balochi (бел. / Balochi); 29] be (белорусс. / Belarusian); 30] bg (болг. / Bulgarian); 31] br (брет. / Breton); 32] bdk (будух. / Budugh); 33] xbo (булг. / Bulgar); 34] bua ((монг.) бурят. / Buryat); 35] sa-vaidika (вед. / Vedic); 36] x-vaynakh (вейнах. / Vaynakh); 37] hu (венг. / Hungarian); 38] vep (вепс. / Veps); 39] bsk (верш. / Burushaski); 40] gem (герм. / Proto-Germanic); 41] glk (гилян. / Gilaki); 42] got (гот. / Gothic); 43] grc (гр. / (Ancient) Greek); 44] ka (груз. / Georgian); 45] hac (гуран. / Gorani); 46] os-x-digor (д. / Digor Ossetic); 47] dar (дарг. / Dargwa); 48] chg (джагат. (чагат.) / Chagatai); 49] kry-x-jek (джекск. / Jek Kryts); 50] ddo (дид. / Tsez); 51] cu-x-bg (др.болг. / Old Bulgarian); 52] goh (др.в.нем. / Old High German); 53] gem-x-old (др.герм. / Old Germanic); 54] hbo (др.евр. / Ancient Hebrew); 55] sa (др.инд. / Old Indic); 56] x-oldirn (др.иран. / Proto-Iranian); 57] sga (др.ирл. / Old Irish); 58] non-x-is (др.исл. / Old Icelandic); 59] peo (др.перс. / Old Persian); 60] prg (др.прусс. / Old Prussian); 61] orv (др.русск. / Old Russian); 62] osx (др.сакс. / Old Saxon); 63] non (др.сев. / Old Norse); 64] x-oldsl (др.слав. / Proto-Slavic); 65] zza (заза / Zazaki); 66] os-x-iron (и. / Iron Ossetic); 67] ine (и.е. / Proto-Indo-European); 68] inh (инг. / Ingush); 69] inc (инд. / Indic); 70] ira (иран. / (Proto-?)Iranian); 71] ga (ирл. / Irish); 72] es (исп. / Spanish); 73] it (ит. / Italian); 74] kbd (каб. / Kabardian); 75] kk (каз. / Kazakh); 76] tt-x-kazan (казан. / Kazan Tatar); 77] dar-x-kaitag (кайт. / Kaitag Dargwa); 78] xal (калм. / Kalmyk); 79] kap (капуч. / Bezhta); 80] kdr (караим. / Karaim); 81] krc-x-karachay (карач. / Karachay); 82] krl (карел. / Karelian); 83] ccs (картв. / South Caucasian); 84] x-nuristan (кафир. / Nuristani); 85] ug-x-kashgar (кашг. / Kashgari Uyghur); 86] cel (кельт. / Celtic); 87] ky (кирг. / Kyrgyz); 88] zh (кит. / Chinese); 89] kv (коми / Komi); 90] os-x-ksan (ксан. / Ksan Ossetic); 91] kum (кум. / Kumyk); 92] qwm (куман. / Cuman); 93] ku (курд. / Kurdish); 94] xbc (кушан. / Bactrian); 95] pgd (кхарошти / Gandhari); 96] lbe (лак. / Lak); 97] la (лат. / Latin); 98] lv (латыш. / Latvian); 99] lez (лезг. / Lezgian); 100] liv (лив. / Livonian); 101] lt (лит. / Lithuanian); 102] smi (лопар. / Sami); 103] wen (луж. / Sorbian); 104] ldd (лур. / Luri); 105] mzn (маз. / Mazanderani); 106] mns (манси / Mansi); 107] chm (мар. / Mari); 108] xmf (мегр. / Mingerlian); 109] xme (мид. / Median); 110] mn (монг. / Mongolian); 111] cmg (монг. письм. / Classical Mongolian); 112] x-mordvin (морд. / Mordvinic); 113] el (н.гр. / Modern Greek); 114] de (нем. / German); 115] yrk (нен. / Nenets); 116] nl (нидерл. / Dutch); 117] nds (н.н.нем. / Low German); 118] nog (ног. / Nogai); 119] no (норв. / Norwegian); 120] nub (нубийское / Nubian); 121] oru ((пам.) орм. / Ormuri); 122] os (ос. / Ossetic); 123] pal-x-pazend (паз. / Pazend); 124] pi (пали / Pali); 125] x-pamir (пам. / Pamir); 126] sgh-x-bartang (пам. барт. / Bartangi); 127] wbl (пам. в. / Wakhi); 128] sgy-x-zebak (пам. зеб. / Zebaki); 129] ydg (пам. и. / Yidgha); 130] isk (пам. ишк. / Ishkashimi); 131] mnj (пам. м. / Munji); 132] x-pamir-n (пам. н.?? / Pamir); 133] x-rushani (пам. руш. / Rushani); 134] srh (пам. с. / Sarikoli); 135] sgy (пам. сгл. / Sanglechi); 136] sgh (пам. ш. / Shughni); 137] yah (пам. язг. / Yazgulyam); 138] prc (пар. / Parachi); 139] xpr (парф. / Parthian); 140] psh (пашан / Pashai (?)); 141] fa (перс. / Persian); 142] pal (пехл. / Middle Persian); 143] pal-x-turfan (пехл. турф. / Turfan Pahlavi); 144] pl (пол. / Polish); 145] ro (рум. / Romanian); 146] ru (русск. / Russian); 147] rut (рутул. / Rutul); 148] kho (сак. / Saka); 149] sva (сван. / Svan); 150] trk-x-north (сев. тюрк. / North Turkic); 151] inc-x-nnew (северные новоиндийские диалекты / North New Indic dialects); 152] sem (семит. / Semitic); 153] sr (серб. / Serbian); 154] syr (сир. / Syriac); 155] xsc (скиф. / Scythian); 156] sla (слав. / Slavic); 157] sl (слов. / Slovenian); 158] sog (согд. / Sogdian); 159] sog-x-chr (согд. христ. / Christian Sogdian); 160] gmh (ср.в.нем. / Middle High German); 161] inc-x-mid (ср.инд. / Middle Indic); 162] ira-x-mid (ср.иран. / Middle Iranian); 163] gml (ср.н.нем. / Middle Low German); 164] oos (ст.ос. / Old Ossetic); 165] cu (ст.слав. / Old Church Slavonic); 166] tab (табас. / Tabassaran); 167] tg (тадж. / Tajik); 168] tly (тал. / Talyshi); 169] tt (татар. / Tatar); 170] ttt (татск. / Tat (Muslim?)); 171] alt-x-teleut (телеут. / Teleut Altai); 172] bo (тибет. / Tibetan); 173] x-tchr (тохар. / Tocharian); 174] xto (тохар. A / Tocharian A); 175] txb (тохар. B / Tocharian B); 176] tr (тур. / Turkish); 177] bbl (туш. / Bats); 178] trk (тюрк. / Turkic); 179] uby (убых. / Ubykh); 180] udi (удин. / Udi); 181] udm (удм. / Udmurt); 182] uz (узб. / Uzbek); 183] ug (уйгур. / Uyghur); 184] uk (укр. / Ukrainian); 185] mn-x-uriankh (урянх. / Uriankhai); 186] fi (фин. / Finnish); 187] fr (фр. / French); 188] txh (фрак. / Thracian); 189] kca (ханты / Khanty); 190] khv (хварш. / Khwarshi); 191] ka-x-khevsur (хевсур. / Khevsur Georgian); 192] hit (хетт. / Hittite); 193] kjj (хиналуг. / Khinalugh); 194] khw (ховар. / Khowar); 195] hr (хорв. / Croatian); 196] zkh (хорезм. / Khwarezmian); 197] tkr (цахур. / Tsakhur); 198] rom (цыг. / Romani); 199] cji (чамал. / Chamalal); 200] lzz (чан. / Laz); 201] x-crc (черк. / Circassian); 202] ce (чеч. / Chechen); 203] cs (чеш. / Czech); 204] cv (чув. / Chuvash); 205] ady-x-shpsg (шапс. / Shapsug Adyghe); 206] sv (швед. / Swedish); 207] sux (шумер. / Sumerian); 208] evn (эвенк. / Evenki); 209] et (эст. / Estonian); 210] os-x-south (ю. / South Ossetic); 211] gbz-x-yzd (язди / Yazdi); 212] x-iazyg (языгский / Iazygean); 213] sah (якут. / Yakut); 214] yai (ягн. / Yaghnobi); 215] ja (япон. / Japanese)</a:documentation>
+            <choice>
+               <value>ady-x-abadz</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(абадз. / Abzakh) </a:documentation>
+               <value>abq</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(абаз. / Abaza) </a:documentation>
+               <value>ab</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(абх. / Abkhaz) </a:documentation>
+               <value>ae</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ав. / Avestan) </a:documentation>
+               <value>av</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(авар. / Avar) </a:documentation>
+               <value>agx</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(агул. / Aghul) </a:documentation>
+               <value>ady</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(адыг. / Adyghe) </a:documentation>
+               <value>aze</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(азерб. / Azerbaijani) </a:documentation>
+               <value>akk</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(аккад. / Akkadian) </a:documentation>
+               <value>dar-x-aqusha</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(акуш. / Aqusha Dargwa) </a:documentation>
+               <value>xln</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(алан. / Alanic) </a:documentation>
+               <value>sqj</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(алб. / Albanian) </a:documentation>
+               <value>alt</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(алт. / Altai) </a:documentation>
+               <value>tr-x-anat</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(анат. / Anatolian Turkish) </a:documentation>
+               <value>en</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(англ. / English) </a:documentation>
+               <value>ang</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(англос. / Old English) </a:documentation>
+               <value>ani</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(анд. / Andi) </a:documentation>
+               <value>iir</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ар. / Proto-Indo-Iranian) </a:documentation>
+               <value>ar</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(араб. / Arabic) </a:documentation>
+               <value>arc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(арам. / Aramaic) </a:documentation>
+               <value>xcl</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(арм. / (Classical) Armenian) </a:documentation>
+               <value>aqc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(арчин. / Archi) </a:documentation>
+               <value>aii</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ассир. / Assyrian) </a:documentation>
+               <value>ps</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(афг. / Pashto) </a:documentation>
+               <value>krc-x-balkar</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(балк. / Balkar) </a:documentation>
+               <value>eu</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(баск. / Basque) </a:documentation>
+               <value>ba</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(башк. / Bashkir) </a:documentation>
+               <value>x-balochi</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(бел. / Balochi) </a:documentation>
+               <value>be</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(белорусс. / Belarusian) </a:documentation>
+               <value>bg</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(болг. / Bulgarian) </a:documentation>
+               <value>br</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(брет. / Breton) </a:documentation>
+               <value>bdk</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(будух. / Budugh) </a:documentation>
+               <value>xbo</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(булг. / Bulgar) </a:documentation>
+               <value>bua</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">((монг.) бурят. / Buryat) </a:documentation>
+               <value>sa-vaidika</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(вед. / Vedic) </a:documentation>
+               <value>x-vaynakh</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(вейнах. / Vaynakh) </a:documentation>
+               <value>hu</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(венг. / Hungarian) </a:documentation>
+               <value>vep</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(вепс. / Veps) </a:documentation>
+               <value>bsk</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(верш. / Burushaski) </a:documentation>
+               <value>gem</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(герм. / Proto-Germanic) </a:documentation>
+               <value>glk</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(гилян. / Gilaki) </a:documentation>
+               <value>got</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(гот. / Gothic) </a:documentation>
+               <value>grc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(гр. / (Ancient) Greek) </a:documentation>
+               <value>ka</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(груз. / Georgian) </a:documentation>
+               <value>hac</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(гуран. / Gorani) </a:documentation>
+               <value>os-x-digor</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(д. / Digor Ossetic) </a:documentation>
+               <value>dar</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(дарг. / Dargwa) </a:documentation>
+               <value>chg</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(джагат. (чагат.) / Chagatai) </a:documentation>
+               <value>kry-x-jek</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(джекск. / Jek Kryts) </a:documentation>
+               <value>ddo</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(дид. / Tsez) </a:documentation>
+               <value>cu-x-bg</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.болг. / Old Bulgarian) </a:documentation>
+               <value>goh</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.в.нем. / Old High German) </a:documentation>
+               <value>gem-x-old</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.герм. / Old Germanic) </a:documentation>
+               <value>hbo</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.евр. / Ancient Hebrew) </a:documentation>
+               <value>sa</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.инд. / Old Indic) </a:documentation>
+               <value>x-oldirn</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.иран. / Proto-Iranian) </a:documentation>
+               <value>sga</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.ирл. / Old Irish) </a:documentation>
+               <value>non-x-is</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.исл. / Old Icelandic) </a:documentation>
+               <value>peo</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.перс. / Old Persian) </a:documentation>
+               <value>prg</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.прусс. / Old Prussian) </a:documentation>
+               <value>orv</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.русск. / Old Russian) </a:documentation>
+               <value>osx</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.сакс. / Old Saxon) </a:documentation>
+               <value>non</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.сев. / Old Norse) </a:documentation>
+               <value>x-oldsl</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(др.слав. / Proto-Slavic) </a:documentation>
+               <value>zza</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(заза / Zazaki) </a:documentation>
+               <value>os-x-iron</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(и. / Iron Ossetic) </a:documentation>
+               <value>ine</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(и.е. / Proto-Indo-European) </a:documentation>
+               <value>inh</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(инг. / Ingush) </a:documentation>
+               <value>inc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(инд. / Indic) </a:documentation>
+               <value>ira</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(иран. / (Proto-?)Iranian) </a:documentation>
+               <value>ga</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ирл. / Irish) </a:documentation>
+               <value>es</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(исп. / Spanish) </a:documentation>
+               <value>it</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ит. / Italian) </a:documentation>
+               <value>kbd</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(каб. / Kabardian) </a:documentation>
+               <value>kk</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(каз. / Kazakh) </a:documentation>
+               <value>tt-x-kazan</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(казан. / Kazan Tatar) </a:documentation>
+               <value>dar-x-kaitag</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(кайт. / Kaitag Dargwa) </a:documentation>
+               <value>xal</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(калм. / Kalmyk) </a:documentation>
+               <value>kap</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(капуч. / Bezhta) </a:documentation>
+               <value>kdr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(караим. / Karaim) </a:documentation>
+               <value>krc-x-karachay</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(карач. / Karachay) </a:documentation>
+               <value>krl</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(карел. / Karelian) </a:documentation>
+               <value>ccs</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(картв. / South Caucasian) </a:documentation>
+               <value>x-nuristan</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(кафир. / Nuristani) </a:documentation>
+               <value>ug-x-kashgar</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(кашг. / Kashgari Uyghur) </a:documentation>
+               <value>cel</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(кельт. / Celtic) </a:documentation>
+               <value>ky</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(кирг. / Kyrgyz) </a:documentation>
+               <value>zh</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(кит. / Chinese) </a:documentation>
+               <value>kv</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(коми / Komi) </a:documentation>
+               <value>os-x-ksan</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ксан. / Ksan Ossetic) </a:documentation>
+               <value>kum</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(кум. / Kumyk) </a:documentation>
+               <value>qwm</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(куман. / Cuman) </a:documentation>
+               <value>ku</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(курд. / Kurdish) </a:documentation>
+               <value>xbc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(кушан. / Bactrian) </a:documentation>
+               <value>pgd</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(кхарошти / Gandhari) </a:documentation>
+               <value>lbe</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(лак. / Lak) </a:documentation>
+               <value>la</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(лат. / Latin) </a:documentation>
+               <value>lv</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(латыш. / Latvian) </a:documentation>
+               <value>lez</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(лезг. / Lezgian) </a:documentation>
+               <value>liv</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(лив. / Livonian) </a:documentation>
+               <value>lt</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(лит. / Lithuanian) </a:documentation>
+               <value>smi</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(лопар. / Sami) </a:documentation>
+               <value>wen</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(луж. / Sorbian) </a:documentation>
+               <value>ldd</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(лур. / Luri) </a:documentation>
+               <value>mzn</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(маз. / Mazanderani) </a:documentation>
+               <value>mns</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(манси / Mansi) </a:documentation>
+               <value>chm</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(мар. / Mari) </a:documentation>
+               <value>xmf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(мегр. / Mingerlian) </a:documentation>
+               <value>xme</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(мид. / Median) </a:documentation>
+               <value>mn</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(монг. / Mongolian) </a:documentation>
+               <value>cmg</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(монг. письм. / Classical Mongolian) </a:documentation>
+               <value>x-mordvin</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(морд. / Mordvinic) </a:documentation>
+               <value>el</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(н.гр. / Modern Greek) </a:documentation>
+               <value>de</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(нем. / German) </a:documentation>
+               <value>yrk</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(нен. / Nenets) </a:documentation>
+               <value>nl</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(нидерл. / Dutch) </a:documentation>
+               <value>nds</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(н.н.нем. / Low German) </a:documentation>
+               <value>nog</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ног. / Nogai) </a:documentation>
+               <value>no</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(норв. / Norwegian) </a:documentation>
+               <value>nub</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(нубийское / Nubian) </a:documentation>
+               <value>oru</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">((пам.) орм. / Ormuri) </a:documentation>
+               <value>os</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ос. / Ossetic) </a:documentation>
+               <value>pal-x-pazend</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(паз. / Pazend) </a:documentation>
+               <value>pi</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пали / Pali) </a:documentation>
+               <value>x-pamir</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. / Pamir) </a:documentation>
+               <value>sgh-x-bartang</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. барт. / Bartangi) </a:documentation>
+               <value>wbl</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. в. / Wakhi) </a:documentation>
+               <value>sgy-x-zebak</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. зеб. / Zebaki) </a:documentation>
+               <value>ydg</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. и. / Yidgha) </a:documentation>
+               <value>isk</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. ишк. / Ishkashimi) </a:documentation>
+               <value>mnj</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. м. / Munji) </a:documentation>
+               <value>x-pamir-n</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. н.?? / Pamir) </a:documentation>
+               <value>x-rushani</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. руш. / Rushani) </a:documentation>
+               <value>srh</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. с. / Sarikoli) </a:documentation>
+               <value>sgy</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. сгл. / Sanglechi) </a:documentation>
+               <value>sgh</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. ш. / Shughni) </a:documentation>
+               <value>yah</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пам. язг. / Yazgulyam) </a:documentation>
+               <value>prc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пар. / Parachi) </a:documentation>
+               <value>xpr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(парф. / Parthian) </a:documentation>
+               <value>psh</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пашан / Pashai (?)) </a:documentation>
+               <value>fa</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(перс. / Persian) </a:documentation>
+               <value>pal</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пехл. / Middle Persian) </a:documentation>
+               <value>pal-x-turfan</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пехл. турф. / Turfan Pahlavi) </a:documentation>
+               <value>pl</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(пол. / Polish) </a:documentation>
+               <value>ro</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(рум. / Romanian) </a:documentation>
+               <value>ru</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(русск. / Russian) </a:documentation>
+               <value>rut</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(рутул. / Rutul) </a:documentation>
+               <value>kho</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(сак. / Saka) </a:documentation>
+               <value>sva</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(сван. / Svan) </a:documentation>
+               <value>trk-x-north</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(сев. тюрк. / North Turkic) </a:documentation>
+               <value>inc-x-nnew</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(северные новоиндийские диалекты / North New Indic
+                                        dialects) </a:documentation>
+               <value>sem</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(семит. / Semitic) </a:documentation>
+               <value>sr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(серб. / Serbian) </a:documentation>
+               <value>syr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(сир. / Syriac) </a:documentation>
+               <value>xsc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(скиф. / Scythian) </a:documentation>
+               <value>sla</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(слав. / Slavic) </a:documentation>
+               <value>sl</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(слов. / Slovenian) </a:documentation>
+               <value>sog</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(согд. / Sogdian) </a:documentation>
+               <value>sog-x-chr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(согд. христ. / Christian Sogdian) </a:documentation>
+               <value>gmh</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ср.в.нем. / Middle High German) </a:documentation>
+               <value>inc-x-mid</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ср.инд. / Middle Indic) </a:documentation>
+               <value>ira-x-mid</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ср.иран. / Middle Iranian) </a:documentation>
+               <value>gml</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ср.н.нем. / Middle Low German) </a:documentation>
+               <value>oos</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ст.ос. / Old Ossetic) </a:documentation>
+               <value>cu</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ст.слав. / Old Church Slavonic) </a:documentation>
+               <value>tab</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(табас. / Tabassaran) </a:documentation>
+               <value>tg</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(тадж. / Tajik) </a:documentation>
+               <value>tly</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(тал. / Talyshi) </a:documentation>
+               <value>tt</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(татар. / Tatar) </a:documentation>
+               <value>ttt</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(татск. / Tat (Muslim?)) </a:documentation>
+               <value>alt-x-teleut</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(телеут. / Teleut Altai) </a:documentation>
+               <value>bo</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(тибет. / Tibetan) </a:documentation>
+               <value>x-tchr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(тохар. / Tocharian) </a:documentation>
+               <value>xto</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(тохар. A / Tocharian A) </a:documentation>
+               <value>txb</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(тохар. B / Tocharian B) </a:documentation>
+               <value>tr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(тур. / Turkish) </a:documentation>
+               <value>bbl</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(туш. / Bats) </a:documentation>
+               <value>trk</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(тюрк. / Turkic) </a:documentation>
+               <value>uby</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(убых. / Ubykh) </a:documentation>
+               <value>udi</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(удин. / Udi) </a:documentation>
+               <value>udm</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(удм. / Udmurt) </a:documentation>
+               <value>uz</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(узб. / Uzbek) </a:documentation>
+               <value>ug</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(уйгур. / Uyghur) </a:documentation>
+               <value>uk</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(укр. / Ukrainian) </a:documentation>
+               <value>mn-x-uriankh</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(урянх. / Uriankhai) </a:documentation>
+               <value>fi</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(фин. / Finnish) </a:documentation>
+               <value>fr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(фр. / French) </a:documentation>
+               <value>txh</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(фрак. / Thracian) </a:documentation>
+               <value>kca</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ханты / Khanty) </a:documentation>
+               <value>khv</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(хварш. / Khwarshi) </a:documentation>
+               <value>ka-x-khevsur</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(хевсур. / Khevsur Georgian) </a:documentation>
+               <value>hit</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(хетт. / Hittite) </a:documentation>
+               <value>kjj</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(хиналуг. / Khinalugh) </a:documentation>
+               <value>khw</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ховар. / Khowar) </a:documentation>
+               <value>hr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(хорв. / Croatian) </a:documentation>
+               <value>zkh</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(хорезм. / Khwarezmian) </a:documentation>
+               <value>tkr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(цахур. / Tsakhur) </a:documentation>
+               <value>rom</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(цыг. / Romani) </a:documentation>
+               <value>cji</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(чамал. / Chamalal) </a:documentation>
+               <value>lzz</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(чан. / Laz) </a:documentation>
+               <value>x-crc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(черк. / Circassian) </a:documentation>
+               <value>ce</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(чеч. / Chechen) </a:documentation>
+               <value>cs</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(чеш. / Czech) </a:documentation>
+               <value>cv</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(чув. / Chuvash) </a:documentation>
+               <value>ady-x-shpsg</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(шапс. / Shapsug Adyghe) </a:documentation>
+               <value>sv</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(швед. / Swedish) </a:documentation>
+               <value>sux</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(шумер. / Sumerian) </a:documentation>
+               <value>evn</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(эвенк. / Evenki) </a:documentation>
+               <value>et</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(эст. / Estonian) </a:documentation>
+               <value>os-x-south</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ю. / South Ossetic) </a:documentation>
+               <value>gbz-x-yzd</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(язди / Yazdi) </a:documentation>
+               <value>x-iazyg</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(языгский / Iazygean) </a:documentation>
+               <value>sah</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(якут. / Yakut) </a:documentation>
+               <value>yai</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ягн. / Yaghnobi) </a:documentation>
+               <value>ja</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(япон. / Japanese) </a:documentation>
+               <choice>
+                  <data type="language"/>
+                  <choice>
+                     <value/>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  </choice>
+               </choice>
+            </choice>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -3827,8 +4190,9 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description) contains a brief description of the object documented by its parent element, typically a documentation element or an entity. [22.4.1. Description of Components]</a:documentation>
          <ref name="tei_macro.limitedContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-desc-deprecationInfo-only-in-deprecated-constraint-rule-11">
+                  id="abaevTEI-desc-deprecationInfo-only-in-deprecated-constraint-rule-12">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       context="tei:desc[ @type eq 'deprecationInfo']">
@@ -3875,7 +4239,6 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
          <ref name="tei_att.pointing.attributes"/>
          <ref name="tei_att.typed.attributes"/>
          <ref name="tei_att.canonical.attributes"/>
-         <ref name="tei_att.sortable.attributes"/>
          <ref name="tei_att.cReferencing.attributes"/>
          <empty/>
       </element>
@@ -4294,9 +4657,10 @@ Sample values include: 1] suspension; 2] contraction; 3] brevigraph; 4] superscr
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(pointer) defines a pointer to another location. [3.6. Simple Links and Cross-References 16.1. Links]</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-ptr-ptrAtts-constraint-report-7">
+                  id="abaevTEI-ptr-ptrAtts-constraint-report-8">
             <rule context="tei:ptr">
-               <report xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+               <report xmlns:xi="http://www.w3.org/2001/XInclude"
+                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="@target and @cRef">Only one of the
 attributes @target and @cRef may be supplied on <name/>.</report>
@@ -4316,9 +4680,10 @@ attributes @target and @cRef may be supplied on <name/>.</report>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) defines a reference to another location, possibly modified by additional text or comment. [3.6. Simple Links and Cross-References 16.1. Links]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-ref-refAtts-constraint-report-8">
+                  id="abaevTEI-ref-refAtts-constraint-report-9">
             <rule context="tei:ref">
-               <report xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+               <report xmlns:xi="http://www.w3.org/2001/XInclude"
+                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="@target and @cRef">Only one of the
 	attributes @target' and @cRef' may be supplied on <name/>
@@ -4329,8 +4694,26 @@ attributes @target and @cRef may be supplied on <name/>.</report>
          <ref name="tei_att.declaring.attributes"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.internetMedia.attributes"/>
-         <ref name="tei_att.pointing.attributes"/>
-         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.pointing.attribute.targetLang"/>
+         <ref name="tei_att.pointing.attribute.evaluate"/>
+         <ref name="tei_att.typed.attribute.subtype"/>
+         <attribute name="target">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the destination of the reference by supplying one or more URI References</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
+            <choice>
+               <value>xr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>bibl</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </choice>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -4387,8 +4770,9 @@ attributes @target and @cRef may be supplied on <name/>.</report>
             </zeroOrMore>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-list-gloss-list-must-have-labels-constraint-rule-12">
+                  id="abaevTEI-list-gloss-list-must-have-labels-constraint-rule-13">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       context="tei:list[@type='gloss']">
@@ -4396,7 +4780,6 @@ attributes @target and @cRef may be supplied on <name/>.</report>
             </sch:rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.sortable.attributes"/>
          <ref name="tei_att.typed.attribute.subtype"/>
          <optional>
             <attribute name="type">
@@ -4427,7 +4810,6 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains one component of a list. [3.7. Lists 2.6. The Revision Description]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.sortable.attributes"/>
          <empty/>
       </element>
    </define>
@@ -4486,8 +4868,19 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.placement.attributes"/>
          <ref name="tei_att.pointing.attributes"/>
-         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.typed.attribute.subtype"/>
          <ref name="tei_att.written.attributes"/>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
+            <choice>
+               <value>comment</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>internal</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>footnote</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </choice>
+         </attribute>
          <optional>
             <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                        name="anchored"
@@ -4985,7 +5378,6 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.declarable.attributes"/>
          <ref name="tei_att.typed.attributes"/>
-         <ref name="tei_att.sortable.attributes"/>
          <ref name="tei_att.docStatus.attributes"/>
          <empty/>
       </element>
@@ -5017,7 +5409,6 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.declarable.attributes"/>
          <ref name="tei_att.typed.attributes"/>
-         <ref name="tei_att.sortable.attributes"/>
          <ref name="tei_att.docStatus.attributes"/>
          <empty/>
       </element>
@@ -5043,7 +5434,6 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
             </zeroOrMore>
          </group>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.sortable.attributes"/>
          <ref name="tei_att.declarable.attributes"/>
          <ref name="tei_att.typed.attributes"/>
          <empty/>
@@ -5059,15 +5449,17 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
             </choice>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-relatedItem-targetorcontent1-constraint-report-9">
+                  id="abaevTEI-relatedItem-targetorcontent1-constraint-report-10">
             <rule context="tei:relatedItem">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
+                           xmlns:xi="http://www.w3.org/2001/XInclude"
                            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
                            test="@target and count( child::* ) &gt; 0">
 If the @target attribute on <sch:name/> is used, the
 relatedItem element must be empty</sch:report>
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
+                           xmlns:xi="http://www.w3.org/2001/XInclude"
                            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
                            test="@target or child::*">A relatedItem element should have either a 'target' attribute
@@ -5098,9 +5490,10 @@ relatedItem element must be empty</sch:report>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-l-abstractModel-structure-l-constraint-report-10">
+                  id="abaevTEI-l-abstractModel-structure-l-constraint-report-11">
             <rule context="tei:l">
-               <report xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+               <report xmlns:xi="http://www.w3.org/2001/XInclude"
+                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="ancestor::tei:l[not(.//tei:note//tei:l[. = current()])]">
         Abstract model violation: Lines may not contain lines or lg elements.
@@ -5150,6 +5543,7 @@ relatedItem element must be empty</sch:report>
                   id="abaevTEI-lg-atleast1oflggapl-constraint-assert-10">
             <rule context="tei:lg">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
+                           xmlns:xi="http://www.w3.org/2001/XInclude"
                            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
                            test="count(descendant::tei:lg|descendant::tei:l|descendant::tei:gap) &gt; 0">An lg element
@@ -5157,9 +5551,10 @@ relatedItem element must be empty</sch:report>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-lg-abstractModel-structure-l-constraint-report-11">
+                  id="abaevTEI-lg-abstractModel-structure-l-constraint-report-12">
             <rule context="tei:lg">
-               <report xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+               <report xmlns:xi="http://www.w3.org/2001/XInclude"
+                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="ancestor::tei:l[not(.//tei:note//tei:lg[. = current()])]">
         Abstract model violation: Lines may not contain line groups.
@@ -5529,7 +5924,6 @@ Sample values include: 1] index; 2] toc; 3] figlist; 4] tablist</a:documentation
             </choice>
          </zeroOrMore>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.sortable.attributes"/>
          <ref name="tei_att.datable.attributes"/>
          <ref name="tei_att.typed.attribute.subtype"/>
          <optional>
@@ -5694,7 +6088,6 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
          </choice>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.declarable.attributes"/>
-         <ref name="tei_att.sortable.attributes"/>
          <ref name="tei_att.docStatus.attributes"/>
          <empty/>
       </element>
@@ -5836,7 +6229,7 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
             <ref name="tei_model.pLike"/>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-quotation-quotationContents-constraint-report-12">
+                  id="abaevTEI-quotation-quotationContents-constraint-report-13">
             <rule context="tei:quotation">
                <report xmlns:xi="http://www.w3.org/2001/XInclude"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6548,7 +6941,6 @@ Suggested values include: 1] WGS84 (World Geodetic System); 2] MGRS (Military Gr
          </choice>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.typed.attribute.subtype"/>
-         <ref name="tei_att.sortable.attributes"/>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes the nature of the action.
@@ -6648,7 +7040,6 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
             </oneOrMore>
          </group>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.sortable.attributes"/>
          <ref name="tei_att.typed.attributes"/>
          <optional>
             <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
@@ -6681,16 +7072,19 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
             </choice>
          </group>
          <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:xi="http://www.w3.org/2001/XInclude"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  prefix="tei"
                  uri="http://www.tei-c.org/ns/1.0"/>
          <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:xi="http://www.w3.org/2001/XInclude"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  prefix="xs"
                  uri="http://www.w3.org/2001/XMLSchema"/>
          <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:xi="http://www.w3.org/2001/XInclude"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  prefix="rng"
@@ -6977,9 +7371,10 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
             </optional>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-div-abstractModel-structure-l-constraint-report-13">
+                  id="abaevTEI-div-abstractModel-structure-l-constraint-report-14">
             <rule context="tei:div">
-               <report xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+               <report xmlns:xi="http://www.w3.org/2001/XInclude"
+                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="ancestor::tei:l">
         Abstract model violation: Lines may not contain higher-level structural elements such as div.
@@ -6987,9 +7382,10 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-div-abstractModel-structure-p-constraint-report-14">
+                  id="abaevTEI-div-abstractModel-structure-p-constraint-report-15">
             <rule context="tei:div">
-               <report xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+               <report xmlns:xi="http://www.w3.org/2001/XInclude"
+                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="ancestor::tei:p or ancestor::tei:ab and not(ancestor::tei:floatingText)">
         Abstract model violation: p and ab may not contain higher-level structural elements such as div.
@@ -7901,10 +8297,6 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
          </attribute>
       </optional>
    </define>
-   <define name="tei_att.lexicographic.attributes">
-      <ref name="tei_att.datcat.attributes"/>
-      <ref name="tei_att.lexicographic.normalized.attributes"/>
-   </define>
    <define name="tei_model.morphLike">
       <choice>
          <ref name="tei_gram"/>
@@ -8144,25 +8536,86 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
          </choice>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.entryLike.attributes"/>
-         <ref name="tei_att.sortable.attributes"/>
          <empty/>
       </element>
    </define>
    <define name="tei_entry">
       <element name="entry">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a single structured entry in any kind of lexical resource, such as a dictionary or lexicon. [9.1. Dictionary Body and Overall Structure 9.2. The Structure of Dictionary Entries]</a:documentation>
-         <oneOrMore>
-            <choice>
-               <ref name="tei_hom"/>
-               <ref name="tei_sense"/>
-               <ref name="tei_model.entryPart.top"/>
+         <group>
+            <zeroOrMore>
                <ref name="tei_model.global"/>
-               <ref name="tei_model.ptrLike"/>
-            </choice>
-         </oneOrMore>
+            </zeroOrMore>
+            <group>
+               <ref name="tei_form"/>
+               <optional>
+                  <ref name="tei_form"/>
+               </optional>
+            </group>
+            <zeroOrMore>
+               <ref name="tei_model.global"/>
+            </zeroOrMore>
+            <optional>
+               <ref name="tei_usg"/>
+            </optional>
+            <zeroOrMore>
+               <ref name="tei_model.global"/>
+            </zeroOrMore>
+            <oneOrMore>
+               <ref name="tei_sense"/>
+            </oneOrMore>
+            <zeroOrMore>
+               <ref name="tei_model.global"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="tei_re"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="tei_model.global"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="tei_exampleGrp"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="tei_model.global"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="tei_re"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="tei_model.global"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="tei_exampleGrp"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="tei_model.global"/>
+            </zeroOrMore>
+            <group>
+               <optional>
+                  <ref name="tei_etym"/>
+               </optional>
+               <optional>
+                  <ref name="tei_etym"/>
+                  <optional>
+                     <ref name="tei_etym"/>
+                  </optional>
+               </optional>
+            </group>
+            <zeroOrMore>
+               <ref name="tei_model.global"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="tei_ref"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="tei_model.global"/>
+            </zeroOrMore>
+         </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-entry-form-type-constraint-rule-13">
+                  id="abaevTEI-entry-form-type-constraint-rule-14">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       context="tei:entry/tei:form[1]">
@@ -8170,6 +8623,7 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
                                     'lemma' (headword).</sch:assert>
             </sch:rule>
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       context="tei:entry/tei:form[2]">
@@ -8180,35 +8634,62 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-entry-note-type-constraint-rule-15">
+                  id="abaevTEI-entry-note-type-constraint-rule-16">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       context="tei:entry/tei:note[@type = 'internal']">
-               <sch:assert test="not(following-sibling::tei:etym)">Internal note should follow
-                                    etymology.</sch:assert>
+               <sch:assert test="not(following-sibling::tei:etym)">Internal note
+                                    should follow etymology.</sch:assert>
             </sch:rule>
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       context="tei:entry/tei:note[@type = 'comment']">
-               <sch:assert test="not(preceding-sibling::tei:etym)">Entry comments should precede
-                                    etymology.</sch:assert>
+               <sch:assert test="not(preceding-sibling::tei:etym)">Entry comments
+                                    should precede etymology.</sch:assert>
             </sch:rule>
          </pattern>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-entry-cit-type-constraint-rule-17">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      context="tei:entry/tei:cit">
-               <sch:assert test="@type = 'exampleGroup'">A 'cit' element inside
-                                    'entry' should be of type 'exampleGroup'.</sch:assert>
-            </sch:rule>
-         </pattern>
-         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.global.attribute.xmlid"/>
+         <ref name="tei_att.global.attribute.n"/>
+         <ref name="tei_att.global.attribute.xmlbase"/>
          <ref name="tei_att.entryLike.attributes"/>
-         <ref name="tei_att.sortable.attributes"/>
+         <attribute name="xml:lang">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to <a xmlns="http://www.w3.org/1999/xhtml"
+                  href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47</a>.</a:documentation>
+            <choice>
+               <value>os</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ossetic) </a:documentation>
+               <value>os-x-iron</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Iron Ossetic) </a:documentation>
+               <value>os-x-digor</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Digor Ossetic) </a:documentation>
+               <value>os-x-south</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(South Ossetic) </a:documentation>
+               <value>os-x-ksan</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ksan Ossetic) </a:documentation>
+            </choice>
+         </attribute>
+         <optional>
+            <attribute name="status" ns="http://ossetic-studies.org/ns/abaevdict">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
+                  <value>new</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(New entry not found in Abaev's original dictionary.) </a:documentation>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="completeness" ns="http://ossetic-studies.org/ns/abaevdict">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
+                  <value>incomplete</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Entry requires additional work on annotation and/or translation.) </a:documentation>
+               </choice>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>
@@ -8228,8 +8709,6 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
          </zeroOrMore>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.entryLike.attributes"/>
-         <ref name="tei_att.lexicographic.attributes"/>
-         <ref name="tei_att.sortable.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8244,7 +8723,6 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
             </choice>
          </zeroOrMore>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.lexicographic.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8253,16 +8731,34 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">groups together all information relating to one word sense in a dictionary entry, for example definitions, examples, and translation equivalents. [9.2. The Structure of Dictionary Entries]</a:documentation>
          <zeroOrMore>
             <choice>
-               <text/>
-               <ref name="tei_model.gLike"/>
+               <ref name="tei_macro.xtext"/>
                <ref name="tei_sense"/>
-               <ref name="tei_model.entryPart.top"/>
-               <ref name="tei_model.phrase"/>
+               <ref name="tei_tr"/>
+               <ref name="tei_usg"/>
                <ref name="tei_model.global"/>
             </choice>
          </zeroOrMore>
-         <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.lexicographic.attributes"/>
+         <ref name="tei_att.global.attribute.xmlid"/>
+         <ref name="tei_att.global.attribute.n"/>
+         <ref name="tei_att.global.attribute.xmlbase"/>
+         <optional>
+            <attribute name="xml:lang">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47</a>.</a:documentation>
+               <choice>
+                  <value>os</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ossetic) </a:documentation>
+                  <value>os-x-iron</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Iron Ossetic) </a:documentation>
+                  <value>os-x-digor</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Digor Ossetic) </a:documentation>
+                  <value>os-x-south</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(South Ossetic) </a:documentation>
+                  <value>os-x-ksan</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ksan Ossetic) </a:documentation>
+               </choice>
+            </attribute>
+         </optional>
          <optional>
             <attribute name="level">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives the nesting depth of this sense.</a:documentation>
@@ -8303,34 +8799,21 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
                <ref name="tei_model.global"/>
             </choice>
          </zeroOrMore>
-         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.global.attribute.xmlid"/>
+         <ref name="tei_att.global.attribute.xmllang"/>
+         <ref name="tei_att.global.attribute.xmlbase"/>
          <ref name="tei_att.typed.attribute.subtype"/>
-         <ref name="tei_att.lexicographic.attributes"/>
-         <optional>
-            <attribute name="type">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">classifies form as simple, compound, etc.
-Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] derivative; 6] inflected; 7] phrase</a:documentation>
-               <choice>
-                  <value>simple</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">single free lexical item</a:documentation>
-                  <value>lemma</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the headword itself</a:documentation>
-                  <value>variant</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a variant form</a:documentation>
-                  <value>compound</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">word formed from simple lexical items</a:documentation>
-                  <value>derivative</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">word derived from headword</a:documentation>
-                  <value>inflected</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">word in other than usual dictionary form</a:documentation>
-                  <value>phrase</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">multiple-word lexical item</a:documentation>
-                  <data type="token">
-                     <param name="pattern">[^\p{C}\p{Z}]+</param>
-                  </data>
-               </choice>
-            </attribute>
-         </optional>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">classifies form as simple, compound, etc.</a:documentation>
+            <choice>
+               <value>lemma</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>dialectal</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>participle</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </choice>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -8339,18 +8822,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(orthographic form) gives the orthographic form of a dictionary headword. [9.3.1. Information on Written and Spoken Forms]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.typed.attribute.subtype"/>
-         <ref name="tei_att.lexicographic.attributes"/>
-         <ref name="tei_att.partials.attributes"/>
-         <ref name="tei_att.notated.attributes"/>
-         <optional>
-            <attribute name="type">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives the type of spelling.</a:documentation>
-               <data type="token">
-                  <param name="pattern">[^\p{C}\p{Z}]+</param>
-               </data>
-            </attribute>
-         </optional>
          <empty/>
       </element>
    </define>
@@ -8359,9 +8830,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(pronunciation) contains the pronunciation(s) of the word. [9.3.1. Information on Written and Spoken Forms]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.lexicographic.attributes"/>
-         <ref name="tei_att.notated.attributes"/>
-         <ref name="tei_att.partials.attributes"/>
          <ref name="tei_att.typed.attributes"/>
          <empty/>
       </element>
@@ -8371,8 +8839,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(hyphenation) contains a hyphenated form of a dictionary headword, or hyphenation information in some other form. [9.3.1. Information on Written and Spoken Forms]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.lexicographic.attributes"/>
-         <ref name="tei_att.notated.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8381,8 +8847,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(syllabification) contains the syllabification of the headword. [9.3.1. Information on Written and Spoken Forms]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.lexicographic.attributes"/>
-         <ref name="tei_att.notated.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8391,7 +8855,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the stress pattern for a dictionary headword, if given separately. [9.3.1. Information on Written and Spoken Forms]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.notated.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8401,7 +8864,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.typed.attribute.subtype"/>
-         <ref name="tei_att.lexicographic.attributes"/>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">classifies the grammatical information given according to some convenient typology—in the case of terminological information, preferably the dictionary of data element types specified in <a xmlns="http://www.w3.org/1999/xhtml" href="http://www.isocat.org/">ISO 12620</a>.</a:documentation>
@@ -8418,7 +8880,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(gender) identifies the morphological gender of a lexical item, as given in the dictionary. [9.3.1. Information on Written and Spoken Forms]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.lexicographic.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8427,7 +8888,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates grammatical number associated with a form, as given in a dictionary. [9.3.1. Information on Written and Spoken Forms 9.3.2. Grammatical Information]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.lexicographic.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8436,7 +8896,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains grammatical case information given by a dictionary for a given form. [9.3.1. Information on Written and Spoken Forms]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.lexicographic.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8445,7 +8904,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(person) contains an indication of the grammatical person (1st, 2nd, 3rd, etc.) associated with a given inflected form in a dictionary. [9.3.1. Information on Written and Spoken Forms]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.lexicographic.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8454,7 +8912,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(tense) indicates the grammatical tense associated with a given inflected form in a dictionary. [9.3.1. Information on Written and Spoken Forms]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.lexicographic.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8463,7 +8920,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains information about the grammatical mood of verbs (e.g. indicative, subjunctive, imperative). [9.3.1. Information on Written and Spoken Forms]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.lexicographic.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8473,7 +8929,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.typed.attribute.subtype"/>
-         <ref name="tei_att.lexicographic.attributes"/>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the type of indicator used to specify the inflection class, when it is necessary to distinguish between the usual abbreviated indications (e.g. inv) and other kinds of indicators, such as special codes referring to conjugation patterns, etc.</a:documentation>
@@ -8499,7 +8954,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
             </choice>
          </zeroOrMore>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.lexicographic.attributes"/>
          <ref name="tei_att.typed.attributes"/>
          <empty/>
       </element>
@@ -8509,7 +8963,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(part of speech) indicates the part of speech assigned to a dictionary headword such as noun, verb, or adjective. [9.3.2. Grammatical Information]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.lexicographic.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8518,7 +8971,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(subcategorization) contains subcategorization information (transitive/intransitive, countable/non-countable, etc.) [9.3.2. Grammatical Information]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.lexicographic.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8527,7 +8979,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(collocate) contains any sequence of words that co-occur with the headword with significant frequency. [9.3.2. Grammatical Information]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.lexicographic.attributes"/>
          <ref name="tei_att.typed.attributes"/>
          <empty/>
       </element>
@@ -8537,7 +8988,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(definition) contains definition text in a dictionary entry. [9.3.3.1. Definitions]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.lexicographic.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8559,9 +9009,20 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
                <ref name="tei_xr"/>
             </choice>
          </zeroOrMore>
-         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.global.attribute.xmlid"/>
+         <ref name="tei_att.global.attribute.n"/>
+         <ref name="tei_att.global.attribute.xmlbase"/>
          <ref name="tei_att.typed.attributes"/>
-         <ref name="tei_att.lexicographic.attributes"/>
+         <attribute name="xml:lang">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to <a xmlns="http://www.w3.org/1999/xhtml"
+                  href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47</a>.</a:documentation>
+            <choice>
+               <value>ru</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Russian) </a:documentation>
+               <value>en</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(English) </a:documentation>
+            </choice>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -8570,7 +9031,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language name) contains the name of a language mentioned in etymological or other linguistic discussion. [9.3.4. Etymological Information]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.lexicographic.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8580,7 +9040,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.typed.attribute.subtype"/>
-         <ref name="tei_att.lexicographic.attributes"/>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">classifies the usage information using any convenient typology.</a:documentation>
@@ -8598,7 +9057,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.typed.attribute.subtype"/>
-         <ref name="tei_att.lexicographic.attributes"/>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">classifies the label using any convenient typology.</a:documentation>
@@ -8626,7 +9084,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          </zeroOrMore>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.typed.attribute.subtype"/>
-         <ref name="tei_att.lexicographic.attributes"/>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the type of cross reference, using any convenient typology.</a:documentation>
@@ -8652,7 +9109,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
             </choice>
          </zeroOrMore>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.lexicographic.attributes"/>
          <ref name="tei_att.typed.attributes"/>
          <empty/>
       </element>
@@ -8669,9 +9125,7 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          </zeroOrMore>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.typed.attribute.subtype"/>
-         <ref name="tei_att.lexicographic.attributes"/>
          <ref name="tei_att.pointing.attributes"/>
-         <ref name="tei_att.notated.attributes"/>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the kind of typographic modification made to the headword in the reference.</a:documentation>
@@ -8695,8 +9149,6 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          </zeroOrMore>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.pointing.attributes"/>
-         <ref name="tei_att.lexicographic.attributes"/>
-         <ref name="tei_att.notated.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8829,7 +9281,6 @@ Suggested values include: 1] label; 2] data</a:documentation>
             </choice>
          </zeroOrMore>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.notated.attributes"/>
          <empty/>
       </element>
    </define>
@@ -8899,10 +9350,10 @@ Suggested values include: 1] label; 2] data</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines an association or hypertextual link among elements or passages, of some type not more precisely specifiable by other elements. [16.1. Links]</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-link-linkTargets3-constraint-assert-17">
+                  id="abaevTEI-link-linkTargets3-constraint-assert-16">
             <rule context="tei:link">
-               <sch:assert xmlns:xi="http://www.w3.org/2001/XInclude"
-                           xmlns="http://www.tei-c.org/ns/1.0"
+               <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
+                           xmlns:xi="http://www.w3.org/2001/XInclude"
                            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
                            test="contains(normalize-space(@target),' ')">You must supply at least two values for @target or  on <sch:name/>
@@ -8934,7 +9385,7 @@ Suggested values include: 1] label; 2] data</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(anonymous block) contains any arbitrary component-level unit of text, acting as an anonymous container for phrase or inter level elements analogous to, but without the semantic baggage of, a paragraph. [16.3. Blocks, Segments, and Anchors]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-ab-abstractModel-structure-ab-constraint-report-15">
+                  id="abaevTEI-ab-abstractModel-structure-ab-constraint-report-16">
             <rule context="tei:ab">
                <report xmlns:xi="http://www.w3.org/2001/XInclude"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -8945,7 +9396,7 @@ Suggested values include: 1] label; 2] data</a:documentation>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-ab-abstractModel-structure-l-constraint-report-16">
+                  id="abaevTEI-ab-abstractModel-structure-l-constraint-report-17">
             <rule context="tei:ab">
                <report xmlns:xi="http://www.w3.org/2001/XInclude"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -8980,7 +9431,6 @@ Suggested values include: 1] label; 2] data</a:documentation>
          <ref name="tei_att.segLike.attributes"/>
          <ref name="tei_att.typed.attributes"/>
          <ref name="tei_att.written.attributes"/>
-         <ref name="tei_att.notated.attributes"/>
          <empty/>
       </element>
    </define>
@@ -9113,7 +9563,7 @@ Suggested values include: 1] d (days); 2] h (hours); 3] min (minutes); 4] s (sec
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-join-joinTargets3-constraint-assert-18">
+                  id="abaevTEI-join-joinTargets3-constraint-assert-17">
             <rule context="tei:join">
                <assert xmlns:xi="http://www.w3.org/2001/XInclude"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9253,10 +9703,10 @@ You must supply at least two values for @target on <name/>
             <ref name="tei_model.standOffPart"/>
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-standOff-nested_standOff_should_be_typed-constraint-assert-19">
+                  id="abaevTEI-standOff-nested_standOff_should_be_typed-constraint-assert-18">
             <rule context="tei:standOff">
-               <sch:assert xmlns:xi="http://www.w3.org/2001/XInclude"
-                           xmlns="http://www.tei-c.org/ns/1.0"
+               <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
+                           xmlns:xi="http://www.w3.org/2001/XInclude"
                            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
                            test="@type or not(ancestor::tei:standOff)">This
@@ -9290,7 +9740,6 @@ You must supply at least two values for @target on <name/>
          </group>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.typed.attributes"/>
-         <ref name="tei_att.notated.attributes"/>
          <ref name="tei_att.declaring.attributes"/>
          <empty/>
       </element>
@@ -9313,16 +9762,9 @@ You must supply at least two values for @target on <name/>
                <ref name="tei_model.annotationPart.body"/>
             </zeroOrMore>
          </group>
-         <ref name="tei_att.global.attribute.dialect"/>
          <ref name="tei_att.global.attribute.n"/>
          <ref name="tei_att.global.attribute.xmllang"/>
          <ref name="tei_att.global.attribute.xmlbase"/>
-         <ref name="tei_att.global.attribute.xmlspace"/>
-         <ref name="tei_att.global.rendition.attribute.rend"/>
-         <ref name="tei_att.global.rendition.attribute.style"/>
-         <ref name="tei_att.global.rendition.attribute.rendition"/>
-         <ref name="tei_att.global.linking.attribute.corresp"/>
-         <ref name="tei_att.global.source.attribute.source"/>
          <ref name="tei_att.pointing.attribute.targetLang"/>
          <ref name="tei_att.pointing.attribute.evaluate"/>
          <attribute name="xml:id">
@@ -9377,10 +9819,6 @@ You must supply at least two values for @target on <name/>
          <empty/>
       </element>
    </define>
-   <define name="tei_att.lexicographic.normalized.attributes">
-      <ref name="tei_att.lexicographic.normalized.attribute.norm"/>
-      <ref name="tei_att.lexicographic.normalized.attribute.orig"/>
-   </define>
    <define name="tei_att.lexicographic.normalized.attribute.norm">
       <optional>
          <attribute name="norm">
@@ -9398,7 +9836,6 @@ You must supply at least two values for @target on <name/>
       </optional>
    </define>
    <define name="tei_att.linguistic.attributes">
-      <ref name="tei_att.lexicographic.normalized.attributes"/>
       <ref name="tei_att.linguistic.attribute.lemma"/>
       <ref name="tei_att.linguistic.attribute.lemmaRef"/>
       <ref name="tei_att.linguistic.attribute.pos"/>
@@ -9466,9 +9903,10 @@ You must supply at least two values for @target on <name/>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(s-unit) contains a sentence-like division of a text. [17.1. Linguistic Segment Categories 8.4.1. Segmentation]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-s-noNestedS-constraint-report-17">
+                  id="abaevTEI-s-noNestedS-constraint-report-18">
             <rule context="tei:s">
-               <report xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+               <report xmlns:xi="http://www.w3.org/2001/XInclude"
+                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="tei:s">You may not nest one s element within
       another: use seg instead</report>
@@ -9477,7 +9915,6 @@ You must supply at least two values for @target on <name/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.segLike.attributes"/>
          <ref name="tei_att.typed.attributes"/>
-         <ref name="tei_att.notated.attributes"/>
          <empty/>
       </element>
    </define>
@@ -9488,7 +9925,6 @@ You must supply at least two values for @target on <name/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.segLike.attributes"/>
          <ref name="tei_att.typed.attributes"/>
-         <ref name="tei_att.notated.attributes"/>
          <empty/>
       </element>
    </define>
@@ -9499,7 +9935,6 @@ You must supply at least two values for @target on <name/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.segLike.attributes"/>
          <ref name="tei_att.typed.attributes"/>
-         <ref name="tei_att.notated.attributes"/>
          <empty/>
       </element>
    </define>
@@ -9524,7 +9959,6 @@ You must supply at least two values for @target on <name/>
          <ref name="tei_att.segLike.attributes"/>
          <ref name="tei_att.typed.attributes"/>
          <ref name="tei_att.linguistic.attributes"/>
-         <ref name="tei_att.notated.attributes"/>
          <empty/>
       </element>
    </define>
@@ -9545,7 +9979,6 @@ You must supply at least two values for @target on <name/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.segLike.attributes"/>
          <ref name="tei_att.typed.attributes"/>
-         <ref name="tei_att.notated.attributes"/>
          <optional>
             <attribute name="baseForm">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies the morpheme's base form.</a:documentation>
@@ -9564,7 +9997,153 @@ You must supply at least two values for @target on <name/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.segLike.attributes"/>
          <ref name="tei_att.typed.attributes"/>
-         <ref name="tei_att.notated.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_att.dialectal.attributes">
+      <ref name="tei_att.dialectal.attribute.dialect"/>
+   </define>
+   <define name="tei_att.dialectal.attribute.dialect">
+      <optional>
+         <attribute name="dialect">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <list>
+               <oneOrMore>
+                  <data type="language"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tei_att.extralang.attributes">
+      <ref name="tei_att.extralang.attribute.extralang"/>
+   </define>
+   <define name="tei_att.extralang.attribute.extralang">
+      <optional>
+         <attribute name="extralang">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <list>
+               <oneOrMore>
+                  <data type="language"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="tei_example">
+      <element name="example" ns="http://ossetic-studies.org/ns/abaevdict">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">represents an example in Abaev's Ossetic dictionary entry.</a:documentation>
+         <zeroOrMore>
+            <ref name="tei_model.global"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="tei_usg"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="tei_model.global"/>
+         </zeroOrMore>
+         <ref name="tei_quote"/>
+         <zeroOrMore>
+            <ref name="tei_model.global"/>
+         </zeroOrMore>
+         <group>
+            <optional>
+               <ref name="tei_tr"/>
+            </optional>
+            <optional>
+               <ref name="tei_tr"/>
+               <optional>
+                  <ref name="tei_tr"/>
+               </optional>
+            </optional>
+         </group>
+         <zeroOrMore>
+            <ref name="tei_model.global"/>
+         </zeroOrMore>
+         <optional>
+            <ref name="tei_bibl"/>
+         </optional>
+         <zeroOrMore>
+            <ref name="tei_model.global"/>
+         </zeroOrMore>
+         <ref name="tei_att.global.attribute.xmlid"/>
+         <ref name="tei_att.global.attribute.n"/>
+         <ref name="tei_att.global.attribute.xmlbase"/>
+         <ref name="tei_att.global.rendition.attributes"/>
+         <ref name="tei_att.global.linking.attributes"/>
+         <optional>
+            <attribute name="xml:lang">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) the language should only be indicated if the source has д. (for Digor) or ксан. (for Ksan) preceding the example text. Other dialect options are possible, but not attesed. Otherwise <code xmlns="http://www.w3.org/1999/xhtml">@xml:lang</code> is inherited from the dictionary entry.</a:documentation>
+               <choice>
+                  <value>os</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ossetic) </a:documentation>
+                  <value>os-x-iron</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Iron Ossetic) </a:documentation>
+                  <value>os-x-digor</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Digor Ossetic) </a:documentation>
+                  <value>os-x-south</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(South Ossetic) </a:documentation>
+                  <value>os-x-ksan</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ksan Ossetic) </a:documentation>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_exampleGrp">
+      <element name="exampleGrp" ns="http://ossetic-studies.org/ns/abaevdict">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(example group) represents a group of examples in Abaev's Ossetic dictionary entry.</a:documentation>
+         <zeroOrMore>
+            <ref name="tei_note"/>
+         </zeroOrMore>
+         <oneOrMore>
+            <ref name="tei_example"/>
+         </oneOrMore>
+         <zeroOrMore>
+            <ref name="tei_note"/>
+         </zeroOrMore>
+         <ref name="tei_att.global.attribute.xmlid"/>
+         <ref name="tei_att.global.attribute.xmllang"/>
+         <ref name="tei_att.global.attribute.xmlbase"/>
+         <ref name="tei_att.global.rendition.attributes"/>
+         <ref name="tei_att.global.linking.attributes"/>
+         <optional>
+            <attribute name="n">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(number) represents the number that precedes the example group in some lexical entries. This number usually corresponds to a numbered <code xmlns="http://www.w3.org/1999/xhtml">&lt;sense&gt;</code>.</a:documentation>
+               <data type="string"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_tr">
+      <element name="tr" ns="http://ossetic-studies.org/ns/abaevdict">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(translation) represents translations of examples in Abaev's dictionary entries.</a:documentation>
+         <zeroOrMore>
+            <ref name="tei_model.global"/>
+         </zeroOrMore>
+         <oneOrMore>
+            <ref name="tei_q"/>
+         </oneOrMore>
+         <zeroOrMore>
+            <ref name="tei_model.global"/>
+         </zeroOrMore>
+         <ref name="tei_att.global.attribute.xmlid"/>
+         <ref name="tei_att.global.attribute.n"/>
+         <ref name="tei_att.global.attribute.xmlbase"/>
+         <ref name="tei_att.global.rendition.attributes"/>
+         <ref name="tei_att.global.linking.attributes"/>
+         <attribute name="xml:lang">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to <a xmlns="http://www.w3.org/1999/xhtml"
+                  href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47</a>.</a:documentation>
+            <choice>
+               <value>ru</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Russian) </a:documentation>
+               <value>en</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(English) </a:documentation>
+            </choice>
+         </attribute>
          <empty/>
       </element>
    </define>
