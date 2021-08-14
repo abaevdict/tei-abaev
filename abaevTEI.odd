@@ -954,6 +954,7 @@
                                 <valItem ident="lemma"/>
                                 <valItem ident="dialectal"/>
                                 <valItem ident="participle"/>
+                                <valItem ident="variant"/>
                             </valList>
                         </attDef>
                     </attList>
