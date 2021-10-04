@@ -60,7 +60,7 @@
                     </classes>
                     <constraintSpec ident="lang-not-empty" scheme="schematron">
                         <constraint><sch:rule context="@xml:lang">
-                                <sch:assert test="string(.) != ''">Language may not be empty.</sch:assert>
+                                <sch:assert test="string(.) != ''" role="warning">Language may not be empty.</sch:assert>
                             </sch:rule></constraint>
                     </constraintSpec>
                     <attList>
@@ -346,6 +346,9 @@
                                 <valItem ident="kv">
                                     <gloss>коми / Komi</gloss>
                                 </valItem>
+                                <valItem ident="ko">
+                                    <gloss>корейский / Korean</gloss>
+                                </valItem>
                                 <valItem ident="os-x-ksan">
                                     <gloss>ксан. / Ksan Ossetic</gloss>
                                 </valItem>
@@ -396,6 +399,9 @@
                                 </valItem>
                                 <valItem ident="mns">
                                     <gloss>манси / Mansi</gloss>
+                                </valItem>
+                                <valItem ident="mnc">
+                                    <gloss>манчж. / Manchu</gloss>
                                 </valItem>
                                 <valItem ident="chm">
                                     <gloss>мар. / Mari</gloss>
@@ -711,6 +717,9 @@
                                 <valItem ident="os-x-south">
                                     <gloss>ю. / South Ossetic</gloss>
                                 </valItem>
+                                <valItem ident="syd-x-south">
+                                    <gloss>южносамоедские наречия / Southern Samoyedic</gloss>
+                                </valItem>
                                 <valItem ident="gbz-x-yzd">
                                     <gloss>язди / Yazdi</gloss>
                                 </valItem>
@@ -802,10 +811,14 @@
                     <attList>
                         <attDef ident="type" mode="change" usage="req">
                             <valList mode="replace" type="closed">
-                                <valItem ident="comment"/>
-                                <valItem ident="internal"/>
+                                <valItem ident="comment"><gloss>comments to various elements of the dictionary, usually in parentheses or separated from their environment by other punctuation; these punctuation marks should be included within the note, if possible</gloss></valItem>
+                                <valItem ident="internal"><gloss>comments for internal use of project participants, not intended for publication</gloss></valItem>
                                 <valItem ident="footnote"/>
+                                <valItem ident="bibl"><gloss>bibliographic note, mainly used in <gi>re</gi>, which sometimes includes bibliographic citations (because <gi>bibl</gi> cannot be inserted directly).</gloss></valItem>
                             </valList>
+                        </attDef>
+                        <attDef ident="xml:lang" mode="change" usage="rec">
+                            <xi:include href="vallist-ruen.xml" parse="xml"/>
                         </attDef>
                     </attList>
                 </elementSpec>
@@ -843,7 +856,7 @@
                             <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
                             <elementRef key="exampleGrp" minOccurs="0" maxOccurs="unbounded"/>
                             <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
-                            <elementRef key="etym" minOccurs="1" maxOccurs="2"/>
+                            <elementRef key="etym" minOccurs="0" maxOccurs="2"/>
                             <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
                             <elementRef key="ref" minOccurs="0" maxOccurs="unbounded"/>
                             <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
@@ -897,6 +910,8 @@
                         <attDef ident="completeness" mode="add" ns="http://ossetic-studies.org/ns/abaevdict">
                             <valList mode="replace" type="closed">
                                 <valItem ident="incomplete"><gloss>Entry requires additional work on annotation and/or translation.</gloss></valItem>
+                                <valItem ident="questions"><gloss>Entry essentially complete but questions remain.</gloss></valItem>
+                                <valItem ident="complete"><gloss>Entry is finished.</gloss></valItem>
                             </valList>
                         </attDef>                        
                     </attList>
@@ -907,8 +922,10 @@
                         <alternate minOccurs="0" maxOccurs="unbounded">
                             <macroRef key="macro.xtext"/>
                             <elementRef key="sense"/>
+                            <elementRef key="def"/>
                             <elementRef key="tr"/>
                             <elementRef key="usg"/>
+                            <elementRef key="re"/> <!-- cf. lasyn -->
                             <classRef key="model.global"/>
                         </alternate>
                     </content>
@@ -984,9 +1001,9 @@
                         <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
                         <elementRef key="quote" minOccurs="1" maxOccurs="1"/>
                         <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
-                        <elementRef key="tr" minOccurs="0" maxOccurs="2"/>
+                        <elementRef key="tr" minOccurs="0" maxOccurs="unbounded"/>
                         <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
-                        <elementRef key="bibl" minOccurs="0" maxOccurs="1"/>
+                        <elementRef key="bibl" minOccurs="0" maxOccurs="unbounded"/>
                         <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
                     </content>
                     <attList>
@@ -1090,7 +1107,15 @@
                         <p>An <att>xml:lang</att> attribute <hi rend="bold">must</hi> be supplied, with the value of either <val>ru</val> or <val>en</val>.</p>
                         <p>In standard TEI, the semantic equivalent is <gi>cit</gi> with the value <val>translation</val> for <att>type</att>.</p>
                     </remarks>
-                </elementSpec>                
+                </elementSpec>      
+                
+                <elementSpec ident="def" mode="change">
+                    <attList>
+                        <attDef ident="xml:lang" mode="change" usage="req">
+                            <xi:include href="vallist-ruen.xml"/>
+                        </attDef>
+                    </attList>
+                </elementSpec>
                 
 <!--                Move this to a separate ODD file (for a 'standard compliant' TEI style). cit is not needed in this version.-->
                 
@@ -1163,7 +1188,7 @@
                     <constraintSpec ident="punctuation-only" scheme="schematron">
                         <constraint>
                             <sch:rule context="tei:mentioned/text()">
-                                <sch:report test="matches(.,'[^ ,\n]')">Text in mentioned forms must only include punctuation (spaces, commas).</sch:report>
+                                <sch:report test="matches(.,'[^ ,—;()\n]')">Text in mentioned forms must only include punctuation (spaces, commas).</sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>                    
@@ -1183,7 +1208,14 @@
                                 <sch:assert test="substring(@target,2) = //tei:entry/@xml:id">The cross-referenced entry <sch:value-of select="substring(@target,2)"/> does not exist.</sch:assert>
                             </sch:rule>
                         </constraint>
-                    </constraintSpec>-->                    
+                    </constraintSpec>-->  
+                    <constraintSpec ident="target-or-text" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="tei:ref">
+                                <sch:assert test="text() | @target" role="warning">Bibliographic reference must either point to a known bibliography item or include explicit text.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>                    
                     <attList>
                         <attDef ident="type" mode="change" usage="req">
                             <valList mode="replace" type="closed">
@@ -1191,7 +1223,7 @@
                                 <valItem ident="bibl"/>
                             </valList>
                         </attDef>
-                        <attDef ident="target" usage="req" mode="change"/>
+                        <attDef ident="target" usage="rec" mode="change"/>
                     </attList>
                 </elementSpec>
                 

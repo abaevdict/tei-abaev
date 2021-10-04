@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2021-08-14T14:47:18Z. .
+Schema generated from ODD source 2021-09-26T11:59:44Z. .
 TEI Edition: Version 4.1.0. Last updated on
 	19th August 2020, revision b414ba550
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
@@ -716,7 +716,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
          <attribute name="xml:lang">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to <a xmlns="http://www.w3.org/1999/xhtml"
                   href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47</a>.
-Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (абаз. / Abaza); 3] ab (абх. / Abkhaz); 4] ae (ав. / Avestan); 5] av (авар. / Avar); 6] agx (агул. / Aghul); 7] ady (адыг. / Adyghe); 8] aze (азерб. / Azerbaijani); 9] akk (аккад. / Akkadian); 10] dar-x-aqusha (акуш. / Aqusha Dargwa); 11] xln (алан. / Alanic); 12] sqj (алб. / Albanian); 13] alt (алт. / Altai); 14] tr-x-anat (анат. / Anatolian Turkish); 15] en (англ. / English); 16] ang (англос. / Old English); 17] ani (анд. / Andi); 18] iir (ар. / Proto-Indo-Iranian); 19] ar (араб. / Arabic); 20] arc (арам. / Aramaic); 21] xcl (арм. / (Classical) Armenian); 22] aqc (арчин. / Archi); 23] aii (ассир. / Assyrian); 24] ps (афг. / Pashto); 25] krc-x-balkar (балк. / Balkar); 26] eu (баск. / Basque); 27] ba (башк. / Bashkir); 28] x-balochi (бел. / Balochi); 29] be (белорусс. / Belarusian); 30] bg (болг. / Bulgarian); 31] br (брет. / Breton); 32] bdk (будух. / Budugh); 33] xbo (булг. / Bulgar); 34] bua ((монг.) бурят. / Buryat); 35] sa-vaidika (вед. / Vedic); 36] x-vaynakh (вейнах. / Vaynakh); 37] hu (венг. / Hungarian); 38] vep (вепс. / Veps); 39] bsk (верш. / Burushaski); 40] gem (герм. / Proto-Germanic); 41] glk (гилян. / Gilaki); 42] got (гот. / Gothic); 43] grc (гр. / (Ancient) Greek); 44] ka (груз. / Georgian); 45] hac (гуран. / Gorani); 46] os-x-digor (д. / Digor Ossetic); 47] dar (дарг. / Dargwa); 48] chg (джагат. (чагат.) / Chagatai); 49] kry-x-jek (джекск. / Jek Kryts); 50] ddo (дид. / Tsez); 51] cu-x-bg (др.болг. / Old Bulgarian); 52] goh (др.в.нем. / Old High German); 53] gem-x-old (др.герм. / Old Germanic); 54] hbo (др.евр. / Ancient Hebrew); 55] sa (др.инд. / Old Indic); 56] x-oldirn (др.иран. / Proto-Iranian); 57] sga (др.ирл. / Old Irish); 58] non-x-is (др.исл. / Old Icelandic); 59] peo (др.перс. / Old Persian); 60] prg (др.прусс. / Old Prussian); 61] orv (др.русск. / Old Russian); 62] osx (др.сакс. / Old Saxon); 63] non (др.сев. / Old Norse); 64] x-oldsl (др.слав. / Proto-Slavic); 65] zza (заза / Zazaki); 66] os-x-iron (и. / Iron Ossetic); 67] ine (и.е. / Proto-Indo-European); 68] inh (инг. / Ingush); 69] inc (инд. / Indic); 70] ira (иран. / (Proto-?)Iranian); 71] ga (ирл. / Irish); 72] es (исп. / Spanish); 73] it (ит. / Italian); 74] kbd (каб. / Kabardian); 75] kk (каз. / Kazakh); 76] tt-x-kazan (казан. / Kazan Tatar); 77] dar-x-kaitag (кайт. / Kaitag Dargwa); 78] xal (калм. / Kalmyk); 79] kap (капуч. / Bezhta); 80] kdr (караим. / Karaim); 81] krc-x-karachay (карач. / Karachay); 82] krl (карел. / Karelian); 83] ccs (картв. / South Caucasian); 84] x-nuristan (кафир. / Nuristani); 85] ug-x-kashgar (кашг. / Kashgari Uyghur); 86] cel (кельт. / Celtic); 87] ky (кирг. / Kyrgyz); 88] zh (кит. / Chinese); 89] kv (коми / Komi); 90] os-x-ksan (ксан. / Ksan Ossetic); 91] kum (кум. / Kumyk); 92] qwm (куман. / Cuman); 93] ku (курд. / Kurdish); 94] xbc (кушан. / Bactrian); 95] pgd (кхарошти / Gandhari); 96] lbe (лак. / Lak); 97] la (лат. / Latin); 98] lv (латыш. / Latvian); 99] lez (лезг. / Lezgian); 100] liv (лив. / Livonian); 101] lt (лит. / Lithuanian); 102] smi (лопар. / Sami); 103] wen (луж. / Sorbian); 104] ldd (лур. / Luri); 105] mzn (маз. / Mazanderani); 106] mns (манси / Mansi); 107] chm (мар. / Mari); 108] xmf (мегр. / Mingerlian); 109] xme (мид. / Median); 110] mn (монг. / Mongolian); 111] cmg (монг. письм. / Classical Mongolian); 112] x-mordvin (морд. / Mordvinic); 113] el (н.гр. / Modern Greek); 114] de (нем. / German); 115] yrk (нен. / Nenets); 116] nl (нидерл. / Dutch); 117] nds (н.н.нем. / Low German); 118] nog (ног. / Nogai); 119] no (норв. / Norwegian); 120] nub (нубийское / Nubian); 121] oru ((пам.) орм. / Ormuri); 122] os (ос. / Ossetic); 123] pal-x-pazend (паз. / Pazend); 124] pi (пали / Pali); 125] x-pamir (пам. / Pamir); 126] sgh-x-bartang (пам. барт. / Bartangi); 127] wbl (пам. в. / Wakhi); 128] sgy-x-zebak (пам. зеб. / Zebaki); 129] ydg (пам. и. / Yidgha); 130] isk (пам. ишк. / Ishkashimi); 131] mnj (пам. м. / Munji); 132] x-pamir-n (пам. н.?? / Pamir); 133] x-rushani (пам. руш. / Rushani); 134] srh (пам. с. / Sarikoli); 135] sgy (пам. сгл. / Sanglechi); 136] sgh (пам. ш. / Shughni); 137] yah (пам. язг. / Yazgulyam); 138] prc (пар. / Parachi); 139] xpr (парф. / Parthian); 140] psh (пашан / Pashai (?)); 141] fa (перс. / Persian); 142] pal (пехл. / Middle Persian); 143] pal-x-turfan (пехл. турф. / Turfan Pahlavi); 144] pl (пол. / Polish); 145] ro (рум. / Romanian); 146] ru (русск. / Russian); 147] rut (рутул. / Rutul); 148] kho (сак. / Saka); 149] sva (сван. / Svan); 150] trk-x-north (сев. тюрк. / North Turkic); 151] inc-x-nnew (северные новоиндийские диалекты / North New Indic dialects); 152] sem (семит. / Semitic); 153] sr (серб. / Serbian); 154] syr (сир. / Syriac); 155] xsc (скиф. / Scythian); 156] sla (слав. / Slavic); 157] sl (слов. / Slovenian); 158] sog (согд. / Sogdian); 159] sog-x-chr (согд. христ. / Christian Sogdian); 160] gmh (ср.в.нем. / Middle High German); 161] inc-x-mid (ср.инд. / Middle Indic); 162] ira-x-mid (ср.иран. / Middle Iranian); 163] gml (ср.н.нем. / Middle Low German); 164] oos (ст.ос. / Old Ossetic); 165] cu (ст.слав. / Old Church Slavonic); 166] tab (табас. / Tabassaran); 167] tg (тадж. / Tajik); 168] tly (тал. / Talyshi); 169] tt (татар. / Tatar); 170] ttt (татск. / Tat (Muslim?)); 171] alt-x-teleut (телеут. / Teleut Altai); 172] bo (тибет. / Tibetan); 173] x-tchr (тохар. / Tocharian); 174] xto (тохар. A / Tocharian A); 175] txb (тохар. B / Tocharian B); 176] tr (тур. / Turkish); 177] bbl (туш. / Bats); 178] trk (тюрк. / Turkic); 179] uby (убых. / Ubykh); 180] udi (удин. / Udi); 181] udm (удм. / Udmurt); 182] uz (узб. / Uzbek); 183] ug (уйгур. / Uyghur); 184] uk (укр. / Ukrainian); 185] mn-x-uriankh (урянх. / Uriankhai); 186] fi (фин. / Finnish); 187] fr (фр. / French); 188] txh (фрак. / Thracian); 189] kca (ханты / Khanty); 190] khv (хварш. / Khwarshi); 191] ka-x-khevsur (хевсур. / Khevsur Georgian); 192] hit (хетт. / Hittite); 193] kjj (хиналуг. / Khinalugh); 194] khw (ховар. / Khowar); 195] hr (хорв. / Croatian); 196] zkh (хорезм. / Khwarezmian); 197] tkr (цахур. / Tsakhur); 198] rom (цыг. / Romani); 199] cji (чамал. / Chamalal); 200] lzz (чан. / Laz); 201] x-crc (черк. / Circassian); 202] ce (чеч. / Chechen); 203] cs (чеш. / Czech); 204] cv (чув. / Chuvash); 205] ady-x-shpsg (шапс. / Shapsug Adyghe); 206] sv (швед. / Swedish); 207] sux (шумер. / Sumerian); 208] evn (эвенк. / Evenki); 209] et (эст. / Estonian); 210] os-x-south (ю. / South Ossetic); 211] gbz-x-yzd (язди / Yazdi); 212] x-iazyg (языгский / Iazygean); 213] sah (якут. / Yakut); 214] yai (ягн. / Yaghnobi); 215] ja (япон. / Japanese)</a:documentation>
+Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (абаз. / Abaza); 3] ab (абх. / Abkhaz); 4] ae (ав. / Avestan); 5] av (авар. / Avar); 6] agx (агул. / Aghul); 7] ady (адыг. / Adyghe); 8] aze (азерб. / Azerbaijani); 9] akk (аккад. / Akkadian); 10] dar-x-aqusha (акуш. / Aqusha Dargwa); 11] xln (алан. / Alanic); 12] sqj (алб. / Albanian); 13] alt (алт. / Altai); 14] tr-x-anat (анат. / Anatolian Turkish); 15] en (англ. / English); 16] ang (англос. / Old English); 17] ani (анд. / Andi); 18] iir (ар. / Proto-Indo-Iranian); 19] ar (араб. / Arabic); 20] arc (арам. / Aramaic); 21] xcl (арм. / (Classical) Armenian); 22] aqc (арчин. / Archi); 23] aii (ассир. / Assyrian); 24] ps (афг. / Pashto); 25] krc-x-balkar (балк. / Balkar); 26] eu (баск. / Basque); 27] ba (башк. / Bashkir); 28] x-balochi (бел. / Balochi); 29] be (белорусс. / Belarusian); 30] bg (болг. / Bulgarian); 31] br (брет. / Breton); 32] bdk (будух. / Budugh); 33] xbo (булг. / Bulgar); 34] bua ((монг.) бурят. / Buryat); 35] sa-vaidika (вед. / Vedic); 36] x-vaynakh (вейнах. / Vaynakh); 37] hu (венг. / Hungarian); 38] vep (вепс. / Veps); 39] bsk (верш. / Burushaski); 40] gem (герм. / Proto-Germanic); 41] glk (гилян. / Gilaki); 42] got (гот. / Gothic); 43] grc (гр. / (Ancient) Greek); 44] ka (груз. / Georgian); 45] hac (гуран. / Gorani); 46] os-x-digor (д. / Digor Ossetic); 47] dar (дарг. / Dargwa); 48] chg (джагат. (чагат.) / Chagatai); 49] kry-x-jek (джекск. / Jek Kryts); 50] ddo (дид. / Tsez); 51] cu-x-bg (др.болг. / Old Bulgarian); 52] goh (др.в.нем. / Old High German); 53] gem-x-old (др.герм. / Old Germanic); 54] hbo (др.евр. / Ancient Hebrew); 55] sa (др.инд. / Old Indic); 56] x-oldirn (др.иран. / Proto-Iranian); 57] sga (др.ирл. / Old Irish); 58] non-x-is (др.исл. / Old Icelandic); 59] peo (др.перс. / Old Persian); 60] prg (др.прусс. / Old Prussian); 61] orv (др.русск. / Old Russian); 62] osx (др.сакс. / Old Saxon); 63] non (др.сев. / Old Norse); 64] x-oldsl (др.слав. / Proto-Slavic); 65] zza (заза / Zazaki); 66] os-x-iron (и. / Iron Ossetic); 67] ine (и.е. / Proto-Indo-European); 68] inh (инг. / Ingush); 69] inc (инд. / Indic); 70] ira (иран. / (Proto-?)Iranian); 71] ga (ирл. / Irish); 72] es (исп. / Spanish); 73] it (ит. / Italian); 74] kbd (каб. / Kabardian); 75] kk (каз. / Kazakh); 76] tt-x-kazan (казан. / Kazan Tatar); 77] dar-x-kaitag (кайт. / Kaitag Dargwa); 78] xal (калм. / Kalmyk); 79] kap (капуч. / Bezhta); 80] kdr (караим. / Karaim); 81] krc-x-karachay (карач. / Karachay); 82] krl (карел. / Karelian); 83] ccs (картв. / South Caucasian); 84] x-nuristan (кафир. / Nuristani); 85] ug-x-kashgar (кашг. / Kashgari Uyghur); 86] cel (кельт. / Celtic); 87] ky (кирг. / Kyrgyz); 88] zh (кит. / Chinese); 89] kv (коми / Komi); 90] ko (корейский / Korean); 91] os-x-ksan (ксан. / Ksan Ossetic); 92] kum (кум. / Kumyk); 93] qwm (куман. / Cuman); 94] ku (курд. / Kurdish); 95] xbc (кушан. / Bactrian); 96] pgd (кхарошти / Gandhari); 97] lbe (лак. / Lak); 98] la (лат. / Latin); 99] lv (латыш. / Latvian); 100] lez (лезг. / Lezgian); 101] liv (лив. / Livonian); 102] lt (лит. / Lithuanian); 103] smi (лопар. / Sami); 104] wen (луж. / Sorbian); 105] ldd (лур. / Luri); 106] mzn (маз. / Mazanderani); 107] mns (манси / Mansi); 108] mnc (манчж. / Manchu); 109] chm (мар. / Mari); 110] xmf (мегр. / Mingerlian); 111] xme (мид. / Median); 112] mn (монг. / Mongolian); 113] cmg (монг. письм. / Classical Mongolian); 114] x-mordvin (морд. / Mordvinic); 115] el (н.гр. / Modern Greek); 116] de (нем. / German); 117] yrk (нен. / Nenets); 118] nl (нидерл. / Dutch); 119] nds (н.н.нем. / Low German); 120] nog (ног. / Nogai); 121] no (норв. / Norwegian); 122] nub (нубийское / Nubian); 123] oru ((пам.) орм. / Ormuri); 124] os (ос. / Ossetic); 125] pal-x-pazend (паз. / Pazend); 126] pi (пали / Pali); 127] x-pamir (пам. / Pamir); 128] sgh-x-bartang (пам. барт. / Bartangi); 129] wbl (пам. в. / Wakhi); 130] sgy-x-zebak (пам. зеб. / Zebaki); 131] ydg (пам. и. / Yidgha); 132] isk (пам. ишк. / Ishkashimi); 133] mnj (пам. м. / Munji); 134] x-pamir-n (пам. н.?? / Pamir); 135] x-rushani (пам. руш. / Rushani); 136] srh (пам. с. / Sarikoli); 137] sgy (пам. сгл. / Sanglechi); 138] sgh (пам. ш. / Shughni); 139] yah (пам. язг. / Yazgulyam); 140] prc (пар. / Parachi); 141] xpr (парф. / Parthian); 142] psh (пашан / Pashai (?)); 143] fa (перс. / Persian); 144] pal (пехл. / Middle Persian); 145] pal-x-turfan (пехл. турф. / Turfan Pahlavi); 146] pl (пол. / Polish); 147] ro (рум. / Romanian); 148] ru (русск. / Russian); 149] rut (рутул. / Rutul); 150] kho (сак. / Saka); 151] sva (сван. / Svan); 152] trk-x-north (сев. тюрк. / North Turkic); 153] inc-x-nnew (северные новоиндийские диалекты / North New Indic dialects); 154] sem (семит. / Semitic); 155] sr (серб. / Serbian); 156] syr (сир. / Syriac); 157] xsc (скиф. / Scythian); 158] sla (слав. / Slavic); 159] sl (слов. / Slovenian); 160] sog (согд. / Sogdian); 161] sog-x-chr (согд. христ. / Christian Sogdian); 162] gmh (ср.в.нем. / Middle High German); 163] inc-x-mid (ср.инд. / Middle Indic); 164] ira-x-mid (ср.иран. / Middle Iranian); 165] gml (ср.н.нем. / Middle Low German); 166] oos (ст.ос. / Old Ossetic); 167] cu (ст.слав. / Old Church Slavonic); 168] tab (табас. / Tabassaran); 169] tg (тадж. / Tajik); 170] tly (тал. / Talyshi); 171] tt (татар. / Tatar); 172] ttt (татск. / Tat (Muslim?)); 173] alt-x-teleut (телеут. / Teleut Altai); 174] bo (тибет. / Tibetan); 175] x-tchr (тохар. / Tocharian); 176] xto (тохар. A / Tocharian A); 177] txb (тохар. B / Tocharian B); 178] tr (тур. / Turkish); 179] bbl (туш. / Bats); 180] trk (тюрк. / Turkic); 181] uby (убых. / Ubykh); 182] udi (удин. / Udi); 183] udm (удм. / Udmurt); 184] uz (узб. / Uzbek); 185] ug (уйгур. / Uyghur); 186] uk (укр. / Ukrainian); 187] mn-x-uriankh (урянх. / Uriankhai); 188] fi (фин. / Finnish); 189] fr (фр. / French); 190] txh (фрак. / Thracian); 191] kca (ханты / Khanty); 192] khv (хварш. / Khwarshi); 193] ka-x-khevsur (хевсур. / Khevsur Georgian); 194] hit (хетт. / Hittite); 195] kjj (хиналуг. / Khinalugh); 196] khw (ховар. / Khowar); 197] hr (хорв. / Croatian); 198] zkh (хорезм. / Khwarezmian); 199] tkr (цахур. / Tsakhur); 200] rom (цыг. / Romani); 201] cji (чамал. / Chamalal); 202] lzz (чан. / Laz); 203] x-crc (черк. / Circassian); 204] ce (чеч. / Chechen); 205] cs (чеш. / Czech); 206] cv (чув. / Chuvash); 207] ady-x-shpsg (шапс. / Shapsug Adyghe); 208] sv (швед. / Swedish); 209] sux (шумер. / Sumerian); 210] evn (эвенк. / Evenki); 211] et (эст. / Estonian); 212] os-x-south (ю. / South Ossetic); 213] syd-x-south (южносамоедские наречия / Southern Samoyedic); 214] gbz-x-yzd (язди / Yazdi); 215] x-iazyg (языгский / Iazygean); 216] sah (якут. / Yakut); 217] yai (ягн. / Yaghnobi); 218] ja (япон. / Japanese)</a:documentation>
             <choice>
                <value>ady-x-abadz</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(абадз. / Abzakh) </a:documentation>
@@ -896,6 +896,8 @@ Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (аба�
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(кит. / Chinese) </a:documentation>
                <value>kv</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(коми / Komi) </a:documentation>
+               <value>ko</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(корейский / Korean) </a:documentation>
                <value>os-x-ksan</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ксан. / Ksan Ossetic) </a:documentation>
                <value>kum</value>
@@ -930,6 +932,8 @@ Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (аба�
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(маз. / Mazanderani) </a:documentation>
                <value>mns</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(манси / Mansi) </a:documentation>
+               <value>mnc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(манчж. / Manchu) </a:documentation>
                <value>chm</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(мар. / Mari) </a:documentation>
                <value>xmf</value>
@@ -1139,6 +1143,8 @@ Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (аба�
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(эст. / Estonian) </a:documentation>
                <value>os-x-south</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ю. / South Ossetic) </a:documentation>
+               <value>syd-x-south</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(южносамоедские наречия / Southern Samoyedic) </a:documentation>
                <value>gbz-x-yzd</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(язди / Yazdi) </a:documentation>
                <value>x-iazyg</value>
@@ -1175,7 +1181,7 @@ Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (аба�
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 context="@xml:lang">
-         <sch:assert test="string(.) != ''">Language may not be empty.</sch:assert>
+         <sch:assert test="string(.) != ''" role="warning">Language may not be empty.</sch:assert>
       </sch:rule>
    </pattern>
    <define name="tei_att.handFeatures.attribute.scribe">
@@ -3721,7 +3727,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       context="tei:mentioned/text()">
-               <sch:report test="matches(.,'[^ ,\n]')">Text in mentioned forms must only include punctuation (spaces, commas).</sch:report>
+               <sch:report test="matches(.,'[^ ,—;()\n]')">Text in mentioned forms must only include punctuation (spaces, commas).</sch:report>
             </sch:rule>
          </pattern>
          <ref name="tei_att.dialectal.attributes"/>
@@ -3732,7 +3738,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
          <attribute name="xml:lang">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to <a xmlns="http://www.w3.org/1999/xhtml"
                   href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47</a>.
-Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (абаз. / Abaza); 3] ab (абх. / Abkhaz); 4] ae (ав. / Avestan); 5] av (авар. / Avar); 6] agx (агул. / Aghul); 7] ady (адыг. / Adyghe); 8] aze (азерб. / Azerbaijani); 9] akk (аккад. / Akkadian); 10] dar-x-aqusha (акуш. / Aqusha Dargwa); 11] xln (алан. / Alanic); 12] sqj (алб. / Albanian); 13] alt (алт. / Altai); 14] tr-x-anat (анат. / Anatolian Turkish); 15] en (англ. / English); 16] ang (англос. / Old English); 17] ani (анд. / Andi); 18] iir (ар. / Proto-Indo-Iranian); 19] ar (араб. / Arabic); 20] arc (арам. / Aramaic); 21] xcl (арм. / (Classical) Armenian); 22] aqc (арчин. / Archi); 23] aii (ассир. / Assyrian); 24] ps (афг. / Pashto); 25] krc-x-balkar (балк. / Balkar); 26] eu (баск. / Basque); 27] ba (башк. / Bashkir); 28] x-balochi (бел. / Balochi); 29] be (белорусс. / Belarusian); 30] bg (болг. / Bulgarian); 31] br (брет. / Breton); 32] bdk (будух. / Budugh); 33] xbo (булг. / Bulgar); 34] bua ((монг.) бурят. / Buryat); 35] sa-vaidika (вед. / Vedic); 36] x-vaynakh (вейнах. / Vaynakh); 37] hu (венг. / Hungarian); 38] vep (вепс. / Veps); 39] bsk (верш. / Burushaski); 40] gem (герм. / Proto-Germanic); 41] glk (гилян. / Gilaki); 42] got (гот. / Gothic); 43] grc (гр. / (Ancient) Greek); 44] ka (груз. / Georgian); 45] hac (гуран. / Gorani); 46] os-x-digor (д. / Digor Ossetic); 47] dar (дарг. / Dargwa); 48] chg (джагат. (чагат.) / Chagatai); 49] kry-x-jek (джекск. / Jek Kryts); 50] ddo (дид. / Tsez); 51] cu-x-bg (др.болг. / Old Bulgarian); 52] goh (др.в.нем. / Old High German); 53] gem-x-old (др.герм. / Old Germanic); 54] hbo (др.евр. / Ancient Hebrew); 55] sa (др.инд. / Old Indic); 56] x-oldirn (др.иран. / Proto-Iranian); 57] sga (др.ирл. / Old Irish); 58] non-x-is (др.исл. / Old Icelandic); 59] peo (др.перс. / Old Persian); 60] prg (др.прусс. / Old Prussian); 61] orv (др.русск. / Old Russian); 62] osx (др.сакс. / Old Saxon); 63] non (др.сев. / Old Norse); 64] x-oldsl (др.слав. / Proto-Slavic); 65] zza (заза / Zazaki); 66] os-x-iron (и. / Iron Ossetic); 67] ine (и.е. / Proto-Indo-European); 68] inh (инг. / Ingush); 69] inc (инд. / Indic); 70] ira (иран. / (Proto-?)Iranian); 71] ga (ирл. / Irish); 72] es (исп. / Spanish); 73] it (ит. / Italian); 74] kbd (каб. / Kabardian); 75] kk (каз. / Kazakh); 76] tt-x-kazan (казан. / Kazan Tatar); 77] dar-x-kaitag (кайт. / Kaitag Dargwa); 78] xal (калм. / Kalmyk); 79] kap (капуч. / Bezhta); 80] kdr (караим. / Karaim); 81] krc-x-karachay (карач. / Karachay); 82] krl (карел. / Karelian); 83] ccs (картв. / South Caucasian); 84] x-nuristan (кафир. / Nuristani); 85] ug-x-kashgar (кашг. / Kashgari Uyghur); 86] cel (кельт. / Celtic); 87] ky (кирг. / Kyrgyz); 88] zh (кит. / Chinese); 89] kv (коми / Komi); 90] os-x-ksan (ксан. / Ksan Ossetic); 91] kum (кум. / Kumyk); 92] qwm (куман. / Cuman); 93] ku (курд. / Kurdish); 94] xbc (кушан. / Bactrian); 95] pgd (кхарошти / Gandhari); 96] lbe (лак. / Lak); 97] la (лат. / Latin); 98] lv (латыш. / Latvian); 99] lez (лезг. / Lezgian); 100] liv (лив. / Livonian); 101] lt (лит. / Lithuanian); 102] smi (лопар. / Sami); 103] wen (луж. / Sorbian); 104] ldd (лур. / Luri); 105] mzn (маз. / Mazanderani); 106] mns (манси / Mansi); 107] chm (мар. / Mari); 108] xmf (мегр. / Mingerlian); 109] xme (мид. / Median); 110] mn (монг. / Mongolian); 111] cmg (монг. письм. / Classical Mongolian); 112] x-mordvin (морд. / Mordvinic); 113] el (н.гр. / Modern Greek); 114] de (нем. / German); 115] yrk (нен. / Nenets); 116] nl (нидерл. / Dutch); 117] nds (н.н.нем. / Low German); 118] nog (ног. / Nogai); 119] no (норв. / Norwegian); 120] nub (нубийское / Nubian); 121] oru ((пам.) орм. / Ormuri); 122] os (ос. / Ossetic); 123] pal-x-pazend (паз. / Pazend); 124] pi (пали / Pali); 125] x-pamir (пам. / Pamir); 126] sgh-x-bartang (пам. барт. / Bartangi); 127] wbl (пам. в. / Wakhi); 128] sgy-x-zebak (пам. зеб. / Zebaki); 129] ydg (пам. и. / Yidgha); 130] isk (пам. ишк. / Ishkashimi); 131] mnj (пам. м. / Munji); 132] x-pamir-n (пам. н.?? / Pamir); 133] x-rushani (пам. руш. / Rushani); 134] srh (пам. с. / Sarikoli); 135] sgy (пам. сгл. / Sanglechi); 136] sgh (пам. ш. / Shughni); 137] yah (пам. язг. / Yazgulyam); 138] prc (пар. / Parachi); 139] xpr (парф. / Parthian); 140] psh (пашан / Pashai (?)); 141] fa (перс. / Persian); 142] pal (пехл. / Middle Persian); 143] pal-x-turfan (пехл. турф. / Turfan Pahlavi); 144] pl (пол. / Polish); 145] ro (рум. / Romanian); 146] ru (русск. / Russian); 147] rut (рутул. / Rutul); 148] kho (сак. / Saka); 149] sva (сван. / Svan); 150] trk-x-north (сев. тюрк. / North Turkic); 151] inc-x-nnew (северные новоиндийские диалекты / North New Indic dialects); 152] sem (семит. / Semitic); 153] sr (серб. / Serbian); 154] syr (сир. / Syriac); 155] xsc (скиф. / Scythian); 156] sla (слав. / Slavic); 157] sl (слов. / Slovenian); 158] sog (согд. / Sogdian); 159] sog-x-chr (согд. христ. / Christian Sogdian); 160] gmh (ср.в.нем. / Middle High German); 161] inc-x-mid (ср.инд. / Middle Indic); 162] ira-x-mid (ср.иран. / Middle Iranian); 163] gml (ср.н.нем. / Middle Low German); 164] oos (ст.ос. / Old Ossetic); 165] cu (ст.слав. / Old Church Slavonic); 166] tab (табас. / Tabassaran); 167] tg (тадж. / Tajik); 168] tly (тал. / Talyshi); 169] tt (татар. / Tatar); 170] ttt (татск. / Tat (Muslim?)); 171] alt-x-teleut (телеут. / Teleut Altai); 172] bo (тибет. / Tibetan); 173] x-tchr (тохар. / Tocharian); 174] xto (тохар. A / Tocharian A); 175] txb (тохар. B / Tocharian B); 176] tr (тур. / Turkish); 177] bbl (туш. / Bats); 178] trk (тюрк. / Turkic); 179] uby (убых. / Ubykh); 180] udi (удин. / Udi); 181] udm (удм. / Udmurt); 182] uz (узб. / Uzbek); 183] ug (уйгур. / Uyghur); 184] uk (укр. / Ukrainian); 185] mn-x-uriankh (урянх. / Uriankhai); 186] fi (фин. / Finnish); 187] fr (фр. / French); 188] txh (фрак. / Thracian); 189] kca (ханты / Khanty); 190] khv (хварш. / Khwarshi); 191] ka-x-khevsur (хевсур. / Khevsur Georgian); 192] hit (хетт. / Hittite); 193] kjj (хиналуг. / Khinalugh); 194] khw (ховар. / Khowar); 195] hr (хорв. / Croatian); 196] zkh (хорезм. / Khwarezmian); 197] tkr (цахур. / Tsakhur); 198] rom (цыг. / Romani); 199] cji (чамал. / Chamalal); 200] lzz (чан. / Laz); 201] x-crc (черк. / Circassian); 202] ce (чеч. / Chechen); 203] cs (чеш. / Czech); 204] cv (чув. / Chuvash); 205] ady-x-shpsg (шапс. / Shapsug Adyghe); 206] sv (швед. / Swedish); 207] sux (шумер. / Sumerian); 208] evn (эвенк. / Evenki); 209] et (эст. / Estonian); 210] os-x-south (ю. / South Ossetic); 211] gbz-x-yzd (язди / Yazdi); 212] x-iazyg (языгский / Iazygean); 213] sah (якут. / Yakut); 214] yai (ягн. / Yaghnobi); 215] ja (япон. / Japanese)</a:documentation>
+Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (абаз. / Abaza); 3] ab (абх. / Abkhaz); 4] ae (ав. / Avestan); 5] av (авар. / Avar); 6] agx (агул. / Aghul); 7] ady (адыг. / Adyghe); 8] aze (азерб. / Azerbaijani); 9] akk (аккад. / Akkadian); 10] dar-x-aqusha (акуш. / Aqusha Dargwa); 11] xln (алан. / Alanic); 12] sqj (алб. / Albanian); 13] alt (алт. / Altai); 14] tr-x-anat (анат. / Anatolian Turkish); 15] en (англ. / English); 16] ang (англос. / Old English); 17] ani (анд. / Andi); 18] iir (ар. / Proto-Indo-Iranian); 19] ar (араб. / Arabic); 20] arc (арам. / Aramaic); 21] xcl (арм. / (Classical) Armenian); 22] aqc (арчин. / Archi); 23] aii (ассир. / Assyrian); 24] ps (афг. / Pashto); 25] krc-x-balkar (балк. / Balkar); 26] eu (баск. / Basque); 27] ba (башк. / Bashkir); 28] x-balochi (бел. / Balochi); 29] be (белорусс. / Belarusian); 30] bg (болг. / Bulgarian); 31] br (брет. / Breton); 32] bdk (будух. / Budugh); 33] xbo (булг. / Bulgar); 34] bua ((монг.) бурят. / Buryat); 35] sa-vaidika (вед. / Vedic); 36] x-vaynakh (вейнах. / Vaynakh); 37] hu (венг. / Hungarian); 38] vep (вепс. / Veps); 39] bsk (верш. / Burushaski); 40] gem (герм. / Proto-Germanic); 41] glk (гилян. / Gilaki); 42] got (гот. / Gothic); 43] grc (гр. / (Ancient) Greek); 44] ka (груз. / Georgian); 45] hac (гуран. / Gorani); 46] os-x-digor (д. / Digor Ossetic); 47] dar (дарг. / Dargwa); 48] chg (джагат. (чагат.) / Chagatai); 49] kry-x-jek (джекск. / Jek Kryts); 50] ddo (дид. / Tsez); 51] cu-x-bg (др.болг. / Old Bulgarian); 52] goh (др.в.нем. / Old High German); 53] gem-x-old (др.герм. / Old Germanic); 54] hbo (др.евр. / Ancient Hebrew); 55] sa (др.инд. / Old Indic); 56] x-oldirn (др.иран. / Proto-Iranian); 57] sga (др.ирл. / Old Irish); 58] non-x-is (др.исл. / Old Icelandic); 59] peo (др.перс. / Old Persian); 60] prg (др.прусс. / Old Prussian); 61] orv (др.русск. / Old Russian); 62] osx (др.сакс. / Old Saxon); 63] non (др.сев. / Old Norse); 64] x-oldsl (др.слав. / Proto-Slavic); 65] zza (заза / Zazaki); 66] os-x-iron (и. / Iron Ossetic); 67] ine (и.е. / Proto-Indo-European); 68] inh (инг. / Ingush); 69] inc (инд. / Indic); 70] ira (иран. / (Proto-?)Iranian); 71] ga (ирл. / Irish); 72] es (исп. / Spanish); 73] it (ит. / Italian); 74] kbd (каб. / Kabardian); 75] kk (каз. / Kazakh); 76] tt-x-kazan (казан. / Kazan Tatar); 77] dar-x-kaitag (кайт. / Kaitag Dargwa); 78] xal (калм. / Kalmyk); 79] kap (капуч. / Bezhta); 80] kdr (караим. / Karaim); 81] krc-x-karachay (карач. / Karachay); 82] krl (карел. / Karelian); 83] ccs (картв. / South Caucasian); 84] x-nuristan (кафир. / Nuristani); 85] ug-x-kashgar (кашг. / Kashgari Uyghur); 86] cel (кельт. / Celtic); 87] ky (кирг. / Kyrgyz); 88] zh (кит. / Chinese); 89] kv (коми / Komi); 90] ko (корейский / Korean); 91] os-x-ksan (ксан. / Ksan Ossetic); 92] kum (кум. / Kumyk); 93] qwm (куман. / Cuman); 94] ku (курд. / Kurdish); 95] xbc (кушан. / Bactrian); 96] pgd (кхарошти / Gandhari); 97] lbe (лак. / Lak); 98] la (лат. / Latin); 99] lv (латыш. / Latvian); 100] lez (лезг. / Lezgian); 101] liv (лив. / Livonian); 102] lt (лит. / Lithuanian); 103] smi (лопар. / Sami); 104] wen (луж. / Sorbian); 105] ldd (лур. / Luri); 106] mzn (маз. / Mazanderani); 107] mns (манси / Mansi); 108] mnc (манчж. / Manchu); 109] chm (мар. / Mari); 110] xmf (мегр. / Mingerlian); 111] xme (мид. / Median); 112] mn (монг. / Mongolian); 113] cmg (монг. письм. / Classical Mongolian); 114] x-mordvin (морд. / Mordvinic); 115] el (н.гр. / Modern Greek); 116] de (нем. / German); 117] yrk (нен. / Nenets); 118] nl (нидерл. / Dutch); 119] nds (н.н.нем. / Low German); 120] nog (ног. / Nogai); 121] no (норв. / Norwegian); 122] nub (нубийское / Nubian); 123] oru ((пам.) орм. / Ormuri); 124] os (ос. / Ossetic); 125] pal-x-pazend (паз. / Pazend); 126] pi (пали / Pali); 127] x-pamir (пам. / Pamir); 128] sgh-x-bartang (пам. барт. / Bartangi); 129] wbl (пам. в. / Wakhi); 130] sgy-x-zebak (пам. зеб. / Zebaki); 131] ydg (пам. и. / Yidgha); 132] isk (пам. ишк. / Ishkashimi); 133] mnj (пам. м. / Munji); 134] x-pamir-n (пам. н.?? / Pamir); 135] x-rushani (пам. руш. / Rushani); 136] srh (пам. с. / Sarikoli); 137] sgy (пам. сгл. / Sanglechi); 138] sgh (пам. ш. / Shughni); 139] yah (пам. язг. / Yazgulyam); 140] prc (пар. / Parachi); 141] xpr (парф. / Parthian); 142] psh (пашан / Pashai (?)); 143] fa (перс. / Persian); 144] pal (пехл. / Middle Persian); 145] pal-x-turfan (пехл. турф. / Turfan Pahlavi); 146] pl (пол. / Polish); 147] ro (рум. / Romanian); 148] ru (русск. / Russian); 149] rut (рутул. / Rutul); 150] kho (сак. / Saka); 151] sva (сван. / Svan); 152] trk-x-north (сев. тюрк. / North Turkic); 153] inc-x-nnew (северные новоиндийские диалекты / North New Indic dialects); 154] sem (семит. / Semitic); 155] sr (серб. / Serbian); 156] syr (сир. / Syriac); 157] xsc (скиф. / Scythian); 158] sla (слав. / Slavic); 159] sl (слов. / Slovenian); 160] sog (согд. / Sogdian); 161] sog-x-chr (согд. христ. / Christian Sogdian); 162] gmh (ср.в.нем. / Middle High German); 163] inc-x-mid (ср.инд. / Middle Indic); 164] ira-x-mid (ср.иран. / Middle Iranian); 165] gml (ср.н.нем. / Middle Low German); 166] oos (ст.ос. / Old Ossetic); 167] cu (ст.слав. / Old Church Slavonic); 168] tab (табас. / Tabassaran); 169] tg (тадж. / Tajik); 170] tly (тал. / Talyshi); 171] tt (татар. / Tatar); 172] ttt (татск. / Tat (Muslim?)); 173] alt-x-teleut (телеут. / Teleut Altai); 174] bo (тибет. / Tibetan); 175] x-tchr (тохар. / Tocharian); 176] xto (тохар. A / Tocharian A); 177] txb (тохар. B / Tocharian B); 178] tr (тур. / Turkish); 179] bbl (туш. / Bats); 180] trk (тюрк. / Turkic); 181] uby (убых. / Ubykh); 182] udi (удин. / Udi); 183] udm (удм. / Udmurt); 184] uz (узб. / Uzbek); 185] ug (уйгур. / Uyghur); 186] uk (укр. / Ukrainian); 187] mn-x-uriankh (урянх. / Uriankhai); 188] fi (фин. / Finnish); 189] fr (фр. / French); 190] txh (фрак. / Thracian); 191] kca (ханты / Khanty); 192] khv (хварш. / Khwarshi); 193] ka-x-khevsur (хевсур. / Khevsur Georgian); 194] hit (хетт. / Hittite); 195] kjj (хиналуг. / Khinalugh); 196] khw (ховар. / Khowar); 197] hr (хорв. / Croatian); 198] zkh (хорезм. / Khwarezmian); 199] tkr (цахур. / Tsakhur); 200] rom (цыг. / Romani); 201] cji (чамал. / Chamalal); 202] lzz (чан. / Laz); 203] x-crc (черк. / Circassian); 204] ce (чеч. / Chechen); 205] cs (чеш. / Czech); 206] cv (чув. / Chuvash); 207] ady-x-shpsg (шапс. / Shapsug Adyghe); 208] sv (швед. / Swedish); 209] sux (шумер. / Sumerian); 210] evn (эвенк. / Evenki); 211] et (эст. / Estonian); 212] os-x-south (ю. / South Ossetic); 213] syd-x-south (южносамоедские наречия / Southern Samoyedic); 214] gbz-x-yzd (язди / Yazdi); 215] x-iazyg (языгский / Iazygean); 216] sah (якут. / Yakut); 217] yai (ягн. / Yaghnobi); 218] ja (япон. / Japanese)</a:documentation>
             <choice>
                <value>ady-x-abadz</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(абадз. / Abzakh) </a:documentation>
@@ -3912,6 +3918,8 @@ Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (аба�
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(кит. / Chinese) </a:documentation>
                <value>kv</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(коми / Komi) </a:documentation>
+               <value>ko</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(корейский / Korean) </a:documentation>
                <value>os-x-ksan</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ксан. / Ksan Ossetic) </a:documentation>
                <value>kum</value>
@@ -3946,6 +3954,8 @@ Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (аба�
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(маз. / Mazanderani) </a:documentation>
                <value>mns</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(манси / Mansi) </a:documentation>
+               <value>mnc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(манчж. / Manchu) </a:documentation>
                <value>chm</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(мар. / Mari) </a:documentation>
                <value>xmf</value>
@@ -4155,6 +4165,8 @@ Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (аба�
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(эст. / Estonian) </a:documentation>
                <value>os-x-south</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ю. / South Ossetic) </a:documentation>
+               <value>syd-x-south</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(южносамоедские наречия / Southern Samoyedic) </a:documentation>
                <value>gbz-x-yzd</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(язди / Yazdi) </a:documentation>
                <value>x-iazyg</value>
@@ -4680,6 +4692,16 @@ attributes @target and @cRef may be supplied on <name/>.</report>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) defines a reference to another location, possibly modified by additional text or comment. [3.6. Simple Links and Cross-References 16.1. Links]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="abaevTEI-ref-target-or-text-constraint-rule-13">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      context="tei:ref">
+               <sch:assert test="text() | @target" role="warning">Bibliographic reference must either point to a known bibliography item or include explicit text.</sch:assert>
+            </sch:rule>
+         </pattern>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="abaevTEI-ref-refAtts-constraint-report-9">
             <rule context="tei:ref">
                <report xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -4697,14 +4719,16 @@ attributes @target and @cRef may be supplied on <name/>.</report>
          <ref name="tei_att.pointing.attribute.targetLang"/>
          <ref name="tei_att.pointing.attribute.evaluate"/>
          <ref name="tei_att.typed.attribute.subtype"/>
-         <attribute name="target">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the destination of the reference by supplying one or more URI References</a:documentation>
-            <list>
-               <oneOrMore>
-                  <data type="anyURI"/>
-               </oneOrMore>
-            </list>
-         </attribute>
+         <optional>
+            <attribute name="target">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the destination of the reference by supplying one or more URI References</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="anyURI"/>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
          <attribute name="type">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
             <choice>
@@ -4770,7 +4794,7 @@ attributes @target and @cRef may be supplied on <name/>.</report>
             </zeroOrMore>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-list-gloss-list-must-have-labels-constraint-rule-13">
+                  id="abaevTEI-list-gloss-list-must-have-labels-constraint-rule-14">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4865,20 +4889,36 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
       <element name="note">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a note or annotation. [3.8.1. Notes and Simple Annotation 2.2.6. The Notes Statement 3.11.2.8. Notes and Statement of Language 9.3.5.4. Notes within Entries]</a:documentation>
          <ref name="tei_macro.specialPara"/>
-         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.global.attribute.xmlid"/>
+         <ref name="tei_att.global.attribute.n"/>
+         <ref name="tei_att.global.attribute.xmlbase"/>
          <ref name="tei_att.placement.attributes"/>
          <ref name="tei_att.pointing.attributes"/>
          <ref name="tei_att.typed.attribute.subtype"/>
          <ref name="tei_att.written.attributes"/>
+         <optional>
+            <attribute name="xml:lang">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47</a>.</a:documentation>
+               <choice>
+                  <value>ru</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Russian) </a:documentation>
+                  <value>en</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(English) </a:documentation>
+               </choice>
+            </attribute>
+         </optional>
          <attribute name="type">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
             <choice>
                <value>comment</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(comments to various elements of the dictionary, usually in parentheses or separated from their environment by other punctuation; these punctuation marks should be included within the note, if possible) </a:documentation>
                <value>internal</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(comments for internal use of project participants, not intended for publication) </a:documentation>
                <value>footnote</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>bibl</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(bibliographic note, mainly used in re, which sometimes includes bibliographic citations (because bibl cannot be inserted directly).) </a:documentation>
             </choice>
          </attribute>
          <optional>
@@ -5540,7 +5580,7 @@ relatedItem element must be empty</sch:report>
             </zeroOrMore>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-lg-atleast1oflggapl-constraint-assert-10">
+                  id="abaevTEI-lg-atleast1oflggapl-constraint-assert-11">
             <rule context="tei:lg">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -8592,9 +8632,14 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
                <ref name="tei_model.global"/>
             </zeroOrMore>
             <group>
-               <ref name="tei_etym"/>
                <optional>
                   <ref name="tei_etym"/>
+               </optional>
+               <optional>
+                  <ref name="tei_etym"/>
+                  <optional>
+                     <ref name="tei_etym"/>
+                  </optional>
                </optional>
             </group>
             <zeroOrMore>
@@ -8608,7 +8653,7 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
             </zeroOrMore>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-entry-form-type-constraint-rule-14">
+                  id="abaevTEI-entry-form-type-constraint-rule-15">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -8629,7 +8674,7 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-entry-note-type-constraint-rule-16">
+                  id="abaevTEI-entry-note-type-constraint-rule-17">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -8682,6 +8727,10 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
                <choice>
                   <value>incomplete</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Entry requires additional work on annotation and/or translation.) </a:documentation>
+                  <value>questions</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Entry essentially complete but questions remain.) </a:documentation>
+                  <value>complete</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Entry is finished.) </a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -8728,8 +8777,10 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
             <choice>
                <ref name="tei_macro.xtext"/>
                <ref name="tei_sense"/>
+               <ref name="tei_def"/>
                <ref name="tei_tr"/>
                <ref name="tei_usg"/>
+               <ref name="tei_re"/>
                <ref name="tei_model.global"/>
             </choice>
          </zeroOrMore>
@@ -8984,7 +9035,19 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
       <element name="def">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(definition) contains definition text in a dictionary entry. [9.3.3.1. Definitions]</a:documentation>
          <ref name="tei_macro.paraContent"/>
-         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.global.attribute.xmlid"/>
+         <ref name="tei_att.global.attribute.n"/>
+         <ref name="tei_att.global.attribute.xmlbase"/>
+         <attribute name="xml:lang">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to <a xmlns="http://www.w3.org/1999/xhtml"
+                  href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47</a>.</a:documentation>
+            <choice>
+               <value>ru</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Russian) </a:documentation>
+               <value>en</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(English) </a:documentation>
+            </choice>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -9347,7 +9410,7 @@ Suggested values include: 1] label; 2] data</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines an association or hypertextual link among elements or passages, of some type not more precisely specifiable by other elements. [16.1. Links]</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-link-linkTargets3-constraint-assert-16">
+                  id="abaevTEI-link-linkTargets3-constraint-assert-17">
             <rule context="tei:link">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -9560,7 +9623,7 @@ Suggested values include: 1] d (days); 2] h (hours); 3] min (minutes); 4] s (sec
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-join-joinTargets3-constraint-assert-17">
+                  id="abaevTEI-join-joinTargets3-constraint-assert-18">
             <rule context="tei:join">
                <assert xmlns:xi="http://www.w3.org/2001/XInclude"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9700,7 +9763,7 @@ You must supply at least two values for @target on <name/>
             <ref name="tei_model.standOffPart"/>
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-standOff-nested_standOff_should_be_typed-constraint-assert-18">
+                  id="abaevTEI-standOff-nested_standOff_should_be_typed-constraint-assert-19">
             <rule context="tei:standOff">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -10043,23 +10106,15 @@ You must supply at least two values for @target on <name/>
          <zeroOrMore>
             <ref name="tei_model.global"/>
          </zeroOrMore>
-         <group>
-            <optional>
-               <ref name="tei_tr"/>
-            </optional>
-            <optional>
-               <ref name="tei_tr"/>
-               <optional>
-                  <ref name="tei_tr"/>
-               </optional>
-            </optional>
-         </group>
+         <zeroOrMore>
+            <ref name="tei_tr"/>
+         </zeroOrMore>
          <zeroOrMore>
             <ref name="tei_model.global"/>
          </zeroOrMore>
-         <optional>
+         <zeroOrMore>
             <ref name="tei_bibl"/>
-         </optional>
+         </zeroOrMore>
          <zeroOrMore>
             <ref name="tei_model.global"/>
          </zeroOrMore>
