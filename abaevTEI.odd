@@ -832,7 +832,14 @@
                 <elementSpec module="core" ident="q" mode="change">
                     <classes mode="change">
                         <memberOf mode="add" key="att.global.rendition"/>
-                    </classes>                    
+                    </classes>
+                    <content>
+                        <alternate minOccurs="0" maxOccurs="unbounded">
+                            <textNode/>
+                            <classRef key="model.gLike"/>
+                            <classRef key="model.global"/>
+                        </alternate>
+                    </content>                    
                 </elementSpec>
                 
                 <elementSpec module="dictionaries" ident="entry" mode="change">
