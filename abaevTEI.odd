@@ -1198,7 +1198,7 @@
                     <constraintSpec ident="punctuation-only" scheme="schematron">
                         <constraint>
                             <sch:rule context="tei:mentioned/text()">
-                                <sch:report test="matches(.,'[^ ,—;()\n]')">Text in mentioned forms must only include punctuation (spaces, commas).</sch:report>
+                                <sch:report test="matches(.,'[^ ,—;:()\n]')">Text in mentioned forms must only include punctuation (spaces, commas).</sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>                    
