@@ -1183,27 +1183,54 @@
                     <content>
                         <sequence>
                             <elementRef key="lang" minOccurs="0" maxOccurs="1"/>
-                            <alternate minOccurs="0" maxOccurs="unbounded">
-                                <classRef key="model.global"/>
-                                <elementRef key="w"/>
-                                <elementRef key="c"/>
-                                <elementRef key="m"/>
-                                <elementRef key="phr"/>
-                                <elementRef key="s"/>
-                                <elementRef key="gloss"/>
-                                <textNode/>
+                            <alternate minOccurs="1" maxOccurs="1">
+                                <sequence>
+                                    <alternate minOccurs="1" maxOccurs="unbounded">
+                                        <classRef key="model.global"/>
+                                        <elementRef key="mentioned"/>
+                                        <textNode/>
+                                        <classRef key="model.gLike"/>
+                                    </alternate>
+                                    <alternate minOccurs="1" maxOccurs="unbounded">
+                                        <classRef key="model.global"/>
+                                        <elementRef key="gloss"/>
+                                        <textNode/>
+                                        <classRef key="model.gLike"/>
+                                    </alternate>
+                                </sequence>
+                                <alternate minOccurs="0" maxOccurs="unbounded">
+                                    <classRef key="model.global"/>
+                                    <elementRef key="w"/>
+                                    <elementRef key="c"/>
+                                    <elementRef key="m"/>
+                                    <elementRef key="phr"/>
+                                    <elementRef key="s"/>
+                                    <elementRef key="gloss"/>
+                                    <textNode/>
+                                    <classRef key="model.gLike"/>
+                                </alternate>
                             </alternate>
                         </sequence>
                     </content>
-                    <constraintSpec ident="punctuation-only" scheme="schematron">
+                    <!--<constraintSpec ident="punctuation-only" scheme="schematron">
                         <constraint>
                             <sch:rule context="tei:mentioned/text()">
                                 <sch:report test="matches(.,'[^ ,—;:()\n]')">Text in mentioned forms must only include punctuation (spaces, commas).</sch:report>
                             </sch:rule>
                         </constraint>
-                    </constraintSpec>                    
+                    </constraintSpec>-->
+                    <constraintSpec ident="top-lang" scheme="schematron">
+                        <constraint>
+                            <sch:rule context="tei:mentioned/tei:mentioned | tei:mentioned[not(tei:mentioned)]">
+                                <sch:assert test="@xml:lang">Mentioned forms must include language attributes.</sch:assert>
+                            </sch:rule>
+                            <sch:rule context="tei:mentioned[tei:mentioned]">
+                                <sch:assert test="not(@xml:lang)">Mentioned containers must not define languages.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
                     <attList>
-                        <attDef ident="xml:lang" mode="change" usage="req"/>
+                        <attDef ident="xml:lang" mode="change" usage="rec"/>
                     </attList>
                 </elementSpec>
                 
