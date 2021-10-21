@@ -1328,4 +1328,29 @@
                 </attDef>
             </attList>
         </elementSpec>-->
+                <elementSpec ident="re" mode="change">
+                    <content>
+                        <sequence>
+                            <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+                            <elementRef key="form" minOccurs="1" maxOccurs="2"/>
+                            <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+                            <elementRef key="usg" minOccurs="0" maxOccurs="1"/>
+                            <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+                            <elementRef key="sense" minOccurs="0" maxOccurs="unbounded"/>
+                            <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+<!--                            <elementRef key="re" minOccurs="0" maxOccurs="unbounded"/>
+                            <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>-->
+                            <elementRef key="exampleGrp" minOccurs="0" maxOccurs="unbounded"/>
+                            <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+<!--                            <elementRef key="re" minOccurs="0" maxOccurs="unbounded"/>
+                            <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>-->
+<!--                            <elementRef key="exampleGrp" minOccurs="0" maxOccurs="unbounded"/>
+                            <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+                            <elementRef key="etym" minOccurs="0" maxOccurs="2"/>
+                            <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+                            <elementRef key="ref" minOccurs="0" maxOccurs="unbounded"/>
+                            <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>-->
+                        </sequence>
+                    </content>
+                </elementSpec>
             </schemaSpec></body></text></TEI>
