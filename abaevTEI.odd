@@ -839,6 +839,7 @@
                             <classRef key="model.gLike"/>
                             <classRef key="model.global"/>
                             <classRef key="model.hiLike"/>
+                            <classRef key="model.emphLike"/>
                             <classRef key="model.ptrLike.form"/>
                             <classRef key="model.ptrLike"/>
                         </alternate>
