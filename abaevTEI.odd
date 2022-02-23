@@ -1003,8 +1003,8 @@
                         <memberOf key="att.global.rendition"/>
                         <memberOf key="att.global.linking"/>
 <!--                        <memberOf key="att.dialectal"/>-->
-                        <!-- No model membership, because examples only occur in exampleGrp, where they 
-                            are explicitly mentioned in the content model. -->
+                        <!-- No model membership, because examples only occur in exampleGrp and within etymologies, where they 
+                            are explicitly mentioned in the content model. If the number of such cases grows, may include into model.quoteLike -->
                     </classes>
                     <content>
                         <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
@@ -1168,6 +1168,22 @@
                 </elementSpec>-->
                 
                 <elementSpec ident="etym" mode="change">
+                    <content><!-- replicates standard TEI P5 but adds example -->
+                        <alternate minOccurs="0" maxOccurs="unbounded">
+                            <textNode/>
+                            <classRef key="model.gLike"/>
+                            <classRef key="model.global"/>
+                            <classRef key="model.inter"/>
+                            <classRef key="model.phrase"/>
+                            <elementRef key="def"/>
+                            <elementRef key="etym"/>
+                            <elementRef key="gramGrp"/>
+                            <elementRef key="lbl"/>
+                            <elementRef key="usg"/>
+                            <elementRef key="xr"/>
+                            <elementRef key="example"/>
+                        </alternate>
+                    </content>
                     <attList>
                         <attDef ident="xml:lang" mode="change" usage="req">
                             <xi:include href="vallist-ruen.xml"/>
