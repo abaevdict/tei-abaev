@@ -983,6 +983,7 @@
                                 <valItem ident="dialectal"/>
                                 <valItem ident="participle"/>
                                 <valItem ident="variant"/>
+                                <valItem ident="parens"/>
                             </valList>
                         </attDef>
                     </attList>
