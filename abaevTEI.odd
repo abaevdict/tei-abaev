@@ -922,6 +922,8 @@
                             <valList mode="replace" type="closed">
                                 <valItem ident="incomplete"><gloss>Entry requires additional work on annotation and/or translation.</gloss></valItem>
                                 <valItem ident="questions"><gloss>Entry essentially complete but questions remain.</gloss></valItem>
+                                <valItem ident="russian-questions"><gloss>Entry essentially complete but questions in the Russian translation remain.</gloss></valItem>
+                                <valItem ident="english-questions"><gloss>Entry essentially complete but questions in the English translation remain.</gloss></valItem>
                                 <valItem ident="complete"><gloss>Entry is finished.</gloss></valItem>
                             </valList>
                         </attDef>                        
