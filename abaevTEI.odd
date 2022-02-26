@@ -833,7 +833,7 @@
                     <classes mode="change">
                         <memberOf mode="add" key="att.global.rendition"/>
                     </classes>
-                    <content>
+<!--                    <content>
                         <alternate minOccurs="0" maxOccurs="unbounded">
                             <textNode/>
                             <classRef key="model.gLike"/>
@@ -843,7 +843,7 @@
                             <classRef key="model.ptrLike.form"/>
                             <classRef key="model.ptrLike"/>
                         </alternate>
-                    </content>                    
+                    </content>      -->              
                 </elementSpec>
                 
                 <elementSpec module="dictionaries" ident="entry" mode="change">
