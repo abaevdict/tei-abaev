@@ -984,6 +984,7 @@
                                 <valItem ident="participle"/>
                                 <valItem ident="variant"/>
                                 <valItem ident="parens"/>
+                                <valItem ident="synonym"/>
                             </valList>
                         </attDef>
                     </attList>
