@@ -24,7 +24,7 @@
                 <moduleRef key="dictionaries" except=""/>
                 <classSpec module="dictionaries" type="atts" ident="att.lexicographic" mode="change">
                     <attList>
-                        <attDef ident="expand" mode="delete"/>
+<!--                        <attDef ident="expand" mode="delete"/>-->
                         <attDef ident="split" mode="delete"/>
                         <attDef ident="value" mode="delete"/>
                         <attDef ident="location" mode="delete"/>
