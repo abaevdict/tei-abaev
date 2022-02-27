@@ -1029,7 +1029,7 @@
                                 infrequent case is when the example is in Russian (i.e. there is no
                                 Ossetic text). Otherwise <att>xml:lang</att> is inherited from the dictionary
                                 entry.</desc>
-                            <xi:include href="vallist-oslang.xml"/>
+                            <xi:include href="vallist-example.xml"/>
                         </attDef>
 <!--                        <attDef ident="dialect" usage="opt" mode="change">
                             <desc>represents the (sub)dialect of Ossetic used in the example. At
