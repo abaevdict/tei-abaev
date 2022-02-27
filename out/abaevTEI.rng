@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2022-02-26T17:53:54Z. .
+Schema generated from ODD source 2022-02-27T10:01:04Z. .
 TEI Edition: Version 4.1.0. Last updated on
 	19th August 2020, revision b414ba550
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
@@ -10186,7 +10186,7 @@ You must supply at least two values for @target on <name/>
          <ref name="tei_att.global.linking.attributes"/>
          <optional>
             <attribute name="xml:lang">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) the language should only be indicated if the source has д. (for Digor) or ксан. (for Ksan) preceding the example text. Other dialect options are possible, but not attesed. Otherwise <code xmlns="http://www.w3.org/1999/xhtml">@xml:lang</code> is inherited from the dictionary entry.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) the language should only be indicated if the source has д. (for Digor) or ксан. (for Ksan) preceding the example text. Other dialect options are possible, but not attesed. Another, relatively infrequent case is when the example is in Russian (i.e. there is no Ossetic text). Otherwise <code xmlns="http://www.w3.org/1999/xhtml">@xml:lang</code> is inherited from the dictionary entry.</a:documentation>
                <choice>
                   <value>os</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ossetic) </a:documentation>

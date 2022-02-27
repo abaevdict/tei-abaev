@@ -1025,8 +1025,9 @@
                         <attDef ident="xml:lang" usage="opt" mode="change">
                             <desc>the language should only be indicated if the source has <q>д.</q>
                                 (for Digor) or <q>ксан.</q> (for Ksan) preceding the example text.
-                                Other dialect options are possible, but not attesed. Otherwise
-                                    <att>xml:lang</att> is inherited from the dictionary
+                                Other dialect options are possible, but not attesed. Another, relatively 
+                                infrequent case is when the example is in Russian (i.e. there is no
+                                Ossetic text). Otherwise <att>xml:lang</att> is inherited from the dictionary
                                 entry.</desc>
                             <xi:include href="vallist-oslang.xml"/>
                         </attDef>
