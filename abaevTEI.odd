@@ -1007,8 +1007,7 @@
                         <memberOf key="att.global.rendition"/>
                         <memberOf key="att.global.linking"/>
 <!--                        <memberOf key="att.dialectal"/>-->
-                        <!-- No model membership, because examples only occur in exampleGrp and within etymologies, where they 
-                            are explicitly mentioned in the content model. If the number of such cases grows, may include into model.quoteLike -->
+                        <memberOf key="model.quoteLike"/>
                     </classes>
                     <content>
                         <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
