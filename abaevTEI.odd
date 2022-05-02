@@ -856,16 +856,26 @@
                             <elementRef key="form" minOccurs="1" maxOccurs="2"/>
                             <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
                             <elementRef key="usg" minOccurs="0" maxOccurs="1"/>
-                            <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
-                            <elementRef key="sense" minOccurs="0" maxOccurs="unbounded"/>
-                            <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
-                            <elementRef key="re" minOccurs="0" maxOccurs="unbounded"/>
-                            <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
-                            <elementRef key="exampleGrp" minOccurs="0" maxOccurs="unbounded"/>
-                            <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
-                            <elementRef key="re" minOccurs="0" maxOccurs="unbounded"/>
-                            <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
-                            <elementRef key="exampleGrp" minOccurs="0" maxOccurs="unbounded"/>
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <classRef key="model.global"/>
+                                <elementRef key="sense"/>                                
+                            </alternate>
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <classRef key="model.global"/>
+                                <elementRef key="re"/>
+                            </alternate>
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <classRef key="model.global"/>
+                                <elementRef key="exampleGrp"/>
+                            </alternate>
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <classRef key="model.global"/>
+                                <elementRef key="re"/>
+                            </alternate>
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <classRef key="model.global"/>
+                                <elementRef key="exampleGrp"/>
+                            </alternate>
                             <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
                             <elementRef key="etym" minOccurs="0" maxOccurs="2"/>
                             <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
