@@ -985,8 +985,12 @@
                                 <valItem ident="dialectal"/>
                                 <valItem ident="participle"/>
                                 <valItem ident="variant"/>
-                                <valItem ident="parens"/>
                                 <valItem ident="synonym"/>
+                            </valList>
+                        </attDef>
+                        <attDef ident="subtype" usage="opt" mode="change">
+                            <valList mode="replace" type="closed">
+                                <valItem ident="parens"/>
                             </valList>
                         </attDef>
                     </attList>
