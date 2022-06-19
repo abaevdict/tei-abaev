@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2022-05-02T20:28:30Z. .
+Schema generated from ODD source 2022-06-19T08:47:39Z. .
 TEI Edition: Version 4.1.0. Last updated on
 	19th August 2020, revision b414ba550
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
@@ -1908,6 +1908,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_w"/>
          <ref name="tei_m"/>
          <ref name="tei_c"/>
+         <ref name="tei_pc"/>
       </choice>
    </define>
    <define name="tei_model.hiLike">
@@ -3704,6 +3705,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                <ref name="tei_model.graphicLike"/>
                <ref name="tei_model.ptrLike"/>
                <ref name="tei_model.attributable"/>
+               <ref name="tei_pc"/>
                <ref name="tei_q"/>
             </choice>
          </oneOrMore>
@@ -8808,6 +8810,7 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
          <zeroOrMore>
             <choice>
                <ref name="tei_sense"/>
+               <ref name="tei_pc"/>
                <ref name="tei_model.entryPart.top"/>
                <ref name="tei_model.global"/>
             </choice>
@@ -10104,6 +10107,7 @@ You must supply at least two values for @target on <name/>
                <ref name="tei_w"/>
                <ref name="tei_m"/>
                <ref name="tei_c"/>
+               <ref name="tei_pc"/>
                <ref name="tei_model.global"/>
                <ref name="tei_model.lPart"/>
                <ref name="tei_model.hiLike"/>
@@ -10152,6 +10156,51 @@ You must supply at least two values for @target on <name/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.segLike.attributes"/>
          <ref name="tei_att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_pc">
+      <element name="pc">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(punctuation character) contains a character or string of characters regarded as constituting a single punctuation mark. [17.1.2. Below the Word Level 17.4.2. Lightweight Linguistic Annotation]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="tei_model.gLike"/>
+               <ref name="tei_c"/>
+               <ref name="tei_model.pPart.edit"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.segLike.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.linguistic.attributes"/>
+         <optional>
+            <attribute name="force">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the extent to which this punctuation mark conventionally separates words or phrases</a:documentation>
+               <choice>
+                  <value>strong</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the punctuation mark is a word separator</a:documentation>
+                  <value>weak</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the punctuation mark is not a word separator</a:documentation>
+                  <value>inter</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the punctuation mark may or may not be a word separator</a:documentation>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="unit">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides a name for the kind of unit delimited by this punctuation mark.</a:documentation>
+               <data type="token">
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
+               </data>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="pre">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates whether this punctuation mark precedes or follows the unit it delimits.</a:documentation>
+               <data type="boolean"/>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>

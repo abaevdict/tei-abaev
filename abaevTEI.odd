@@ -45,7 +45,7 @@
                         <attDef ident="select" mode="delete"/>
                     </attList>
                 </classSpec>
-                <moduleRef key="analysis" include="w m c cl phr s"/>
+                <moduleRef key="analysis" include="w m c cl phr s pc"/>
                 <classSpec module="analysis" type="atts" ident="att.global.analytic" mode="change">
                     <attList>
                         <attDef ident="ana" mode="delete"/>
