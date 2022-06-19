@@ -1392,6 +1392,8 @@
                                 <elementRef key="re" minOccurs="1" maxOccurs="unbounded"/>
                                 <elementRef key="sense" minOccurs="0" maxOccurs="unbounded"/>
                                 <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="exampleGrp" minOccurs="0" maxOccurs="unbounded"/>
+                                <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
                             </sequence>
                         </alternate>
                     </content>
