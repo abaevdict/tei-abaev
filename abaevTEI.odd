@@ -1293,6 +1293,7 @@
                             <valList mode="replace" type="closed">
                                 <valItem ident="xr"/>
                                 <valItem ident="bibl"/>
+                                <valItem ident="url"/>
                             </valList>
                         </attDef>
                         <attDef ident="target" usage="rec" mode="change"/>
