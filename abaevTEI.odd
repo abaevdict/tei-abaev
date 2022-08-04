@@ -37,7 +37,7 @@
                 <classSpec module="linking" type="atts" ident="att.global.linking" mode="change">
                     <attList>
                         <attDef ident="synch" mode="delete"/>
-                        <attDef ident="sameAs" mode="delete"/>
+                        <!--<attDef ident="sameAs" mode="delete"/>-->
                         <attDef ident="copyOf" mode="delete"/>
                         <attDef ident="next" mode="delete"/>
                         <attDef ident="prev" mode="delete"/>
@@ -55,7 +55,7 @@
 <!--                <moduleRef key="certainty"/>-->
                 <classSpec module="tei" type="atts" ident="att.global" mode="change">
                     <classes mode="change">
-                        <memberOf mode="delete" key="att.global.linking"/>
+                        <!--<memberOf mode="delete" key="att.global.linking"/>-->
                         <memberOf mode="delete" key="att.global.rendition"/>
                     </classes>
                     <constraintSpec ident="lang-not-empty" scheme="schematron">
@@ -1019,7 +1019,7 @@
                     <classes>
                         <memberOf key="att.global"/>
                         <memberOf key="att.global.rendition"/>
-                        <memberOf key="att.global.linking"/>
+<!--                        <memberOf key="att.global.linking"/>-->
 <!--                        <memberOf key="att.dialectal"/>-->
                         <memberOf key="model.quoteLike"/>
                     </classes>
@@ -1087,7 +1087,7 @@
                     <classes>
                         <memberOf key="att.global"/>
                         <memberOf key="att.global.rendition"/>
-                        <memberOf key="att.global.linking"/>
+<!--                        <memberOf key="att.global.linking"/>-->
                         <memberOf key="model.entryPart.top"/>
                     </classes>
                     <content>
@@ -1117,7 +1117,6 @@
                     <classes>
                         <memberOf key="att.global"/>
                         <memberOf key="att.global.rendition"/>
-                        <memberOf key="att.global.linking"/>
                         <!-- No model membership, because translations only occur in examples, where they 
                             are explicitly mentioned in the content model. -->
                     </classes>
