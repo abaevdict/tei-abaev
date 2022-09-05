@@ -943,7 +943,7 @@
                 <elementSpec module="dictionaries" ident="sense" mode="change">
                     <content>
                         <alternate minOccurs="0" maxOccurs="unbounded">
-                            <macroRef key="macro.xtext"/>
+                            <!--<macroRef key="macro.xtext"/>-->
                             <elementRef key="sense"/>
                             <elementRef key="def"/>
                             <elementRef key="tr"/>
