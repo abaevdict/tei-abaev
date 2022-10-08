@@ -860,11 +860,9 @@
                             <elementRef key="usg" minOccurs="0" maxOccurs="1"/>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <classRef key="model.global"/>
+                                <elementRef key="formGrp" minOccurs="0" maxOccurs="unbounded"/> <!-- additional forms after the sense -->                                
                                 <elementRef key="sense"/>                                
                             </alternate>
-                            <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
-                            <elementRef key="formGrp" minOccurs="0" maxOccurs="unbounded"/> <!-- additional forms after the sense -->
-                            <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <classRef key="model.global"/>
                                 <elementRef key="re"/>
