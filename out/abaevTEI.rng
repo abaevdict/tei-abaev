@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2022-09-05T13:45:53Z. .
+Schema generated from ODD source 2022-10-08T21:24:58Z. .
 TEI Edition: Version 4.1.0. Last updated on
 	19th August 2020, revision b414ba550
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
@@ -432,6 +432,7 @@ Sample values include: 1] all; 2] most; 3] range</a:documentation>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="abaevTEI-att.datable.w3c-att-datable-w3c-when-constraint-rule-1">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -442,6 +443,7 @@ Sample values include: 1] all; 2] most; 3] range</a:documentation>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="abaevTEI-att.datable.w3c-att-datable-w3c-from-constraint-rule-2">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -452,6 +454,7 @@ Sample values include: 1] all; 2] most; 3] range</a:documentation>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="abaevTEI-att.datable.w3c-att-datable-w3c-to-constraint-rule-3">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -475,6 +478,7 @@ Sample values include: 1] all; 2] most; 3] range</a:documentation>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="abaevTEI-att.datable-calendar-calendar-constraint-rule-4">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -1178,6 +1182,7 @@ Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (аба�
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="abaevTEI-att.global-lang-not-empty-constraint-rule-5">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -1420,6 +1425,7 @@ Suggested values include: 1] m (metre); 2] kg (kilogram); 3] s (second); 4] Hz (
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="abaevTEI-att.measurement-att-measurement-unitRef-constraint-rule-6">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -1525,6 +1531,7 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="abaevTEI-att.typed-subtypeTyped-constraint-rule-7">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -1555,6 +1562,7 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="abaevTEI-att.pointing-targetLang-targetLang-constraint-rule-8">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -1688,6 +1696,7 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="abaevTEI-att.spanning-spanTo-spanTo-2-constraint-rule-9">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -1731,6 +1740,7 @@ The element indicated by @spanTo (<sch:value-of select="@spanTo"/>) must follow 
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="abaevTEI-att.styleDef-schemeVersion-schemeVersionRequiresScheme-constraint-rule-10">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -2846,6 +2856,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <choice>
          <ref name="tei_quote"/>
          <ref name="tei_cit"/>
+         <ref name="tei_formGrp"/>
          <ref name="tei_example"/>
       </choice>
    </define>
@@ -2853,12 +2864,14 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <choice>
          <ref name="tei_quote"/>
          <ref name="tei_cit"/>
+         <ref name="tei_formGrp"/>
          <ref name="tei_example"/>
       </choice>
    </define>
    <define name="tei_model.quoteLike_sequence">
       <ref name="tei_quote"/>
       <ref name="tei_cit"/>
+      <ref name="tei_formGrp"/>
       <ref name="tei_example"/>
    </define>
    <define name="tei_model.quoteLike_sequenceOptional">
@@ -2867,6 +2880,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </optional>
       <optional>
          <ref name="tei_cit"/>
+      </optional>
+      <optional>
+         <ref name="tei_formGrp"/>
       </optional>
       <optional>
          <ref name="tei_example"/>
@@ -2880,6 +2896,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_cit"/>
       </zeroOrMore>
       <zeroOrMore>
+         <ref name="tei_formGrp"/>
+      </zeroOrMore>
+      <zeroOrMore>
          <ref name="tei_example"/>
       </zeroOrMore>
    </define>
@@ -2889,6 +2908,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </oneOrMore>
       <oneOrMore>
          <ref name="tei_cit"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tei_formGrp"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="tei_example"/>
@@ -3520,7 +3542,8 @@ Suggested values include: 1] page; 2] column; 3] line; 4] book; 5] poem; 6] cant
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="abaevTEI-p-abstractModel-structure-p-constraint-report-5">
             <rule context="tei:p">
-               <report xmlns:xi="http://www.w3.org/2001/XInclude"
+               <report xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
+                       xmlns:xi="http://www.w3.org/2001/XInclude"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="not(ancestor::tei:floatingText) and (ancestor::tei:p or ancestor::tei:ab)          and not(parent::tei:exemplum                |parent::tei:item                |parent::tei:note                |parent::tei:q                |parent::tei:quote                |parent::tei:remarks                |parent::tei:said                |parent::tei:sp                |parent::tei:stage                |parent::tei:cell                |parent::tei:figure                )">
@@ -3531,7 +3554,8 @@ Suggested values include: 1] page; 2] column; 3] line; 4] book; 5] poem; 6] cant
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="abaevTEI-p-abstractModel-structure-l-constraint-report-6">
             <rule context="tei:p">
-               <report xmlns:xi="http://www.w3.org/2001/XInclude"
+               <report xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
+                       xmlns:xi="http://www.w3.org/2001/XInclude"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="ancestor::tei:l[not(.//tei:note//tei:p[. = current()])]">
@@ -3759,6 +3783,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="abaevTEI-mentioned-top-lang-constraint-rule-11">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -3766,6 +3791,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                <sch:assert test="@xml:lang">Mentioned forms must include language attributes.</sch:assert>
             </sch:rule>
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -4250,6 +4276,7 @@ Suggested values include: 1] ady-x-abadz (абадз. / Abzakh); 2] abq (аба�
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="abaevTEI-desc-deprecationInfo-only-in-deprecated-constraint-rule-13">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -4717,7 +4744,8 @@ Sample values include: 1] suspension; 2] contraction; 3] brevigraph; 4] superscr
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="abaevTEI-ptr-ptrAtts-constraint-report-7">
             <rule context="tei:ptr">
-               <report xmlns:xi="http://www.w3.org/2001/XInclude"
+               <report xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
+                       xmlns:xi="http://www.w3.org/2001/XInclude"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="@target and @cRef">Only one of the
@@ -4740,6 +4768,7 @@ attributes @target and @cRef may be supplied on <name/>.</report>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="abaevTEI-ref-target-or-text-constraint-rule-14">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -4750,7 +4779,8 @@ attributes @target and @cRef may be supplied on <name/>.</report>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="abaevTEI-ref-refAtts-constraint-report-8">
             <rule context="tei:ref">
-               <report xmlns:xi="http://www.w3.org/2001/XInclude"
+               <report xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
+                       xmlns:xi="http://www.w3.org/2001/XInclude"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="@target and @cRef">Only one of the
@@ -4844,6 +4874,7 @@ attributes @target and @cRef may be supplied on <name/>.</report>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="abaevTEI-list-gloss-list-must-have-labels-constraint-rule-15">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -5541,6 +5572,7 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
                   id="abaevTEI-relatedItem-targetorcontent1-constraint-report-9">
             <rule context="tei:relatedItem">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
+                           xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                            xmlns:xi="http://www.w3.org/2001/XInclude"
                            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -5548,6 +5580,7 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
 If the @target attribute on <sch:name/> is used, the
 relatedItem element must be empty</sch:report>
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
+                           xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                            xmlns:xi="http://www.w3.org/2001/XInclude"
                            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -5581,7 +5614,8 @@ relatedItem element must be empty</sch:report>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="abaevTEI-l-abstractModel-structure-l-constraint-report-10">
             <rule context="tei:l">
-               <report xmlns:xi="http://www.w3.org/2001/XInclude"
+               <report xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
+                       xmlns:xi="http://www.w3.org/2001/XInclude"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="ancestor::tei:l[not(.//tei:note//tei:l[. = current()])]">
@@ -5632,6 +5666,7 @@ relatedItem element must be empty</sch:report>
                   id="abaevTEI-lg-atleast1oflggapl-constraint-assert-13">
             <rule context="tei:lg">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
+                           xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                            xmlns:xi="http://www.w3.org/2001/XInclude"
                            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -5642,7 +5677,8 @@ relatedItem element must be empty</sch:report>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="abaevTEI-lg-abstractModel-structure-l-constraint-report-11">
             <rule context="tei:lg">
-               <report xmlns:xi="http://www.w3.org/2001/XInclude"
+               <report xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
+                       xmlns:xi="http://www.w3.org/2001/XInclude"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="ancestor::tei:l[not(.//tei:note//tei:lg[. = current()])]">
@@ -6320,7 +6356,8 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="abaevTEI-quotation-quotationContents-constraint-report-12">
             <rule context="tei:quotation">
-               <report xmlns:xi="http://www.w3.org/2001/XInclude"
+               <report xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
+                       xmlns:xi="http://www.w3.org/2001/XInclude"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="not(@marks) and not (tei:p)">
@@ -7161,18 +7198,21 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
             </choice>
          </group>
          <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                  xmlns:xi="http://www.w3.org/2001/XInclude"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  prefix="tei"
                  uri="http://www.tei-c.org/ns/1.0"/>
          <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                  xmlns:xi="http://www.w3.org/2001/XInclude"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  prefix="xs"
                  uri="http://www.w3.org/2001/XMLSchema"/>
          <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                  xmlns:xi="http://www.w3.org/2001/XInclude"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -7462,7 +7502,8 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="abaevTEI-div-abstractModel-structure-l-constraint-report-13">
             <rule context="tei:div">
-               <report xmlns:xi="http://www.w3.org/2001/XInclude"
+               <report xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
+                       xmlns:xi="http://www.w3.org/2001/XInclude"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="ancestor::tei:l">
@@ -7473,7 +7514,8 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="abaevTEI-div-abstractModel-structure-p-constraint-report-14">
             <rule context="tei:div">
-               <report xmlns:xi="http://www.w3.org/2001/XInclude"
+               <report xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
+                       xmlns:xi="http://www.w3.org/2001/XInclude"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="ancestor::tei:p or ancestor::tei:ab and not(ancestor::tei:floatingText)">
@@ -8644,6 +8686,12 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
             <zeroOrMore>
                <ref name="tei_model.global"/>
             </zeroOrMore>
+            <zeroOrMore>
+               <ref name="tei_formGrp"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="tei_model.global"/>
+            </zeroOrMore>
             <optional>
                <ref name="tei_usg"/>
             </optional>
@@ -8652,6 +8700,12 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
                   <ref name="tei_model.global"/>
                   <ref name="tei_sense"/>
                </choice>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="tei_model.global"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="tei_formGrp"/>
             </zeroOrMore>
             <zeroOrMore>
                <choice>
@@ -8704,6 +8758,7 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="abaevTEI-entry-form-type-constraint-rule-16">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -8712,6 +8767,7 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
                                     'lemma' (headword).</sch:assert>
             </sch:rule>
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -8721,10 +8777,22 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
                <sch:assert test="@type = 'dialectal'">The second form must be a
                                     dialectal variant.</sch:assert>
             </sch:rule>
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      context="formGrp/tei:form[2]">
+               <sch:assert test="@xml:lang = 'os-x-digor'">The second form may only
+                                    be the Digor form.</sch:assert>
+               <sch:assert test="@type = 'dialectal'">The second form must be a
+                                    dialectal variant.</sch:assert>
+            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-entry-note-type-constraint-rule-18">
+                  id="abaevTEI-entry-note-type-constraint-rule-19">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -8733,6 +8801,7 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
                                     should follow etymology.</sch:assert>
             </sch:rule>
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -8916,6 +8985,8 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
                <value>variant</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>synonym</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>plural</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             </choice>
          </attribute>
@@ -9523,9 +9594,10 @@ Suggested values include: 1] label; 2] data</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines an association or hypertextual link among elements or passages, of some type not more precisely specifiable by other elements. [16.1. Links]</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-link-linkTargets3-constraint-assert-19">
+                  id="abaevTEI-link-linkTargets3-constraint-assert-21">
             <rule context="tei:link">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
+                           xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                            xmlns:xi="http://www.w3.org/2001/XInclude"
                            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -9560,7 +9632,8 @@ Suggested values include: 1] label; 2] data</a:documentation>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="abaevTEI-ab-abstractModel-structure-ab-constraint-report-15">
             <rule context="tei:ab">
-               <report xmlns:xi="http://www.w3.org/2001/XInclude"
+               <report xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
+                       xmlns:xi="http://www.w3.org/2001/XInclude"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="not(ancestor::tei:floatingText) and (ancestor::tei:p or ancestor::tei:ab)          and not(parent::tei:exemplum         |parent::tei:item         |parent::tei:note         |parent::tei:q         |parent::tei:quote         |parent::tei:remarks         |parent::tei:said         |parent::tei:sp         |parent::tei:stage         |parent::tei:cell         |parent::tei:figure)">
@@ -9571,7 +9644,8 @@ Suggested values include: 1] label; 2] data</a:documentation>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="abaevTEI-ab-abstractModel-structure-l-constraint-report-16">
             <rule context="tei:ab">
-               <report xmlns:xi="http://www.w3.org/2001/XInclude"
+               <report xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
+                       xmlns:xi="http://www.w3.org/2001/XInclude"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="ancestor::tei:l or ancestor::tei:lg">
@@ -9736,9 +9810,10 @@ Suggested values include: 1] d (days); 2] h (hours); 3] min (minutes); 4] s (sec
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-join-joinTargets3-constraint-assert-20">
+                  id="abaevTEI-join-joinTargets3-constraint-assert-22">
             <rule context="tei:join">
-               <assert xmlns:xi="http://www.w3.org/2001/XInclude"
+               <assert xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
+                       xmlns:xi="http://www.w3.org/2001/XInclude"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="contains(@target,' ')">
@@ -9876,9 +9951,10 @@ You must supply at least two values for @target on <name/>
             <ref name="tei_model.standOffPart"/>
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="abaevTEI-standOff-nested_standOff_should_be_typed-constraint-assert-21">
+                  id="abaevTEI-standOff-nested_standOff_should_be_typed-constraint-assert-23">
             <rule context="tei:standOff">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
+                           xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
                            xmlns:xi="http://www.w3.org/2001/XInclude"
                            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -10079,7 +10155,8 @@ You must supply at least two values for @target on <name/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="abaevTEI-s-noNestedS-constraint-report-17">
             <rule context="tei:s">
-               <report xmlns:xi="http://www.w3.org/2001/XInclude"
+               <report xmlns:abv="http://ossetic-studies.org/ns/abaevdict"
+                       xmlns:xi="http://www.w3.org/2001/XInclude"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        test="tei:s">You may not nest one s element within
@@ -10249,6 +10326,26 @@ You must supply at least two values for @target on <name/>
             </list>
          </attribute>
       </optional>
+   </define>
+   <define name="tei_formGrp">
+      <element name="formGrp" ns="http://ossetic-studies.org/ns/abaevdict">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a set of additional forms; corresponds to a <code xmlns="http://www.w3.org/1999/xhtml">&lt;cit&gt;</code> element with <code xmlns="http://www.w3.org/1999/xhtml">@type</code> = form.</a:documentation>
+         <zeroOrMore>
+            <ref name="tei_model.global"/>
+         </zeroOrMore>
+         <group>
+            <ref name="tei_form"/>
+            <optional>
+               <ref name="tei_form"/>
+            </optional>
+         </group>
+         <zeroOrMore>
+            <ref name="tei_model.global"/>
+         </zeroOrMore>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.global.rendition.attributes"/>
+         <empty/>
+      </element>
    </define>
    <define name="tei_example">
       <element name="example" ns="http://ossetic-studies.org/ns/abaevdict">
