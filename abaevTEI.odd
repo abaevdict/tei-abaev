@@ -865,6 +865,7 @@
                             </alternate>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <classRef key="model.global"/>
+                                <elementRef key="formGrp" minOccurs="0" maxOccurs="unbounded"/> <!-- additional forms after the sense -->                                
                                 <elementRef key="re"/>
                             </alternate>
                             <alternate minOccurs="0" maxOccurs="unbounded">
