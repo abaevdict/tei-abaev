@@ -870,17 +870,20 @@
                             </alternate>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <classRef key="model.global"/>
+                                <elementRef key="formGrp" minOccurs="0" maxOccurs="unbounded"/> <!-- additional forms after the sense -->
                                 <elementRef key="exampleGrp"/>
                             </alternate>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <classRef key="model.global"/>
+                                <elementRef key="formGrp" minOccurs="0" maxOccurs="unbounded"/> <!-- additional forms after the sense -->
                                 <elementRef key="re"/>
                             </alternate>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <classRef key="model.global"/>
+                                <elementRef key="formGrp" minOccurs="0" maxOccurs="unbounded"/> <!-- additional forms after the sense -->
                                 <elementRef key="exampleGrp"/>
                             </alternate>
-                            <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+                            <!--<classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>-->
                             <elementRef key="etym" minOccurs="0" maxOccurs="2"/>
                             <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
                             <elementRef key="ref" minOccurs="0" maxOccurs="unbounded"/>
