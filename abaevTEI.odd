@@ -1039,7 +1039,7 @@
                         <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
                         <elementRef key="form" minOccurs="1" maxOccurs="2"/>
                         <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
-                        <elementRef key="exampleGrp" minOccurs="0" maxOccurs="unbounded"/>
+                        <elementRef key="example" minOccurs="0" maxOccurs="unbounded"/>
                     </content>                    
                 </elementSpec>
                 
