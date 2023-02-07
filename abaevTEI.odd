@@ -32,7 +32,7 @@
                         <attDef ident="opt" mode="delete"/>
                     </attList>
                 </classSpec>                
-                <moduleRef key="figures" except=""/>
+                <moduleRef key="figures" except="notatedMusic"/>
                 <moduleRef key="linking"/>
                 <classSpec module="linking" type="atts" ident="att.global.linking" mode="change">
                     <attList>
@@ -1300,7 +1300,9 @@
                 </elementSpec>
                 
                 <elementSpec ident="gloss" mode="change">
-                    
+                    <classes mode="change">
+                        <memberOf key="att.extralang"/>
+                    </classes>
                 </elementSpec>
                 
                 <elementSpec module="core" ident="ref" mode="change">
