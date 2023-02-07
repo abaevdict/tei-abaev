@@ -1286,7 +1286,7 @@
                     </constraintSpec>-->
                     <constraintSpec ident="top-lang" scheme="schematron">
                         <constraint>
-                            <sch:rule context="tei:mentioned/tei:mentioned | tei:mentioned[not(tei:mentioned)]">
+                            <sch:rule context="tei:mentioned[not(tei:mentioned)]">
                                 <sch:assert test="@xml:lang">Mentioned forms must include language attributes.</sch:assert>
                             </sch:rule>
                             <sch:rule context="tei:mentioned[tei:mentioned]">
