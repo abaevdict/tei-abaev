@@ -1426,7 +1426,10 @@
                             </sequence>
                             <sequence><!-- several subentries with shared sense(s) -->
                                 <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="re" minOccurs="1" maxOccurs="unbounded"/>
+                                <sequence minOccurs="2" maxOccurs="unbounded">
+                                    <elementRef key="re" minOccurs="1" maxOccurs="unbounded"/>
+                                    <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+                                </sequence>
                                 <elementRef key="sense" minOccurs="0" maxOccurs="unbounded"/>
                                 <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="exampleGrp" minOccurs="0" maxOccurs="unbounded"/>
