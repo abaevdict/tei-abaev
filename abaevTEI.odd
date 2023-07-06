@@ -963,6 +963,7 @@
                             <elementRef key="tr"/>
                             <elementRef key="usg"/>
                             <elementRef key="re"/> <!-- cf. lasyn -->
+                            <elementRef key="example"/>
                             <classRef key="model.global"/>
                         </alternate>
                     </content>
