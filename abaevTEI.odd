@@ -961,7 +961,7 @@
                             <elementRef key="sense"/>
                             <elementRef key="def"/>
                             <elementRef key="tr"/>
-                            <elementRef key="usg"/>
+                            <elementRef key="usg" minOccurs="0" maxOccurs="2"/>
                             <elementRef key="re"/> <!-- cf. lasyn -->
                             <elementRef key="example"/>
                             <classRef key="model.global"/>
