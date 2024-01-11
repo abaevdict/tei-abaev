@@ -1407,7 +1407,7 @@
                                 <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="formGrp" minOccurs="0" maxOccurs="unbounded"/> <!-- additional forms -->
                                 <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="usg" minOccurs="0" maxOccurs="1"/>
+                                <elementRef key="usg" minOccurs="0" maxOccurs="2"/>
                                 <alternate minOccurs="0" maxOccurs="unbounded">
                                     <classRef key="model.global"/>
                                     <elementRef key="formGrp" minOccurs="0" maxOccurs="unbounded"/>
