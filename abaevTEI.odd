@@ -649,6 +649,10 @@
                                     <gloss>loan from Ossetic</gloss>
                                     <desc>words borrowed from Ossetic</desc>
                                 </valItem>
+                                <valItem ident="info">
+                                    <gloss>general information</gloss>
+                                    <desc>typological comparisons, etc.</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                         <attDef ident="xml:lang" mode="change" usage="rec"/>
