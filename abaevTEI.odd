@@ -579,7 +579,6 @@
                     <classes mode="change">
                         <memberOf key="att.dialectal"/>
                         <memberOf key="att.extralang"/>
-                        <memberOf key="att.global.responsibility"/>
 <!--                        <memberOf key="att.manylangs"/>-->
                     </classes>
                     <content>
@@ -656,6 +655,30 @@
                                 </valItem>
                             </valList>
                         </attDef>
+                        <attDef mode="add" ident="mentionedCert" usage="rec" ns="http://ossetic-studies.org/ns/abaevdict">
+                            <valList type="closed">
+                                <valItem ident="high">
+                                    <gloss>high</gloss>
+                                    <desc>High degree of certitude (explicitly stated as highly certain or given without comment).</desc>
+                                </valItem>
+                                <valItem ident="medium">
+                                    <gloss>medium</gloss>
+                                    <desc>Etymology provided with a doubt explicitly expressed ("probably", "likely", etc.).</desc>
+                                </valItem>
+                                <valItem ident="low">
+                                    <gloss>low</gloss>
+                                    <desc>Explicitly defined as unlikely.</desc>
+                                </valItem>
+                                <valItem ident="wrong">
+                                    <gloss>wrong</gloss>
+                                    <desc>Explicitly defined as incorrect.</desc>
+                                </valItem>
+                                <valItem ident="unknown">
+                                    <gloss>unknown</gloss>
+                                    <desc>Status unclear.</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>                        
                         <attDef ident="xml:lang" mode="change" usage="rec"/>
                     </attList>
                 </elementSpec>

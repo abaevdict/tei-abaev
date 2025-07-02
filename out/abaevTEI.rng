@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-07-02T05:52:28Z. . 
+Schema generated from ODD source 2025-07-02T06:02:38Z. . 
 TEI Edition: P5 Version 4.9.0. Last updated on 24th January 2025, revision f73186978 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/ 
   
@@ -4183,7 +4183,6 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
          </pattern>
          <ref name="tei_att.dialectal.attributes"/>
          <ref name="tei_att.extralang.attributes"/>
-         <ref name="tei_att.global.responsibility.attributes"/>
          <ref name="tei_att.global.attribute.xmlid"/>
          <ref name="tei_att.global.attribute.n"/>
          <ref name="tei_att.global.attribute.xmlbase"/>
@@ -4217,6 +4216,23 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(loan from Ossetic) words borrowed from Ossetic</a:documentation>
                   <value>info</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(general information) typological comparisons, etc.</a:documentation>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="mentionedCert" ns="http://ossetic-studies.org/ns/abaevdict">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
+                  <value>high</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(high) High degree of certitude (explicitly stated as highly certain or given without comment).</a:documentation>
+                  <value>medium</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(medium) Etymology provided with a doubt explicitly expressed ("probably", "likely", etc.).</a:documentation>
+                  <value>low</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(low) Explicitly defined as unlikely.</a:documentation>
+                  <value>wrong</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(wrong) Explicitly defined as incorrect.</a:documentation>
+                  <value>unknown</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(unknown) Status unclear.</a:documentation>
                </choice>
             </attribute>
          </optional>
